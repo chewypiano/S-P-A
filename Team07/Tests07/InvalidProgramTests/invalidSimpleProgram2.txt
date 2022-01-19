@@ -1,0 +1,13 @@
+procedure Hello {
+    print a;
+    print b;
+}
+
+procedure World {
+    print a;
+    print b;
+}
+
+procedure syntaxError {
+    print a
+}

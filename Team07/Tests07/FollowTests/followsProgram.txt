@@ -1,0 +1,10 @@
+procedure follows {    a = 0;
+    b = a + 1;
+    if ((!(a == b)) || (b == a)) then {
+        a = b + 1;
+    } else {       b = a + 1;    }
+    call follows2;
+    while (a < b) {
+        call follows2;
+        a = a + 1;    } }
+procedure follows2 {    read a; }

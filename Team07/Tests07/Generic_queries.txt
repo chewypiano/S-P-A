@@ -1,0 +1,405 @@
+1 - check vars
+variable v;
+Select v
+a, b, c, d, procedure
+5000
+2 - check consts
+constant c;
+Select c
+0, 1, 2, 7
+5000
+3 - check procs
+procedure p;
+Select p
+Example
+5000
+4 - check prints
+print p;
+Select p
+3, 4, 6, 7
+5000
+5 - invalid query (lower case select)
+procedure p;
+select p
+none
+5000
+6 - invalid query (upper cases procedure)
+Procedure p;
+Select s
+none
+5000
+7 - check assign
+assign a;
+Select a
+1, 2, 8, 9, 12, 13, 15, 16, 17, 18, 19
+5000
+8 - Uses
+assign a; variable v;
+Select a such that Uses(a, v)
+8, 9, 12, 13, 15, 16, 17, 18
+5000
+9 - Follows
+assign a;
+Select a such that Follows(8,_)
+9,1,12,13,15,16,17,18,19,2,8
+5000
+10 - Test Parent
+assign a; while w;
+Select a such that Parent(w, a)
+12, 13
+5000
+11 - Test Uses
+assign a; variable v;
+Select v such that Uses(a, v)
+a, b, c, d
+5000
+12 - Test Modifies
+assign a; variable v;
+Select a such that Modifies(a, v)
+1, 2, 8, 9, 12, 13, 15, 16, 17, 18, 19
+5000
+13 - Test Follows*
+assign a; variable v; if ifs;
+Select a such that Follows*(ifs, a)
+19
+5000
+14 - Test Parent*
+assign a; if ifs;
+Select a such that Parent*(ifs, a)
+12, 13, 15, 16, 17, 18
+5000
+15 - Test no common synonym
+assign a, a1; variable v;
+Select a1 such that Uses(a, v)
+1, 2, 8, 9, 12, 13, 15, 16, 17, 18, 19
+5000
+16 - Test 1 common synonym
+assign a1; variable v;
+Select a1 such that Uses(a1, v)
+8, 9, 12, 13, 15, 16, 17, 18
+5000
+17 - Test pattern with all wildcard
+assign a1; variable v;
+Select a1 pattern a1(_, _)
+1, 2, 8, 9, 12, 13, 15, 16, 17, 18, 19
+5000
+18 - Test pattern with 2 synonym
+assign a; variable v;
+Select a pattern a(_,_"a"_)
+13, 17
+5000
+19 - Test invalid pattern syntax
+assign a; variable v;
+Select a pattern v(a,"!")
+none
+5000
+20 - Test Modifies
+assign a;
+Select a such that Modifies(a, "c")
+12, 16, 18, 19
+5000
+21 - Test Modifies with var
+variable v; if ifs;
+Select v such that Modifies(ifs, v)
+a, c, d
+5000
+22 - Test Uses
+variable v; if ifs;
+Select ifs such that Modifies(ifs, v)
+10, 14
+5000
+23 - Which variables are used in assignment 14
+variable v; 
+Select v such that Uses(14, v)
+a, c, d
+5000
+24 - Find assignments within a loop directly
+assign a; while w;
+Select a such that Parent(w, a)
+12, 13
+5000
+25 - Find procedures that modifies x
+procedure p;
+Select p such that Modifies(p, "x")
+none
+5000
+26 - Find procedures that modifies c - NONE because modifiesP not in iter1
+procedure p;
+Select p such that Modifies(p, "c")
+Example
+5000
+27 - Who is the parent of statement 14
+stmt s;
+Select s such that Parent(s, 14)
+11
+5000
+28 - Find loops with the assignment to a
+assign a; while w;
+Select w pattern a("a", _)
+11
+5000
+29 - Find assignment that uses and modifies the same variable
+assign a; variable v;
+Select a pattern a(v, _"1"_)
+1, 2, 12, 13, 15, 16, 17, 18
+5000
+30 - Test 2 common synonym
+assign a1; variable v;
+Select a1 such that Uses(a1, v) pattern a1(_, _"a"_)
+13, 17
+5000
+31 - Find assignment that uses and modifies a
+assign a;
+Select a such that Modifies(a, "a") pattern a(_, _"a"_)
+13, 17
+5000
+32 - Find assignment statements that are nested directly or indirectly in a loop
+while w; assign a;
+Select a such that Parent*(w, a)
+12, 13, 15, 16, 17
+5000
+33 - Find assignment statements that follows an if directly or indirectly
+assign a; if ifs;
+Select a such that Follows*(ifs, a)
+19
+5000
+34 - Find Ifs that are nested directly or indirectly within a if
+if if1, if2;
+Select if1 such that Parent*(if2, if1)
+14
+5000
+35 - Find loops that are directly nested within ifs
+if ifs; while w;
+Select w such that Parent(ifs, w)
+11
+5000
+36 - Find all print statements that modifies a variable
+print p; variable v;
+Select p such that Modifies(p, v)
+none
+5000
+37 - Find all print that uses the variable a
+print p;
+Select p such that Uses(p, "a")
+4
+5000
+38 - Find all print statements that follow an assignment statement
+print p; assign a;
+Select p such that Follows(a, p)
+3
+5000
+39 - Find all print statements that follow a read statement
+print p; read r;
+Select p such that Follows(r, p)
+6
+5000
+40 - Find if statements that uses d
+if ifs;
+Select ifs such that Uses(ifs, "d")
+10, 14
+5000
+41 - Find loops that uses a
+while w;
+Select w such that Uses(w, "a")
+11
+5000
+42 - Find loops that contain loops
+while w1, w2;
+Select w1 such that Parent*(w1, w2)
+none
+5000
+43 - Such that and pattern do not have shared synonyms
+variable v; assign a, a1;
+Select a such that Uses(a, "a") pattern a1(v, _)
+13, 17
+5000
+44 - Swapped order of 43
+variable v; assign a, a1;
+Select a pattern a1(v, _) such that Uses(a, "a")
+13, 17
+5000
+45 - Select statement with invalid synonym
+assign a;
+Select c
+none
+5000
+46 - Invalid statement
+assign a;
+Select a Parent(a, 14)
+none
+5000
+47 - Semantics check 2 different assign
+assign a; assign b;
+Select a such that Follows(a, b)
+1, 8, 12, 15
+5000
+48 - Semantics error (2 of same varname)
+assign a; procedure a;
+Select a
+none
+5000
+49 - Redeclaration
+assign a; assign a;
+Select a
+none
+5000
+50 - Semantics error (Undeclared var)
+assign a;
+Select b
+none
+5000
+51 - Semantics check (Declare 2 times)
+assign a; assign b;
+Select a such that Follows(a, b)
+1, 8, 12, 15
+5000
+52 - Positive follows relation
+stmt s;
+Select s such that Follows(1, s)
+2
+5000
+53 - pattern valid
+assign a; while wh; stmt s;
+Select a such that Follows*(wh,s) pattern a(_,_)
+none
+5000
+54 - pattern valid
+assign a; while wh;
+Select a such that Follows*(wh,a) pattern a(_,_)
+none
+5000
+55 - pattern valid
+read r; while wh;
+Select r such that Follows*(wh,r)
+none
+5000
+56 - pattern valid
+while wh; if ifs;
+Select ifs such that Follows*(wh,ifs)
+none
+5000
+56 - pattern valid
+while wh; if ifs;
+Select ifs such that Follows*(ifs,wh)
+none
+5000
+57 - pattern valid
+assign a; assign a1;
+Select a such that Follows(a,a1) pattern a(_,_)
+1, 8, 12, 15
+5000
+58 - pattern valid
+assign a; assign a1;
+Select a1 such that Follows(a,a1) pattern a(_,_)
+2, 9, 13, 16
+5000
+59 - pattern valid
+assign a; while wh;
+Select a such that Follows*(wh,a) pattern a(_,_"3"_)
+none
+5000
+60 - pattern valid
+assign a; while wh;
+Select a such that Follows*(wh,a) pattern a("while",_)
+none
+5000
+61 - pattern invalid in iter 1, no exact match syntax
+assign a; while wh;
+Select a such that Follows*(wh,a) pattern a(_,"c")
+none
+5000
+62 - modifies single
+stmt s;
+Select s such that Modifies(s, "a")
+1, 8, 10, 11, 13, 14, 17
+5000
+63 - modifies single
+stmt s;
+Select s such that Modifies(s, if)
+none
+5000
+64 - modifies single
+stmt s;
+Select s such that Modifies(s, if)
+none
+5000
+65 - Follows single
+stmt s;
+Select s such that Follows(s, _)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 15
+5000
+66 - Basic FollowedBy with wildcard
+stmt s;
+Select s such that Follows(_, s)
+2, 3, 4, 5, 6, 7, 8, 9, 10, 13, 14, 16, 19
+5000
+67 - Basic Follows
+variable v;
+Select v such that Follows(1,3)
+none
+5000
+68 - Basic Follows*
+stmt s;
+Select s such that Follows*(1,s)
+2, 3, 4, 5, 6, 7, 8, 9, 10, 19
+5000
+69 - Basic Follows* variable
+variable v;
+Select v such that Follows*(1,10)
+a, b, c, d, procedure
+5000
+70 - Basic Follows* assign stmt
+stmt s; assign a;
+Select s such that Follows*(a, s)
+2, 3, 4, 5, 6, 7, 8, 9, 10, 13, 14, 16, 19
+5000
+71 - Basic Parents
+stmt s;
+Select s such that Parent(s, _)
+10, 11, 14
+5000
+72 - Basic Parents with wildcard
+stmt s;
+Select s such that Parent(_, s)
+11, 12, 13, 14,15, 16, 17, 18
+5000
+73 - Basic Parents variable
+variable v;
+Select v such that Parent(3,4)
+none
+5000
+74 - Basic Parents*
+stmt s;
+Select s such that Parent*(3,_)
+none
+5000
+75 - Basic Parents* variable
+variable v;
+Select v such that Parent*(_,3)
+none
+5000
+76 - Basic Parents* assign stmt
+stmt s; assign a;
+Select s such that Parent*(a, s)
+none
+5000
+77 - Basic Pattern 1 synonym, IDENT, _
+assign a;
+Select a pattern a("c", _)
+12, 16, 18, 19
+5000
+78 - Basic Pattern 1 synonym
+assign a;
+Select a pattern a (_,_)
+1, 2, 8, 9, 12, 13, 15, 16, 17, 18, 19
+5000
+79 - Basic Pattern 2 synonym 1 common
+assign a; variable v;
+Select v pattern a (v,_)
+a, b, c, d
+5000
+80 - Spam queries
+assign a, a1, a2, a3, a4, a5; variable v, v1, v2, v3, v4; while w;
+Select a such that Parent*(w, a1) and Follows(a, a1) and Follows*(a3, a4) pattern a(_, _) pattern a1 (_, _) pattern a(v, _) pattern a1(v2, _) pattern a3(_,_) and a5(_,_)
+12, 15
+5000

@@ -1,0 +1,50 @@
+1 - Select statement with Parent
+stmt s;
+Select s such that Parent(_, s)
+4, 5, 8, 9
+5000
+2 - Select statement with Parent*
+stmt s;
+Select s such that Parent(_, s)
+4, 5, 8, 9
+5000
+3 - Select Parent of statement
+stmt s;
+Select s such that Parent(s, _)
+3, 7
+5000
+4 - Select Parent* of statement
+stmt s;
+Select s such that Parent(s, _)
+3, 7
+5000
+5 - Select valid Parent relation between statements
+variable v;
+Select v such that Parent(3, 4)
+a, b
+5000
+6 - Select valid Parent* relation between statements
+variable v;
+Select v such that Parent*(3, 4)
+a, b
+5000
+7 - Select valid Parent relation between statements and wildcard
+variable v;
+Select v such that Parent(3, _)
+a, b
+5000
+8 - Select valid Parent* relation between statements and wildcard
+variable v;
+Select v such that Parent*(3, _)
+a, b
+5000
+9 - Select valid Parent relation between wildcard and statements
+variable v;
+Select v such that Parent(_, 4)
+a, b
+5000
+10 - Select valid Parent* relation between wildcard and statements
+variable v;
+Select v such that Parent*(_, 4)
+a, b
+5000

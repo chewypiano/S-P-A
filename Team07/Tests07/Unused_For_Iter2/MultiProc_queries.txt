@@ -1,0 +1,55 @@
+1 - Select all procedures
+procedure p;
+Select p
+procA, procB, procC, procD
+5000
+2 - Select all procedures that call other procedures
+procedure p, q;
+Select p such that Calls(p, q)
+procA, procB, procC
+5000
+3 - Select procedure pairs which call each other
+procedure p, q;
+Select <p, q> such that Calls(p, q)
+procA procB, procA procC, procB procC, procC procD
+5000
+4- Select procedures that call procC and modify a
+procedure p, q;
+Select p such that Calls(p, q) with q.procName = "procC" such that Modifies(p, "a")
+procA, procB
+5000
+5 - Select specific procedure using with
+procedure p;
+Select p with p.procName = "procA"
+procA
+5000
+6 - Select boolean for simple relation
+assign a; variable v;
+Select BOOLEAN such that Modifies(a, v);
+TRUE
+5000
+7 - Select variables used by procedure procD
+procedure p; variable v;
+Select v with p.procName = "procD" such that Uses(p, v)
+n, i
+5000
+8 - Select variables modified by procedure procA
+procedure p; variable v;
+Select v with p.procName = "procA" such that Modifies(p, v)
+a, c, b, n
+5000
+9 - Select Next* from within a loop
+prog_line n;
+Select n such that Next*(3, n)
+3, 4, 5, 6, 7, 8, 9
+5000
+10 - Select all procedures if Next condition holds
+procedure p;
+Select p such that Next(1,2)
+procA, procB, procC, procD
+5000
+11 - Select all prog_lines that modify a variable
+prog_line n; variable v;
+Select n such that Modifies(n, v)
+1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 18
+5000

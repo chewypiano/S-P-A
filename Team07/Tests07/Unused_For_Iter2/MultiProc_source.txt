@@ -1,0 +1,31 @@
+procedure procA {
+    a = 1;
+    while (a < b) {
+        c = b + d + e + f - 1238748712;
+        call procB;
+        call procC;
+        if (c < a) then {
+            call procB;
+        } else {
+            call procC;
+        }
+    }
+    call procC;
+}
+procedure procB {
+    a = 3;
+    b = d - c;
+    call procC;
+}
+procedure procC {
+    if (e - g < f + a) then {
+        read n;
+        call procD;
+        print a;
+    } else {
+        print b;
+    }
+}
+procedure procD {
+    a = n + i;
+}

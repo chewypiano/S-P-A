@@ -1,0 +1,2345 @@
+1 - Group 1 ( no clause) All Statements
+stmt s;
+Select s
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64
+5000
+2 - all prog line
+prog_line s;
+Select s
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64
+5000
+3 - All assign
+assign a;
+Select a
+1,4,5,9,11,14,17,18,22,23,25,28,29,33,34,30,37,40,41,44,45, 47,48,49,50,52,53,54,55,57,58,59,60,61
+5000
+4 - All Variable
+variable v;
+Select v
+a,b,c,d,e,f,g,h,i,j,k,l,m,m1,m2,m3,m4,m5,m6,m7,m8,m9,mu1,mu2,mu3,n,o,p,then,u1,u2,u3,u4,u5,u7,u8,u9,z,mu22
+5000
+5 - All constant
+constant c;
+Select c
+1000000001,101010101,1,10,10001,10101010,2,3,4,5,6,7,787878787878,8,9,999
+5000
+6 - All procedure
+procedure p;
+Select p
+first, second
+5000
+400 - Next*
+stmt s,s2;
+Select s such that Next*(s,s2)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63
+5000
+7 - All print
+print p;
+Select p
+7,12,20,26,35,42,62,63
+5000
+8 - All call
+call c;
+Select c
+46
+5000
+9 - All read
+read r;
+Select r
+64,43,36,27,21,13,8
+5000
+10 - All while
+while w;
+Select w
+2, 6, 10, 15,19,24,31,38,51
+5000
+11 - All ifs
+if ifs;
+Select ifs
+56,39,32,16,3
+5000
+12 - no clause - procName call
+call c;
+Select c.procName
+second
+5000
+13 - no clause - procName proc
+procedure p;
+Select p.procName
+first, second
+5000
+14 - no clause - stmt#
+stmt s;
+Select s.stmt#
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64
+5000
+15 - no clause - stmt# read
+read re;
+Select re.stmt#
+64,43,36,27,21,13,8
+5000
+16 - no clause - stmt# call
+call c;
+Select c.stmt#
+46
+5000
+17 - no clause - stmt# prog_linw
+prog_line n;
+Select n.stmt#
+none
+5000
+18 - no clause - stmt# print
+print c;
+Select c.stmt#
+7,12,20,26,35,42,62,63
+5000
+19 - no clause - stmt# assign
+assign c;
+Select c.stmt#
+1,4,5,9,11,14,17,18,22,23,25,28,29,33,34,30,37,40,41,44,45, 47,48,49,50,52,53,54,55,57,58,59,60,61
+5000
+20 - no clause - stmt# if
+if c;
+Select c.stmt#
+56,39,32,16,3
+5000
+1001 - Follows double wildcard - boolean - group 2 single clause
+
+Select BOOLEAN such that Follows(_,_)
+TRUE
+5000
+1002 - Follows double wildcard - stmt
+stmt s;
+Select s such that Follows(_,_)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64
+5000
+1011 - Follows (syn, wildcard) - prog_line
+prog_line n;
+Select n such that Follows(n,_)
+1,2,4,6,7,8,11,12,13,15,16,17,19,20,21,23,25,26,27,30,31,33,35,36,38,39,40,42,43,47,48,49,50,51,52,53,55,56,57,59,60,62,63
+5000
+1012 - Follows (syn, wildcard) - while
+while w;
+Select w.stmt# such that Follows(w,_)
+2, 6, 15,19,31,38,51
+5000
+1013 - Follows (syn, wildcard) - read
+read re1;
+Select <re1, re1, re1> such that Follows(re1,_)
+43 43 43,36 36 36,27 27 27,21 21 21,13 13 13,8 8 8
+5000
+1021 - Follows (wildcard, syn) - print
+print p1;
+Select p1 such that Follows(_,p1)
+62,63,26,12
+5000
+1022 - Follows (wildcard, syn) - call
+call c1;
+Select c1.procName such that Follows(_,c1)
+second
+5000
+1023 - Follows (wildcard, syn) - if
+if ifs1, ifs2;
+Select <ifs1, ifs2> such that Follows(_,ifs1)
+56 56,56 39,56 32,56 16,56 3
+5000
+1031 - Follows (syn, syn) - assign-assign
+assign a1,a2;
+Select <a1.stmt#, a2> such that Follows(a1,a2)
+4 5, 17 18, 33 34, 40 41, 47 48, 48 49, 49 50, 52 53, 53 54, 57 58, 59 60, 60 61
+5000
+1032 - Follows (syn, syn) - assign-print
+assign a; print p;
+Select p such that Follows(a,p)
+12, 26
+5000
+1033 - Follows (syn, syn) - print-read
+read re; print p;
+Select re such that Follows(p,re)
+43,64,36,27,21,13,8
+5000
+1034 - Follows (syn, syn) - while-prog_line
+while w; prog_line n;
+Select <n, w> such that Follows(w,n)
+15 2,10 6,23 19,30 15,38 31,46 38,55 51
+5000
+1041 - Follows (const, wildcard)
+
+Select BOOLEAN such that Follows(46,_)
+FALSE
+5000
+1042 - Follows (const, wildcard) - print
+print p;
+Select p such that Follows(39,_)
+7,12,20,26,35,42,62,63
+5000
+1051 - Follows (wildcard, const) - procedure
+procedure p;
+Select p.procName such that Follows(_,46)
+first, second
+5000
+1052 - Follows (wildcard, const)
+stmt s;
+Select s.stmt# such that Follows(_,1)
+none
+5000
+1061 - Follows (const, const)
+prog_line n;
+Select n such that Follows(38,39)
+none
+5000
+1062 - Follows (const, const)
+
+Select BOOLEAN such that Follows(16,29)
+TRUE
+5000
+1071 - Follows (syn, const) - assign
+assign a;
+Select a such that Follows(a, 2)
+1
+5000
+1072 - Follows (syn, const) - while
+while w;
+Select <w, w.stmt#> such that Follows(w, 10)
+6 6
+5000
+1081 - Follows (const, syn) - assign
+assign a;
+Select BOOLEAN such that Follows(4, a)
+TRUE
+5000
+1082 - Follows (const, syn) - while
+while w;
+Select <w, w.stmt#> such that Follows(6, w)
+10 10
+5000
+1101 - Follows* double wildcard - boolean
+
+Select BOOLEAN such that Follows*(_,_)
+TRUE
+5000
+1102 - Follows* double wildcard - prog_line
+prog_line n;
+Select n such that Follows*(_,_)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64
+5000
+1111 - Follows* (syn, wildcard) - prog_line
+prog_line n;
+Select n such that Follows*(n,_)
+1,2,4,6,7,8,11,12,13,15,16,17,19,20,21,23,25,26,27,30,31,33,35,36,38,39,40,42,43,47,48,49,50,51,52,53,55,56,57,59,60,62,63
+5000
+1112 - Follows* (syn, wildcard) - if
+if ifs;
+Select ifs.stmt# such that Follows*(ifs,_)
+16,39,56
+5000
+1113 - Follows* (syn, wildcard) - read
+read re1;
+Select <re1, re1, re1> such that Follows*(re1,_)
+43 43 43,36 36 36,27 27 27,21 21 21,13 13 13,8 8 8
+5000
+1121 - Follows* (wildcard, syn) - print
+print p1;
+Select p1 such that Follows*(_,p1)
+62,63,26,12
+5000
+1122 - Follows* (wildcard, syn) - call
+call c1;
+Select c1.procName such that Follows*(_,c1)
+second
+5000
+1123 - Follows* (wildcard, syn) - if
+if ifs1, ifs2;
+Select <ifs1, ifs2> such that Follows*(_,ifs1)
+56 56,56 39,56 32,56 16,56 3
+5000
+1131 - Follows* (syn, syn) - while-while
+while w1,w2;
+Select <w1.stmt#, w2> such that Follows*(w1,w2)
+2 15,6 10,15 31,2 31,19 24,31 38,15 38,2 38
+5000
+1132 - Follows* (syn, syn) - assign-call
+assign a; call c;
+Select a such that Follows*(a,c)
+30,1
+5000
+1133 - Follows* (syn, syn) - read-print
+read re; print p;
+Select BOOLEAN such that Follows*(re,p)
+FALSE
+5000
+1134 - Follows* (syn, syn) - stmt-call
+stmt s; call c;
+Select <s, c.procName> such that Follows*(s,c)
+1 second, 2 second, 15 second, 30 second, 31 second, 38 second
+5000
+1135 - Follows* (syn, syn) - prog_line-stmt
+stmt s; stmt n;
+Select <s.stmt#, n.stmt#> such that Follows*(n, s)
+2 1,5 4,10 6,8 7,9 7,9 8,12 11,13 11,14 11,13 12,14 12, 14 13,15 2,15 1,46 1,46 2,46 15,18 17,21 20,22 20,22 21,23 19,24 19,24 23,26 25,27 25,27 26,28 25,28 26,28 27,29 16,30 1,30 15,30 2,31 1,31 15,31 2,31 30,34 33,36 35,37 35,37 36,38 1,38 15,38 2,38 30,38 31,41 40,43 42,44 42,44 43,45 39,46 30,46 31,46 38,48 47,49 47,49 48,50 47,50 48,50 49,51 47,51 48,51 49,51 50,53 52,54 52,54 53,55 47,55 48,55 49,55 50,55 51,56 47,56 48,56 49,56 50,56 51,56 55,58 57,60 59,61 59,61 60,62 47,62 48,62 49,62 50,62 51,62 55,62 56,63 47,63 48,63 49,63 50,63 51,63 55,63 56,63 62,64 47,64 48,64 49,64 50,64 51,64 55,64 56,64 62,64 63
+5000
+1141 - Follows* (const, wildcard)
+
+Select BOOLEAN such that Follows*(46,_)
+FALSE
+5000
+1142 - Follows* (const, wildcard) - read
+read p;
+Select p.stmt# such that Follows*(3,_)
+none
+5000
+1151 - Follows* (wildcard, const) - procedure
+procedure p;
+Select p.procName such that Follows*(_,46)
+first, second
+5000
+1152 - Follows* (wildcard, const)
+while w;
+Select w.stmt# such that Follows*(_,6)
+none
+5000
+1161 - Follows* (const, const)
+call n;
+Select n.procName such that Follows*(2,30)
+second
+5000
+1162 - Follows* (const, const)
+
+Select BOOLEAN such that Follows*(50,52)
+FALSE
+5000
+1171 - Follows* (syn, const) - print
+print r;
+Select r.stmt# such that Follows*(r, 64)
+62,63
+5000
+1172 - Follows* (syn, const) - if
+if ifs;
+Select <ifs, ifs.stmt#> such that Follows*(ifs, 45)
+39 39
+5000
+1181 - Follows* (const, syn) - assign
+assign a;
+Select a such that Follows*(48, a)
+55,50,49
+5000
+1182 - Follows* (const, syn) - while
+while w;
+Select <w, w.stmt#> such that Follows*(2, w)
+15 15,31 31,38 38
+5000
+1201 - Parent double wildcard - boolean
+
+Select BOOLEAN such that Parent(_,_)
+TRUE
+5000
+1202 - Parent double wildcard - assign
+assign a;
+Select a such that Parent(_,_)
+1,4,5,9,11,14,17,18,22,23,25,28,29,33,34,30,37,40,41,44,45, 47,48,49,50,52,53,54,55,57,58,59,60,61
+5000
+1211 - Parent (syn, wildcard) - prog_line
+prog_line n;
+Select n such that Parent(n,_)
+2, 6, 10, 15,19,24,31,38,51,56,39,32,16,3
+5000
+1212 - Parent (syn, wildcard) - while
+while w;
+Select w.stmt# such that Parent(w,_)
+2, 6, 10, 15,19,24,31,38,51
+5000
+1213 - Parent (syn, wildcard) - if
+if ifs;
+Select <ifs, ifs.stmt#> such that Parent(ifs,_)
+56 56,39 39,32 32 ,16 16,3 3
+5000
+1214 - Parent (syn, wildcard) - assign
+assign a;
+Select a such that Parent(a,_)
+none
+5000
+1221 - Parent (wildcard, syn) - print
+print p1;
+Select p1 such that Parent(_,p1)
+7,12,20,26,35,42
+5000
+1222 - Parent (wildcard, syn) - while
+while w;
+Select w.stmt# such that Parent(_,w)
+6, 10,19,24
+5000
+1223 - Parent (wildcard, syn) - if
+if ifs1, ifs2;
+Select <ifs1, ifs2> such that Parent(_,ifs1)
+3 3, 3 16, 3 32, 3 39,16 3, 16 16, 16 32, 16 39,32 3, 32 16, 32 32, 32 39,39 3,39 16,39 32,39 39,3 56, 16 56, 32 56, 39 56
+5000
+1224 - Parent (wildcard, syn) - call
+call c;
+Select c such that Parent(_,c)
+none
+5000
+1231 - Parent (syn, syn) - if-while
+if ifs; while w;
+Select <ifs.stmt#, w> such that Parent(ifs,w)
+3 6, 3 10, 16 19, 16 24
+5000
+1232 - Parent (syn, syn) - while-if
+if ifs; while w;
+Select w such that Parent(w, ifs)
+2,15,31,38
+5000
+1233 - Parent (syn, syn) - stmt-assign
+stmt s; assign a;
+Select <s, a> such that Parent(s,a)
+3 4,3 5,6 9,10 11,10 14,15 29,16 17,16 18,16 23,19 22,24 25,24 28,32 33,32 34,32 37,38 45,39 40,39 41,39 44,51 52, 51 53,51 54,56 57,56 58,56 59,56 60,56 61
+5000
+1234 - Parent (syn, syn) - prog_line-read
+read r; prog_line n;
+Select <r, n, r.stmt#> such that Parent(n,r)
+8 6 8,13 10 13,21 19 21,27 24 27,36 32 36,43 39 43
+5000
+1241 - Parent (const, wildcard)
+
+Select BOOLEAN such that Parent(1,_)
+FALSE
+5000
+1242 - Parent (const, wildcard) - print
+print p;
+Select p such that Parent(39,_)
+7,12,20,26,35,42,62,63
+5000
+1251 - Parent (wildcard, const) - procedure
+procedure p;
+Select p.procName such that Parent(_,46)
+none
+5000
+1252 - Parent (wildcard, const)
+variable v;
+Select v.varName such that Parent(_,45)
+a,b,c,d,e,f,g,h,i,j,k,l,m,m1,m2,m3,m4,m5,m6,m7,m8,m9,mu1,mu2,mu3,n,o,p,then,u1,u2,u3,u4,u5,u7,u8,u9,z,mu22
+5000
+1261 - Parent (const, const)
+prog_line n;
+Select n such that Parent(38,39)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64
+5000
+1262 - Parent (const, const)
+
+Select BOOLEAN such that Parent(16,20)
+FALSE
+5000
+1271 - Parent (syn, const) - while
+while w;
+Select w such that Parent(w, 3)
+2
+5000
+1272 - Parent (syn, const) - if
+if if;
+Select <if, if.stmt#> such that Parent(if, 10)
+3 3
+5000
+1281 - Parent (const, syn) - assign
+assign a;
+Select BOOLEAN such that Parent(3, a)
+TRUE
+5000
+1282 - Parent (const, syn) - while
+while w;
+Select w such that Parent(3, w)
+6,10
+5000
+1301 - Parent* double wildcard - boolean
+
+Select BOOLEAN such that Parent*(_,_)
+TRUE
+5000
+1302 - Parent* double wildcard - assign
+assign a;
+Select a such that Parent*(_,_)
+1,4,5,9,11,14,17,18,22,23,25,28,29,33,34,30,37,40,41,44,45, 47,48,49,50,52,53,54,55,57,58,59,60,61
+5000
+1311 - Parent* (syn, wildcard) - prog_line
+prog_line n;
+Select n such that Parent*(n,_)
+2, 6, 10, 15,19,24,31,38,51,56,39,32,16,3
+5000
+1312 - Parent* (syn, wildcard) - while
+while w;
+Select w.stmt# such that Parent*(w,_)
+2, 6, 10, 15,19,24,31,38,51
+5000
+1313 - Parent* (syn, wildcard) - if
+if ifs;
+Select <ifs, ifs.stmt#> such that Parent*(ifs,_)
+56 56,39 39,32 32 ,16 16,3 3
+5000
+1314 - Parent* (syn, wildcard) - assign
+assign a;
+Select a such that Parent*(a,_)
+none
+5000
+1321 - Parent* (wildcard, syn) - print
+print p1;
+Select p1 such that Parent*(_,p1)
+7,12,20,26,35,42
+5000
+1322 - Parent* (wildcard, syn) - while
+while w;
+Select w.stmt# such that Parent*(_,w)
+6, 10,19,24
+5000
+1323 - Parent* (wildcard, syn) - if
+if ifs1, ifs2;
+Select <ifs1, ifs2> such that Parent*(_,ifs1)
+3 3, 3 16, 3 32, 3 39,16 3, 16 16, 16 32, 16 39,32 3, 32 16, 32 32, 32 39,39 3,39 16,39 32,39 39,3 56, 16 56, 32 56, 39 56
+5000
+1324 - Parent* (wildcard, syn) - call
+call c;
+Select c such that Parent*(_,c)
+none
+5000
+1331 - Parent* (syn, syn) - if-while
+if ifs; while w;
+Select <ifs.stmt#, w> such that Parent*(ifs,w)
+3 6, 3 10, 16 19, 16 24
+5000
+1332 - Parent* (syn, syn) - while-if
+if ifs; while w;
+Select w such that Parent*(w, ifs)
+2,15,31,38
+5000
+1333 - Parent* (syn, syn) - stmt-read
+stmt s; read r;
+Select <r,s> such that Parent*(s,r)
+13 10,13 2,13 3,21 15,21 16,21 19,27 15,27 16,27 24,36 31,36 32,43 38,43 39,8 2,8 3,8 6
+5000
+1334 - Parent* (syn, syn) - prog_line-print
+print pr; prog_line n;
+Select <n,pr, pr.stmt#> such that Parent*(n,pr)
+10 12 12,15 20 20,15 26 26,16 20 20,16 26 26,19 20 20,2 12 12,2 7 7,24 26 26,3 12 12,3 7 7,31 35 35,32 35 35,38 42 42,39 42 42,6 7 7
+5000
+1341 - Parent* (const, wildcard)
+
+Select BOOLEAN such that Parent*(1,_)
+FALSE
+5000
+1342 - Parent* (const, wildcard) - print
+print p;
+Select p such that Parent*(39,_)
+7,12,20,26,35,42,62,63
+5000
+1351 - Parent* (wildcard, const) - procedure
+procedure p;
+Select p.procName such that Parent*(_,46)
+none
+5000
+1352 - Parent* (wildcard, const)
+variable v;
+Select v.varName such that Parent*(_,45)
+a,b,c,d,e,f,g,h,i,j,k,l,m,m1,m2,m3,m4,m5,m6,m7,m8,m9,mu1,mu2,mu3,n,o,p,then,u1,u2,u3,u4,u5,u7,u8,u9,z,mu22
+5000
+1361 - Parent* (const, const)
+prog_line n;
+Select n such that Parent*(38,39)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64
+5000
+1362 - Parent* (const, const)
+
+Select BOOLEAN such that Parent*(16,20)
+TRUE
+5000
+1371 - Parent* (syn, const) - while
+while w;
+Select w such that Parent*(w, 3)
+2
+5000
+1372 - Parent* (syn, const) - if
+if if;
+Select <if, if.stmt#> such that Parent*(if, 10)
+3 3
+5000
+1381 - Parent* (const, syn) - assign
+assign a;
+Select BOOLEAN such that Parent*(3, a)
+TRUE
+5000
+1382 - Parent* (const, syn) - while
+while w;
+Select w such that Parent*(3, w)
+6,10
+5000
+1401 - Next (wildcard, wildcard)
+stmt s;
+Select s such that Next(_,_)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64
+5000
+1402 - Next (wildcard, wildcard)
+
+Select BOOLEAN such that Next(_,_)
+TRUE
+5000
+1411 - Next (syn, wildcard) - prog_line
+prog_line n;
+Select n such that Next(n,_)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63
+5000
+1412 - Next (syn, wildcard) - while
+while w;
+Select w.stmt# such that Next(w,_)
+2, 6, 10, 15, 19, 24, 31, 38, 51
+5000
+1413 - Next (syn, wildcard) - read
+read re1;
+Select <re1, re1, re1> such that Next(re1,_)
+43 43 43,36 36 36,27 27 27,21 21 21,13 13 13,8 8 8
+5000
+1421 - Next (wildcard, syn) - print
+print p1;
+Select p1 such that Next(_,p1)
+62,63,26,12,7,20,35,42
+5000
+1422 - Next (wildcard, syn) - call
+call c1;
+Select c1.procName such that Next(_,c1)
+second
+5000
+1423 - Next (wildcard, syn) - if-if
+if ifs1, ifs2;
+Select <ifs1, ifs2> such that Next(_,ifs1)
+56 56,56 39,56 32,56 16,56 3,16 3,16 16,16 32, 16 39, 16 56,3 3,3 16,3 32,3 39,3 56,32 3,32 16,32 32,32 39,32 56,39 3,39 16,39 32,39 39,39 56
+5000
+1431 - Next (syn, syn) - assign-read
+assign a1; read re1;
+Select <a1.stmt#, re1> such that Next(re1,a1)
+9 8, 14 13,22 21,28 27,37 36,44 43
+5000
+1432 - Next (syn, syn) - assign-if
+assign a1; if if1;
+Select <a1.stmt#, if1> such that Next(if1,a1)
+4 3,17 16,33 32,40 39,57 56,59 56
+5000
+1433 - Next (syn, syn) - while-if
+while w1; if if1;
+Select <w1.stmt#, if1> such that Next(w1,if1)
+2 3,15 16,31 32,38 39
+5000
+1434 - Next (syn, syn) - prog_line-print
+prog_line n1; print pr1;
+Select n1 such that Next(n1,pr1)
+6,11,19,25,32,39,58,61,62
+5000
+1441 - Next (const, wildcard)
+
+Select BOOLEAN such that Next(27,_)
+TRUE
+5000
+1442 - Next (const, wildcard) - read
+read re1;
+Select re1 such that Next(36,_)
+8,13,21,27,36,43,64
+5000
+1443 - Next (const, wildcard) - procedure
+procedure p;
+Select p.procName such that Next(_,42)
+first, second
+5000
+1451 - Next (wildcard, const)
+stmt s;
+Select s.stmt# such that Next(_,1)
+none
+5000
+1452 - Next (wildcard, const) - print
+print pr1;
+Select pr1 such that Next(_,35)
+7,12,20,26,35,42,62,63
+5000
+1453 - Next (wildcard, const) - call
+call call1;
+Select call1 such that Next(_,34)
+46
+5000
+1461 - Next(const, const)
+
+Select BOOLEAN such that Next(2,3)
+TRUE
+5000
+1462 - Next(const, const) - if
+if if1;
+Select if1 such that Next(42,43)
+3,16,32,39,56
+5000
+1463 - Next(const, const) - while
+while w1;
+Select w1 such that Next(62,64)
+none
+5000
+1471 - Next(syn, const) - read
+read re1;
+Select re1 such that Next(re1,44)
+43
+5000
+1472 - Next(syn, const) - print
+print pr1;
+Select pr1 such that Next(pr1,27)
+26
+5000
+1473 - Next(const, syn) - prog_line
+prog_line pl1;
+Select pl1 such that Next(15,pl1)
+30,16
+5000
+1474 - Next(const, syn) - assign
+assign a1;
+Select a1 such that Next(15,a1)
+30
+5000
+1501 - Next*(wildcard,wildcard)
+stmt s;
+Select s such that Next*(_,_)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64
+5000
+1502 - Next*(wildcard,wildcard)
+
+Select BOOLEAN such that Next*(_,_)
+TRUE
+5000
+1511 - Next* (syn, wildcard) - prog_line
+prog_line n;
+Select n such that Next*(n,_)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63
+5000
+1512 - Next* (syn, wildcard) - while
+while w;
+Select w.stmt# such that Next*(w,_)
+2, 6, 10, 15, 19, 24, 31, 38, 51
+5000
+1513 - Next* (syn, wildcard) - read
+read re1;
+Select <re1, re1, re1> such that Next*(re1,_)
+43 43 43,36 36 36,27 27 27,21 21 21,13 13 13,8 8 8
+5000
+1521 - Next* (wildcard, syn) - print
+print p1;
+Select p1 such that Next*(_,p1)
+62,63,26,12,7,20,35,42
+5000
+1522 - Next* (wildcard, syn) - call
+call c1;
+Select c1.procName such that Next*(_,c1)
+second
+5000
+1523 - Next* (wildcard, syn) - if-if
+if ifs1, ifs2;
+Select <ifs1, ifs2> such that Next*(_,ifs1)
+56 56,56 39,56 32,56 16,56 3,16 3,16 16,16 32, 16 39, 16 56,3 3,3 16,3 32,3 39,3 56,32 3,32 16,32 32,32 39,32 56,39 3,39 16,39 32,39 39,39 56
+5000
+1531 - Next* (syn, syn) - assign
+assign a1; read re1;
+Select a1 such that Next*(re1,a1)
+4,5,9,11,14,17,18,22,23,25,28,29,30,33,34,37,40,41,44,45
+5000
+1532 - Next* (syn, syn) - while-if
+while w1; if if1;
+Select <w1, if1> such that Next*(w1,if1)
+2 3,2 16,2 32,2 39,10 3,10 16,10 32,10 39,6 3,6 16,6 32,6 39,15 16,15 32,15 39,19 16,19 32,19 39,24 16,24 32,24 39,31 32,31 39,38 39,51 56
+5000
+1533 - Next* (syn, syn) - prog_line-print
+prog_line n1; print pr1;
+Select n1 such that Next*(n1,pr1)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62
+5000
+1534 - Next* (syn, syn) - while-call
+while w1; call call1;
+Select <w1.stmt#, call1> such that Next*(w1,call1)
+2 46,6 46,10 46,15 46,19 46,24 46,31 46,38 46
+5000
+1541 - Next* (const, wildcard)
+
+Select BOOLEAN such that Next*(27,_)
+TRUE
+5000
+1542 - Next* (const, wildcard) - read
+read re1;
+Select re1 such that Next*(36,_)
+8,13,21,27,36,43,64
+5000
+1543 - Next* (const, wildcard) - procedure
+procedure p;
+Select p.procName such that Next*(_,42)
+first, second
+5000
+1551 - Next* (wildcard, const)
+stmt s;
+Select s.stmt# such that Next*(_,1)
+none
+5000
+1552 - Next* (wildcard, const) - print
+print pr1;
+Select pr1 such that Next*(_,35)
+7,12,20,26,35,42,62,63
+5000
+1553 - Next* (wildcard, const) - call
+call call1;
+Select call1 such that Next*(_,34)
+46
+5000
+1561 - Next*(const, const)
+
+Select BOOLEAN such that Next*(2,27)
+TRUE
+5000
+1562 - Next*(const, const) - if
+if if1;
+Select if1 such that Next*(42,39)
+3,16,32,39,56
+5000
+1563 - Next*(const, const) - while
+while w1;
+Select w1 such that Next*(62,65)
+none
+5000
+1571 - Next*(syn, const) - read
+read re1;
+Select re1 such that Next*(re1,44)
+8,13,21,27,36,43
+5000
+1572 - Next*(syn, const) - print
+print pr1;
+Select pr1 such that Next*(pr1,27)
+7,12,20,26
+5000
+1573 - Next*(const, syn) - prog_line
+prog_line pl1;
+Select pl1 such that Next*(60,pl1)
+61,62,63,64
+5000
+1574 - Next*(const, syn) - assign
+assign a1;
+Select a1 such that Next*(15,a1)
+17,18,22,23,25,28,29,30,33,34,37,40,41,44,45
+5000
+1601 - Affects - Minimal queries -> more testing in Affects_queries
+assign a1,a2;
+Select <a1,a2> such that Affects(a1,a2)
+34 34, 41 41, 34 41, 49 50, 49 59, 50 55, 50 58, 50 59, 52 55, 52 58,52 59,54 52,54 55,54 61,57 58,59 60
+5000
+1602 - Affects
+read r; print pr; assign a1; stmt s1;
+Select BOOLEAN such that Affects(2,11)
+FALSE
+5000
+1603 - Affects
+read r; print pr; assign a1; stmt s1;
+Select BOOLEAN such that Affects(34,41)
+TRUE
+5000
+1604 - Affects
+read r; print pr; assign a1; stmt s1;
+Select a1 such that Affects(a1,_)
+41,34,49,50,52,54,57,59
+5000
+1605 - Affects
+read r; print pr; assign a1; stmt s1;
+Select a1 such that Affects(a1,a1)
+41,34
+5000
+1606 - Affects
+stmt s1; while w1; assign a1, a2; variable v1;
+Select a1 such that Affects(49,a1)
+50,59
+5000
+1607 - Affects
+stmt s1; while w1; assign a1, a2; variable v1;
+Select a1 such that Affects(a1,50)
+49
+5000
+1701 - Affects* - Minimal queries -> more testing in Affects_queries
+assign a1,a2;
+Select <a1,a2> such that Affects*(a1,a2)
+34 34, 41 41, 34 41, 49 50, 49 59, 50 55, 50 58, 50 59, 52 55, 52 58,52 59,54 52,54 55,54 61,57 58,59 60,49 55,49 58,49 60,50 60,52 60,54 58,54 59,54 60
+5000
+1702 - Affects*
+stmt s1; while w1; assign a1, a2; variable v1;
+Select a1 such that Affects*(a1,50)
+49
+5000
+1703 - Affects*
+stmt s1; while w1; assign a1, a2; variable v1;
+Select a1 such that Affects*(49,a1)
+50,55,58,59,60
+5000
+1704 - Affects*
+stmt s1; while w1; assign a1, a2; variable v1;
+Select a1 such that Affects*(a2,a1)
+41,34,50,52,55,58,59,60,61
+5000
+1705 - Affects*
+stmt s1; while w1; assign a1, a2; variable v1;
+Select a1 such that Affects*(a1,a2)
+41,34,49,50,52,54,57,59
+5000
+1706 - Affects*
+stmt s1; while w1; assign a1, a2; variable v1;
+Select a1 such that Affects*(s1,a2)
+1,4,5,9,11,14,17,18,22,23,25,28,29,33,34,30,37,40,41,44,45, 47,48,49,50,52,53,54,55,57,58,59,60,61
+5000
+1707 - Affects*
+stmt s1; while w1; assign a1, a2; variable v1;
+Select a1 such that Affects*(s1,_)
+1,4,5,9,11,14,17,18,22,23,25,28,29,33,34,30,37,40,41,44,45, 47,48,49,50,52,53,54,55,57,58,59,60,61
+5000
+1708 - Affects*
+read r; print pr; assign a1; stmt s1;
+Select a1 such that Affects*(a1,_)
+41,34,49,50,52,54,57,59
+5000
+1709 - Affects*
+read r; print pr; assign a1; stmt s1;
+Select a1 such that Affects*(a1,a1)
+41,34
+5000
+1710 - Affects*
+read r; print pr; assign a1; stmt s1;
+Select BOOLEAN such that Affects*(41,41)
+TRUE
+5000
+1711 - Affects*
+read r; print pr; assign a1; stmt s1;
+Select a1 such that Affects*(54,a1)
+52,55,58,59,60,61
+5000
+1801 - Uses(syn, wildcard) - stmt
+stmt s1;
+Select s1 such that Uses(s1,_)
+1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 14, 15, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 28, 29, 30, 31, 32, 33, 34, 35, 37, 38, 39, 40, 41, 42, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63
+5000
+1802 - Uses(syn, wildcard) - if
+if if1;
+Select if1.stmt# such that Uses(if1,_)
+3,16,32,39,56
+5000
+1803 - Uses(syn, wildcard) - call
+call c1;
+Select c1 such that Uses(c1,_)
+46
+5000
+1811 - Uses(syn, var) - print-var
+print pr1; variable var1;
+Select pr1 such that Uses(pr1,var1)
+7,12,20,26,35,42,62,63
+5000
+1812 - Uses(syn, var) - assign-var
+assign a1; variable var1;
+Select BOOLEAN such that Uses(a1,var1)
+TRUE
+5000
+1813 - Uses(syn, var) - proc-var
+procedure p1; variable var1;
+Select p1 such that Uses(p1,var1)
+first, second
+5000
+1814 - Uses(syn, var) - stmt-var
+stmt s1; variable var1;
+Select s1 such that Uses(s1,var1)
+1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 14, 15, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 28, 29, 30, 31, 32, 33, 34, 35, 37, 38, 39, 40, 41, 42, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63
+5000
+1821 - Uses(syn, var_name) - stmt#-var_name
+stmt s1; variable var1;
+Select s1.stmt# such that Uses(s1,"u4")
+2, 3, 4, 15, 16, 17, 31, 32, 34, 38, 39, 41
+5000
+1822 - Uses(syn, var_name) - print-var_name
+print p1; variable var1;
+Select p1 such that Uses(p1,"u1")
+7, 20, 35, 42
+5000
+1823 - Uses(syn, var_name) - while-var_name
+while w1;
+Select w1 such that Uses(w1,"u3")
+2,6,10,15,19,24
+5000
+1824 - Uses(syn, var_name) - if-var_name
+if if1, if2;
+Select <if1,if2> such that Uses(if1,"mu3")
+32 16,32 3,32 32,32 39,32 56,39 16,39 3,39 32,39 39,39 56
+5000
+1825 - Uses(syn, var_name) - call-var_name
+call c;
+Select c such that Uses(c,"i")
+46
+5000
+1831 - Uses(const, wildcard) - const-wildcard
+
+Select BOOLEAN such that Uses(4,_)
+TRUE
+5000
+1832 - Uses(const, wildcard) - const-wildcard
+call c1;
+Select c1.stmt# such that Uses(9,_)
+46
+5000
+1841 - Uses(const, var) - const-var
+variable var1;
+Select var1 such that Uses(11,var1)
+u1
+5000
+1842 - Uses(const, var) - const-var
+variable var1;
+Select var1 such that Uses(15,var1)
+u1,u2,u3,u4,u5,u7,u8,mu1,mu22
+5000
+1851 - Uses(const,var_name) - const-var_name
+
+Select BOOLEAN such that Uses(30,"u9")
+TRUE
+5000
+1852 - Uses(const,var_name) - const-var_name
+
+Select BOOLEAN such that Uses(37,"u1")
+TRUE
+5000
+1901 - Modifies(syn, wildcard) - prog_line
+prog_line pl1;
+Select pl1 such that Modifies(pl1,_)
+1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 13, 14, 15, 16, 17, 18, 19, 21, 22, 23, 24, 25, 27, 28, 29, 30, 31, 32, 33, 34, 36, 37, 38, 39, 40, 41, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 64
+5000
+1902 - Modifies(syn, wildcard) - while
+while w1;
+Select w1.stmt# such that Modifies(w1,_)
+2, 6, 10, 15, 19, 24, 31, 38, 51
+5000
+1903 - Modifies(syn, wildcard) - read
+read re1;
+Select re1 such that Modifies(re1,_)
+8, 13, 21, 27, 36, 43, 64
+5000
+1911 - Modifies(syn, var) - read-var
+read re1; variable var1;
+Select re1 such that Modifies(re1,var1)
+8, 13, 21, 27, 36, 43, 64
+5000
+1912 - Modifies(syn, var) - assign-var
+assign a1; variable var1;
+Select BOOLEAN such that Modifies(a1,var1)
+TRUE
+5000
+1913 - Modifies(syn, var) - proc-var
+procedure p1; variable var1;
+Select p1 such that Modifies(p1,var1)
+first, second
+5000
+1914 - Modifies(syn, var) - prog_line-var
+prog_line pl1; variable var1;
+Select pl1 such that Modifies(pl1,var1)
+1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 13, 14, 15, 16, 17, 18, 19, 21, 22, 23, 24, 25, 27, 28, 29, 30, 31, 32, 33, 34, 36, 37, 38, 39, 40, 41, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 64
+5000
+1921 - Modifies(syn, var_name) - prog_line#-var_name
+prog_line pl1; variable var1;
+Select pl1.stmt# such that Modifies(pl1,"m9")
+none
+5000
+1922 - Modifies(syn, var_name) - read-var_name
+read re1;
+Select re1 such that Modifies(re1,"c")
+64
+5000
+1923 - Modifies(syn, var_name) - call-var_name
+call c1; variable v;
+Select v such that Modifies(c1,v)
+a,b,c,d,g,h,z
+5000
+1924 - Modifies(syn, var_name) - if-var_name
+if if1, if2;
+Select <if1,if2> such that Modifies(if1,"d")
+56 3,56 16,56 32,56 39,56 56
+5000
+1931 - Modifies(const, wildcard) - const-wildcard
+
+Select BOOLEAN such that Modifies(5,_)
+TRUE
+5000
+1932 - Modifies(const, wildcard) - const-wildcard
+if if1;
+Select if1 such that Modifies(34,_)
+3, 16, 32, 39, 56
+5000
+1941 - Modifies(const, var) - const-var
+variable var1;
+Select var1 such that Modifies(18,var1)
+m3
+5000
+1942 - Modifies(const, var) - const-var
+variable var1;
+Select var1 such that Modifies(27,var1)
+m5
+5000
+1951 - Modifies(const, var_name) - const-var_name
+
+Select BOOLEAN such that Modifies(22,"m1")
+TRUE
+5000
+1952 - Modifies(const, var_name) - const-var_name
+
+Select BOOLEAN such that Modifies(27,"m5")
+TRUE
+5000
+1971 - Calls - Minimal Queries -> more in call_queries
+call c;
+Select c such that Calls(_,_)
+46
+5000
+1972 - Calls
+call c; procedure p;
+Select p such that Calls(p,_)
+first
+5000
+1973 - Calls
+call c; procedure p;
+Select p such that Calls(_,p)
+second
+5000
+1981 - Calls* Minimal Queries -> more in call_queries
+procedure p1,p2;
+Select <p1,p2.procName> such that Calls*(p1,p2)
+first second
+5000
+2001 - Pattern assign - wildcard wildcard
+assign a;
+Select a pattern a(_,_)
+1,4,5,9,11,14,17,18,22,23,25,28,29,33,34,30,37,40,41,44,45, 47,48,49,50,52,53,54,55,57,58,59,60,61
+5000
+2011 - Pattern assign - wildcard fullExpr
+assign a;
+Select a pattern a(_,"u4 + u5")
+4, 17
+5000
+2012 - Pattern assign - wildcard fullExpr
+assign a;
+Select a.stmt# pattern a(_,"u7")
+45,23
+5000
+2013 - Pattern assign - wildcard fullExpr
+assign a;
+Select BOOLEAN pattern a(_,"(999+a+b)")
+FALSE
+5000
+2021 - Pattern assign - wildcard subExpr
+assign a;
+Select a.stmt# pattern a(_,_"999+a+b"_)
+58,59
+5000
+2022 - Pattern assign - wildcard subExpr
+assign a;
+Select <a,a> pattern a(_,_"(999+a+b)"_)
+58 58,59 59
+5000
+2023 - Pattern assign - wildcard subExpr
+assign a;
+Select <a,a> pattern a(_,_"j/k"_)
+none
+5000
+2031 - Pattern assign - ident wildcard
+assign a;
+Select a.stmt# pattern a("m4",_)
+11,25
+5000
+2032 - Pattern assign - ident wildcard
+assign a;
+Select a.stmt# pattern a("i",_)
+none
+5000
+2041 - Pattern assign - ident fullExpr
+assign a;
+Select a.stmt# pattern a("m4","4/u1+9%8+7%6")
+25
+5000
+2042 - Pattern assign - ident fullExpr
+assign a;
+Select a.stmt# pattern a("m4","4/u1+9%8+7%7")
+11
+5000
+2051 - Pattern assign - ident subExpr
+assign a;
+Select a pattern a("h", _"j/k"_)
+none
+5000
+2052 - Pattern assign - ident subExpr
+assign a;
+Select a pattern a("h", _"i/j"_)
+53
+5000
+2061 - Pattern assign - syn wildcard
+assign a; variable v;
+Select <a, v.varName> pattern a(v,_)
+1 m1,11 m4,14 m6,17 m2,18 m3,22 m1,23 m7,25 m4,28 m6,29 m8,30 m9,33 m9,34 mu3,37 m1,4 m2,40 m9,41 mu3,44 m1,45 m9,47 a,48 a,49 a,5 m3,50 b,52 b,53 h,54 c,55 g,57 a,58 z,59 z,60 z,61 d,9 m1
+5000
+2071 - Pattern assign - syn fullExpr
+assign a; variable v;
+Select <a.stmt#,v> pattern a(v,"u4+u5")
+17 m2,4 m2
+5000
+2072 - Pattern assign - syn fullExpr
+assign a; variable v;
+Select v pattern a(v, "u8")
+m8
+5000
+2081 - Pattern assign - syn subExpr
+assign a; variable v;
+Select a.stmt# pattern a(v, _"9%8"_)
+9,11,14,22,25,28,37,44
+5000
+2082 - Pattern assign - syn subExpr
+assign a; variable v;
+Select a pattern a(v, _"i/j"_)
+53, 57
+5000
+2101 - Pattern if - wildcard
+if ifs;
+Select ifs.stmt# pattern ifs(_,_,_)
+56,39,32,16,3
+5000
+2111 - Pattern if - ident
+if ifs;
+Select ifs pattern ifs("b",_,_)
+56
+5000
+2112 - Pattern if - ident
+if ifs;
+Select ifs.stmt# pattern ifs("mu1",_,_)
+39,32,16,3
+5000
+2121 - Pattern if - syn
+if ifs; variable v;
+Select <v,ifs> pattern ifs(v,_,_)
+b 56,c 56,d 56,e 56,f 56,g 56,l 56,m 56,mu1 16,mu1 3,mu1 32,mu1 39,mu2 3,mu2 32,mu2 39,mu22 16,n 56,o 56,p 56,then 56
+5000
+2131 - Pattern while - wildcard
+while w;
+Select w.stmt# pattern w(_,_)
+2, 6, 10, 15,19,24,31,38,51
+5000
+2141 - Pattern while - ident
+while w;
+Select w pattern w("u4",_)
+2,15
+5000
+2142 - Pattern while - ident
+while w;
+Select w.stmt# pattern w("a",_)
+51
+5000
+2151 - Pattern while - syn
+while w; variable v;
+Select v pattern w(v,_)
+u1,u2,u3,u4,u5,a
+5000
+2201 - with-stmt#
+stmt s1;
+Select s1 with s1.stmt# = 3
+3
+5000
+2202 - with-procName
+procedure p1;
+Select p1 with p1.procName = "second"
+second
+5000
+2203 - with-value
+stmt s1; constant c1;
+Select s1 with s1.stmt# = c1.value
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+5000
+2204 - with-and
+stmt s1; prog_line pl1;
+Select s1 with s1.stmt# = pl1 and pl1 = 10
+10
+5000
+10a - Group 2.5 ( single clause) - extra clauses from iter 2
+stmt s;
+Select s such that Follows(s,_)
+1,2,4,6,7,8,11,12,13,15,16,17,19,20,21,23,25,26,27,30,31,33,35,36,38,39,40,42,43,47,48,49,50,51,52,53,55,56,57,59,60,62,63
+5000
+10.1 - follows, only synonyms, one synonym progline
+prog_line s;
+Select s such that Follows(s,_)
+1,2,4,6,7,8,11,12,13,15,16,17,19,20,21,23,25,26,27,30,31,33,35,36,38,39,40,42,43,47,48,49,50,51,52,53,55,56,57,59,60,62,63
+5000
+10.2 - follows, only synonyms, one synonym assign
+assign s;
+Select s such that Follows(s,_)
+1,4,11,17,25,30,33,40,47,48,49,50,52,53,55,57,59,60,23
+5000
+10.3 - follows, only synonyms, one synonym print
+print s;
+Select s such that Follows(s,_)
+7,12,20,26,35,42,62,63
+5000
+10.4 - follows, only synonyms, one synonym print
+print s;
+Select s such that Follows(_,s)
+62,63,26,12
+5000
+11 - follows, only synonyms, independent synonyms
+read re; stmt s;
+Select re such that Follows(s,re)
+64,43,36,27,21,13,8
+5000
+11.1 - follows, only synonyms, independent synonyms
+print pr; stmt s;
+Select pr such that Follows(s,pr)
+62,63,26,12
+5000
+12 - follows
+stmt s;
+Select s such that Follows(s,2)
+1
+5000
+13 - follows
+read re; stmt s;
+Select re such that Follows(re,s)
+43,36,27,21,13,8
+5000
+14 - valid, follow* returns all being followed
+stmt followed;
+Select followed such that Follows*(followed,2)
+1
+5000
+15 - valid, follow* returns all followers inside nesting 1
+stmt followers;
+Select followers such that Follows*(3,followers)
+none
+5000
+16 - valid, follow* returns all followers inside nesting 2
+stmt followers;
+Select followers such that Follows*(6,followers)
+10
+5000
+166 - valid, follow* returns all followers inside nesting 2
+stmt followers;
+Select followers such that Follows*(30,followers)
+31,38,46
+5000
+17 - valid, follow* with wildcard
+stmt followers;
+Select followers such that Follows*(_,followers)
+2,15,5,10,8,9,12,13,14,30,29,18,23,21,22,24,26,27,28,31,34,36,37,38,45,41,43,44,46,48,49,50,51,55,53,54,56,62,58,60,61,63,64
+5000
+18 - parent
+stmt p;
+Select p such that Parent(p,_)
+2, 6, 10, 15,19,24,31,38,51,56,39,32,16,3
+5000
+19 - parent gets all child
+stmt c;
+Select c such that Parent(_,c)
+3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29,32, 33, 34, 35, 36, 37,39, 40, 41, 42, 43, 44, 45,52,53,54,57,58,59,60,61
+5000
+20 - parent gets all child with stmt
+stmt c;
+Select c such that Parent(6,c)
+7,8,9
+5000
+21 - parent* gets all grandchild with stmt
+stmt c;
+Select c such that Parent*(2,c)
+3,4,5,6,7,8,9,10,11,12,13,14
+5000
+22 - parent* gets all parent and grandparents with stmt
+stmt p;
+Select p such that Parent*(p,14)
+2,3,10
+5000
+23 - parent* gets all parents
+stmt p ,c ;
+Select p such that Parent*(p,c)
+2,3,6,10,15,16,19,24,31,32,,38,39,51,56
+5000
+24 - parent* gets all children
+stmt p ,c ;
+Select c such that Parent*(p,c)
+3,4,5,6,7,8,9,10,11,12,13,14,16,17,18,19,20,21,22,23,24,25,26,27,28,29,32,33,34,35,36,37,39,40,41,42,43,44,45,52,53,54,57,58,59,60,61
+5000
+25 - stmt for stmt#s eval to true
+stmt s;
+Select s such that Next(3, 4)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64
+5000
+26 - stmt for stmt#s eval to false
+stmt s;
+Select s such that Next(2, 1)
+none
+5000
+27 - stmt for stmt# wildcard single output
+stmt s;
+Select s such that Next(3, s)
+4,6
+5000
+28 - stmt for stmt# wildcard multi output
+stmt s;
+Select s such that Next(19, s)
+20, 23
+5000
+29 - stmt for if synonym
+if ifs; stmt s;
+Select s such that Next(ifs, s)
+4,6,17,19,33,35,40,42,57,59
+5000
+30 - while for multi synonym
+while while; read rd;
+Select while such that Next(while, rd)
+none
+5000
+31 - next* Boolean for stmt#
+stmt s;
+Select BOOLEAN such that Next*(3,3)
+TRUE
+5000
+32 - next* stmt for all that next* to it
+stmt s;
+Select s such that Next*(16, s)
+15,16,17,18,19,20,21,22,23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46
+5000
+33 - next* stmt for all that next* to it 2
+stmt s;
+Select s such that Next*(57, s)
+58,62,63,64
+5000
+34 - next* stmt for all that next* to a stmt#
+stmt s;
+Select s such that Next*(s, 12)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14
+5000
+35 - next * edge case
+assign a1;
+Select a1 such that Next*(a1,a1)
+4,5,9,11,14,17,18,22,23,25,28,29,33,34,37,40,41,44,45,52,53,54
+5000
+36 - valid, 1 synonym, IDENT, _
+assign a;
+Select a pattern a("m2", _)
+4,17
+5000
+37 - valid, 1 synonym, _, IDENT
+assign a;
+Select a pattern a(_, _"u3"_)
+1,5,18
+5000
+38 - valid, 1 synonym, _, EXPR
+assign a;
+Select a pattern a(_, _"u3+3"_)
+5,18
+5000
+39 - valid, 1 synonym, _, EXPR
+assign a;
+Select a pattern a(_, "u4+u5")
+4,17
+5000
+40 - valid, 1 synonym, if IDENT, _
+if ifs;
+Select ifs pattern ifs("mu2",_, _)
+3,32,39
+5000
+41 - valid, 1 synonym, while IDENT, _
+while w;
+Select w pattern w("a",_)
+51
+5000
+42 - valid, 1 synonym, IDENT, EXPR
+assign a;
+Select a pattern a("h", _"j/k"_)
+none
+5000
+43 - valid, 2 synonym, v, EXPR
+assign a; variable v;
+Select a pattern a(v, _"i/j"_)
+53,57
+5000
+44 - valid, 1 such that, 2 synonyms, 1 common - return all stmts s.t. ModifiesS variable v
+stmt s; variable v;
+Select s such that Modifies(s, v)
+1,4,5,9,11,14,17,18,22,23,25,28,29,33,34,30,37,40,41,44,45, 47,48,49,50,52,53,54,55,57,58,59,60,61,64,43,36,27,21,13,8,2, 6, 10, 15,19,24,31,38,51,56,39,32,16,3,46
+5000
+45 - valid procedure acquisition
+procedure p;
+Select p such that Modifies(p, _)
+first, second
+5000
+46 - valid procedure acquisition with specific variable modifies
+procedure p;
+Select p such that Modifies(p,"a")
+first, second
+5000
+47 - valid procedure acquisition with specific variable modifies
+procedure p;
+Select p such that Modifies(p,"m1")
+first
+5000
+48 - valid, such that, 2 synonyms, no common - ModifiesS (a1, someVarThatIsModified) but Select a
+assign a, a1;
+Select a such that Modifies(a1, "a")
+1,4,5,9,11,14,17,18,22,23,25,28,29,33,34,30,37,40,41,44,45, 47,48,49,50,52,53,54,55,57,58,59,60,61
+5000
+49 - valid, 2 synonyms, 1 common - Modifies return while
+while w; variable v;
+Select w such that Modifies(w, v)
+2, 6, 10, 15,19,24,31,38,51
+5000
+50 - valid, 1 synonym, 1 common - Modifies return if
+if ifs;
+Select ifs such that Modifies(ifs, _)
+56,39,32,16,3
+5000
+51 - valid, such that, 2 synonyms, no common - UsesS (a1, someVarThatIsUsed) but Select a
+assign a, a1;
+Select a such that Uses(a1, "then")
+none
+5000
+52 - valid procedure acquisition
+procedure p;
+Select p such that Uses(p, _)
+first, second
+5000
+53 - valid procedure acquisition with specific variable modifies
+procedure p;
+Select p such that Uses(p,"u1")
+first
+5000
+54 - valid, 2 synonyms, 1 common - Uses return var for ifs
+if ifs; variable v;
+Select v such that Uses(ifs, v)
+a,b,c,d,e,f,g,i,j,k,l,m,mu1,mu2,mu3,n,o,p,then,u1,u2,u3,u4,u5,u7,u8,z,mu22
+5000
+55 - valid but null, 2 synonyms, no common - Uses return if but null
+if ifs; variable v;
+Select ifs such that Uses(ifs, "e")
+56
+5000
+2301 - Group 2 - Multi clause - 2 + Independent Clauses + Constant Args
+
+Select BOOLEAN such that Follows(39, 45) and Parent*(39,42)
+TRUE
+5000
+2302 - Multi clause - 2 + Independent Clauses + Constant Args
+
+Select BOOLEAN such that Follows*(45, 46) and Parent(39,42)
+FALSE
+5000
+2303 - Group 3 - Multi clause - 2 + Independent Clauses + Syn/Constant Args
+assign a1, a2;
+Select <a1.stmt#, a2> such that Next(a1, a2) and Parent*(15,28)
+4 5,17 18,33 34, 40 41,47 48,48 49,49 50,52 53,53 54,57 58,59 60,60 61,41 45,44 45,18 29
+5000
+2304 - Multi clause - 2 + Independent Clauses + Syn/Constant Args
+print p1; read r1;
+Select <r1.varName, r1> such that Next*(r1, p1) and Follows*(15,31)
+m3 8,m5 13,m3 21,m5 27,m3 36,m3 43
+5000
+2305 - Multi clause - 2 + Independent Clauses + Syn/Constant Args
+procedure p1,p2; call c;
+Select <p2.procName, p1> such that Calls*(p1, p2) with c.procName = "second"
+second first
+5000
+2306 - Multi clause - 2 + Independent Clauses + Syn Args
+variable v; procedure p;
+Select v such that Uses(p, v) with p.procName = "second"
+b,c,d,a,l,m,n,o,p,e,f,g,then,z,i,j,k
+5000
+2307 - Multi clause - 2 + Independent Clauses + Syn Args
+if ifs1, ifs2; variable v; while w;
+Select ifs1 such that Modifies(ifs1, v) such that Next*(ifs2, w)
+56,39,32,16,3
+5000
+2308 - Multi clause - 2 + Independent Clauses + Syn Args
+variable v; procedure p; prog_line n1, n2;
+Select p such that Modifies(p, v) and Parent*(n1, n2)
+first, second
+5000
+2309 - Multi clause - 2 + Independent Clauses + Syn Args
+if ifs1, ifs2; variable v; while w;
+Select ifs1.stmt# such that Next(ifs2, while) and Modifies(ifs1, v)
+none
+5000
+2401 - Multi clause - 2 + Common clauses + Syn/Constant Args
+while w; prog_line n;
+Select w such that Next*(w, 15) pattern w("u1", _)
+6,10,19,24
+5000
+2402 - Multi clause - 2 + Common clauses + Syn/Constant Args
+if ifs;
+Select ifs.stmt# pattern ifs("mu1", _, _) such that Parent*(15, ifs)
+16
+5000
+2403 - Multi clause - 2 + Common clauses + Syn/Constant Args
+if ifs; while w; variable v;
+Select <ifs, w> such that Parent(ifs, w) and Uses(ifs,"mu22")
+16 19,16 24
+5000
+2411 - Multi clause - 2 + Common clauses + Syn Args
+if ifs; while w;
+Select <ifs, w> such that Parent(ifs, w) and Parent*(ifs,w)
+16 19,16 24,3 6, 3 10
+5000
+2412 - Multi clause - 2 + Common clauses + Syn Args
+print pr; read r;
+Select r such that Next(pr, r) with r.varName = "m3"
+8,21,36,43
+5000
+2413 - Multi clause - 2 + Common clauses + Syn Args
+print pr; read r;
+Select <pr.stmt#, pr.varName> such that Next*(r, pr) with r.stmt# = 36
+35 u1, 42 u1
+5000
+2414 - Multi clause - 2 + Common clauses + Syn Args
+if ifs; while w; variable v;
+Select <ifs, w> such that Parent(ifs, w) and Modifies(ifs,v)
+16 19,16 24,3 6, 3 10
+5000
+2415 - Multi clause - 2 + Common clauses + Syn Args
+if ifs; while w; variable v;
+Select ifs.stmt# such that Parent(w, ifs) pattern w("u4",_)
+3,16
+5000
+2416 - Multi clause - 2 + Common clauses + Syn Args
+assign a; variable v;
+Select a such that Uses(a, v) and Next*(a, a)
+4,5,9,11,14,17,18,22,23,25,28,29,37,33,34,40,41,44,45,52,53,54
+5000
+2417 - Multi clause - 2 + Common clauses + Syn Args
+assign a; assign a1;
+Select a1 such that Next(a, a1) and Next*(a, a)
+5,18,29,34,41,45,53,54
+5000
+2418 - Multi clause - 2 + Common clauses + Syn Args
+stmt s1,s2; assign a;
+Select s1.stmt# such that Follows*(s1,a) pattern a("m6",_"10*u1"_)
+11,12,13,25,26,27
+5000
+2419 - Multi clause - 2 + Common clauses + Syn Args
+call c; variable v; stmt s1;
+Select s1.stmt# such that Modifies(c,v) and Modifies(s1, v)
+47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,64,46
+5000
+2501 - Multi clause - 3 + Independent Clauses + Constant args
+
+Select BOOLEAN such that Follows*(1,46) and Modifies(46,"g") and Calls("first",_)
+TRUE
+5000
+2502 - Multi clause - 3 + Independent Clauses + Constant args
+
+Select BOOLEAN such that Follows*(1,45) and Next(45,38) such that Parent*(38,45)
+FALSE
+5000
+2503 - Multi clause - 3 + Independent Clauses + Constant args
+
+Select BOOLEAN such that Follows*(1,46) and Next(45,38) such that Parent*(38,45)
+TRUE
+5000
+2511 - Multi clause - 3 + Independent Clauses + Mix args
+assign a1,a2; if ifs;
+Select <a1, ifs.stmt#> such that Next(51,a1) and Next(55,ifs) such that Parent*(56,a2)
+55 56, 52 56
+5000
+2531 - Multi clause - 3 - Mix Clauses
+assign a1; if ifs; procedure p;
+Select <a1,ifs.stmt#> such that Affects(a1,_) and Calls(p,_) such that Parent(ifs,a1)
+41 39, 34 32, 57 56,59 56
+5000
+2532 - Multi clause - 3 - Mix Clauses
+assign a1; if ifs; procedure p;
+Select <a1,ifs.stmt#> such that Affects*(a1,41) such that Parent(ifs,a1) pattern ifs("mu1",_,_)
+34 32, 41 39
+5000
+2533 - Multi clause - 3 - Mix Clauses
+stmt s1,s2; while w;
+Select s1.stmt# pattern w("u1",_) such that Parent(w,s1) with s2.stmt# = 5
+7,8,9,11,12,13,14,20,21,22,25,26,27,28,32,39,45
+5000
+2601 - Multi clause - 3 + dependent Clauses + Constant args
+stmt s1; while w1;
+Select BOOLEAN such that Follows(1,w1) and Parent(w1,s1) and Next(w1,_)
+TRUE
+5000
+2602 - Multi clause - 3 + dependent Clauses + Constant args
+stmt s1; while w1;
+Select w1 such that Follows(1,w1) and Follows*(w1,s1) pattern w1("u4",_)
+2
+5000
+2603 - Multi clause - 3 + dependent Clauses + Constant args
+stmt s1; while w1;
+Select w1 such that Follows(1,w1) and Modifies(w1,"m2") with w1.stmt# = 2
+2
+5000
+2604 - Multi clause - 3 + dependent Clauses + Constant args
+stmt s1; while w1;
+Select w1 such that Modifies(w1,"mu3") and Uses(w1,"u1") pattern w1("u1",_)
+38, 31
+5000
+2605 - Multi clause - 3 + dependent Clauses + Constant args
+stmt s1; while w1; assign a1, a2;
+Select a1 such that Follows(48,a1) and Affects(49, a1) pattern a1("101010101",_)
+none
+5000
+2606 - Multi clause - 3 + dependent Clauses + Constant args
+stmt s1; while w1; assign a1, a2;
+Select a1 such that Follows(51,a1) and Affects*(49, a1) with a1.stmt# = 55
+55
+5000
+2607 - Multi clause - 3 + dependent Clauses + Constant args
+stmt s1; while w1; assign a1, a2;
+Select a1 such that Affects(49,a1) and Affects*(a1, 59) with a1.stmt# = 50
+50
+5000
+2608 - Multi clause - 3 + dependent Clauses + Constant args
+stmt s1; while w1; assign a1, a2; variable v1;
+Select a1 such that Affects(49,a1) and Modifies(a1, v1) with v1.varName = "b"
+50
+5000
+2611 - Multi clause - 3 + Mix Clauses + Constant args
+stmt s1; while w1; call c1;
+Select c1 such that Follows(38,c1) and Calls("first",_) and Next*(32,c1)
+46
+5000
+2612 - Multi clause - 3 + Mix Clauses
+stmt s1; while w1; call c1;
+Select c1.procName such that Next(38,c1) and Calls("first",_) and Modifies(c1,"a")
+second
+5000
+2900 - Multi clause - Many Mix Clauses
+stmt s1; while w1; call c1;
+Select w1.stmt# such that Follows(w1,c1) and Calls("first",_) and Modifies(c1,"a") pattern w1(_,_) such that Uses(w1,"mu1")
+38
+5000
+2901 - test
+stmt s1; while w1; call c1;
+Select s1 such that Follows*(s1,_)
+38,1,11,12,13,15,16,17,19,2,20,21,23,25,26,27,30,31,33,35,36,39,4,40,42,43,47,48,49,50,51,52,53,55,56,57,59,6,60,62,63,7,8
+5000
+2621 - Multi clause - 4 + dependent Clauses + Constant args
+stmt s1; while w1; assign a1, a2; variable v1;
+Select a1 such that Affects(49,a1) and Uses(a1, v1) and Next(a1,51) and Affects*(a1,_)
+50
+5000
+2622 - Multi clause - 4 - dependent Clauses
+read r; print pr; assign a1; stmt s1;
+Select <r.stmt#,pr> such that Next*(r,a1) and Next(pr,r) and Affects(a1,_) and Follows*(pr,r)
+43 42,36 35,13 12,21 20,27 26,8 7
+5000
+2631 - Multi clause - 4 + Mix Clauses + Constant args
+stmt s1; while w1; call c1;
+Select c1 such that Uses(c1,"z") and Calls("first",_) and Parent(s1,33) and Next*(33,c1)
+46
+5000
+2632 - Multi clause - 4 + Mix Clauses + Constant args
+stmt s1; while w1; call c1; procedure p1, p2; read re1;
+Select p2 such that Next(re1,_) and Uses(p1,_) and Calls(p1,p2) with p1.procName = "first"
+second
+5000
+2632 - Multi clause - 4 + Mix Clauses + Constant args
+stmt s1; while w1; call c1; procedure p1, p2;
+Select p2 such that Modifies(c1,"z") and Uses(p1,_) and Calls(p1,p2) with p1.procName = "first"
+second
+5000
+2633 - Multi clause - 4 + Mix Clauses + Constant args
+stmt s1; while w1; call c1; procedure p1, p2;
+Select <p1,p2> such that Modifies(c1,"z") and Next(s1,56) and Calls*(p1,p2) and Calls(p1,_)
+first second
+5000
+2634 - Multi clause - 4 + Mix Clauses + Constant args
+stmt s1; while w1; call c1; procedure p1, p2; if if1; assign a1;
+Select BOOLEAN such that Follows*(if1,a1) and Next(a1,s1) and Calls*(p1,p2) and Calls(p1,_)
+TRUE
+5000
+2635 - Multi clause - 4 + Mix Clauses + Constant args
+stmt s1; while w1; call c1; procedure p1, p2; if if1; assign a1; variable var1;
+Select BOOLEAN such that Next*(a1,s1) and Next(s1,if1) and Modifies(if1,var1) pattern if1(_,_,_)
+TRUE
+5000
+2636 - Multi clause - 4 + Mix Clauses + Constant args
+stmt s1; while w1; call c1; procedure p1, p2; if if1; assign a1; variable var1;
+Select if1 such that Next*(a1,s1) and Next(s1,if1) pattern a1(_,_) pattern if1(_,_,_)
+3, 16, 32, 39, 56
+5000
+2637 - Multi clause - 4 + Mix Clauses + Constant args
+stmt s1; while w1; call c1; procedure p1, p2; if if1; assign a1; variable var1;
+Select if1 such that Uses(a1,var1) and Next*(a1,if1) pattern if1(_,_,_) with if1.stmt# = 32
+32
+5000
+2638 - Multi clause - 4 + Mix Clauses + Constant args
+stmt s1; while w1; call c1; procedure p1, p2; if if1; assign a1; variable var1;
+Select <a1,p1> such that Modifies(a1,var1) and Calls(p1,p2) and Follows*(a1,_) with var1.varName = "h"
+53 first
+5000
+2640 - Multi clause - 4 + Mix Clauses + Constant args
+stmt s1; while w1; call c1; procedure p1, p2; if if1; assign a1; variable var1;
+Select p1 such that Calls(p1,p2) and Follows*(a1,if1) and Parent*(if1,_) pattern if1("p",_,_)
+first
+5000
+2641 - Multi clause - 4 + Mix Clauses + Constant args
+stmt s1; while w1; call c1; procedure p1, p2; if if1; assign a1, a2; variable var1;
+Select a1 such that Follows(a1,a2) and Follows*(a1,w1) and Parent*(w1,_) pattern if1("mu22",_,_)
+47, 48, 49
+5000
+2642 - Multi clause - 4 + Mix Clauses + Constant args
+stmt s1; while w1; call c1; procedure p1, p2; if if1; assign a1, a2; variable var1;
+Select a2 such that Follows*(a1,a2) and Follows*(a1,w1) and Next*(if1,_) and Parent(w1,if1)
+30
+5000
+2643 - Multi clause - 4 + Mix Clauses + Constant args
+stmt s1; while w1; call c1; procedure p1, p2; if if1; assign a1, a2; variable var1;
+Select c1 such that Modifies(c1,"z") and Follows*(a1,w1) and Next*(if1,_) and Parent(w1,if1)
+46
+5000
+2644 - Multi clause - 4 + Mix Clauses + Constant args
+stmt s1; while w1; call c1; procedure p1, p2; if if1; assign a1, a2; variable var1;
+Select BOOLEAN such that Affects*(a1,a2) and Parent*(w1,if1) and Calls*(p1,_) with p1.procName = "first"
+TRUE
+5000
+2645 - Multi clause - 4 + Mix Clauses + Constant args
+stmt s1; while w1; call c1; procedure p1, p2; if if1; assign a1, a2; variable var1;
+Select BOOLEAN such that Affects(a1,a2) and Next*(a1,39) and Parent(if1,_) and Parent*(w1,if1)
+TRUE
+5000
+2651 - Multi clause - 4 - Independent Clauses
+prog_line n; procedure p;
+Select n such that Parent*(n, 20) and Uses(p, "u4") and Affects*(34,41) and Modifies("first", "mu3")
+19,16,15
+5000
+2652 - Multi clause - 4 - Mix clauses
+call c; if ifs; assign a1,a2;
+Select a1.stmt# such that Parent*(ifs, a2) and Affects*(a1, 59) and Calls("first",_) with a2.stmt# = 57
+49,50,52,54
+5000
+2652 - Multi clause - 5 - Mix clauses
+call c; if ifs; assign a1,a2; while w;
+Select a1.stmt# such that Parent*(ifs, a2) and Affects*(a1, 59) and Follows*(w,c) with c.procName = "second" such that Uses("first", "a")
+54,49,50,52
+5000
+56 - GROUP 3.5 - MULTI CLAUSES -  extra from iter 2
+stmt s1, s2;
+Select <s1, s2> such that Next*(s1, s2) and Next*(1, s1) such that Next*(s2,2)
+10 10,10 11,10 12,10 13,10 14,10 2,10 3,10 4,10 5,10 6,10 7,10 8,10 9,11 10,11 11,11 12,11 13,11 14,11 2,11 3,11 4,11 5,11 6,11 7,11 8,11 9,12 10,12 11,12 12,12 13,12 14,12 2,12 3,12 4,12 5,12 6,12 7,12 8,12 9,13 10,13 11,13 12,13 13,13 14,13 2,13 3,13 4,13 5,13 6,13 7,13 8,13 9,14 10,14 11,14 12,14 13,14 14,14 2,14 3,14 4,14 5,14 6,14 7,14 8,14 9,2 10,2 11,2 12,2 13,2 14,2 2,2 3,2 4,2 5,2 6,2 7,2 8,2 9,3 10,3 11,3 12,3 13,3 14,3 2,3 3,3 4,3 5,3 6,3 7,3 8,3 9,4 10,4 11,4 12,4 13,4 14,4 2,4 3,4 4,4 5,4 6,4 7,4 8,4 9,5 10,5 11,5 12,5 13,5 14,5 2,5 3,5 4,5 5,5 6,5 7,5 8,5 9,6 10,6 11,6 12,6 13,6 14,6 2,6 3,6 4,6 5,6 6,6 7,6 8,6 9,7 10,7 11,7 12,7 13,7 14,7 2,7 3,7 4,7 5,7 6,7 7,7 8,7 9,8 10,8 11,8 12,8 13,8 14,8 2,8 3,8 4,8 5,8 6,8 7,8 8,8 9,9 10,9 11,9 12,9 13,9 14,9 2,9 3,9 4,9 5,9 6,9 7,9 8,9 9
+5000
+57 - 3 clauses, UsesS/ModifiesS
+variable v1, v2; stmt s; procedure p;
+Select v1 such that Uses(s, v1) such that Uses(s, v2) such that Modifies(s, v1)
+mu3,a,d,z,c,b,g
+5000
+58 - 3 clauses, UsesS/ModifiesS (same as query 2 but reversed order)
+variable v1, v2; stmt s;
+Select v1 such that Modifies(s, v1) such that Uses(s, v1) and Uses(s, v2)
+mu3,a,d,z,c,b,g
+5000
+59 - 4 clauses, UsesS/ModifiesS and with
+variable v1, v2; stmt s; constant c;
+Select c such that Uses(s, v1) such that Uses(s, v2) such that Modifies(s, v1) with s.stmt# = c.value
+none
+5000
+60 - 3 clauses, UsesP/ModifiesP
+variable v1, v2; procedure p;
+Select v1 such that Uses(p, v1) such that Uses(p, v2) and Modifies(p, v1) with p.procName = "second"
+a,d,z,c,b,g
+5000
+61 - 4 clauses, UsesP/ModifiesP plus with
+variable v1, v2; procedure p; call c;
+Select v2 with p.procName = c.procName such that Uses(p, v1) such that Uses(p, v2) and Modifies(p, v1)
+a,b,c,d,g,z,i,j,k,then,e,f,l,m,n,o,p
+5000
+62 - 5 clauses, UsesP/ModifiesP plus with and with
+variable v1, v2; procedure p; call c; read re;
+Select v1 with p.procName = c.procName and c.procName = "second" such that Uses(p, v1) such that Uses(p, v2) and Modifies(re, v1)
+c
+5000
+63 - 3 common clauses, follows* -> TIMEOUT
+assign a; stmt s1, s2, s3, s4, s5, s6;
+Select a such that Follows*(s1, a) and Follows*(a, s2) and Follows*(s1, s2)
+60,53,49,48,30,23,50,55
+5000
+64 - 5 common clauses, add tuple after - MAYBE BUG
+assign a; read r1, r2; print p1, p2; stmt s1, s2, s3, s4;
+Select <a,s3> such that Parent*(s1, a) and Parent*(s2, a) such that Parent(s3, r1)
+14 10,11 10,11 19,11 24,11 32,11 39,11 6,14 19,14 24,14 32,14 39,14 6,17 10,17 19,17 24,17 32,17 39,17 6,18 10,18 19,18 24,18 32,18 39,18 6,22 10,22 19,22 24,22 32,22 39,22 6,23 10,23 19,23 24,23 32,23 39,23 6,25 10,25 19,25 24,25 32,25 39,25 6,28 10,28 19,28 24,28 32,28 39,28 6,29 10,29 19,29 24,29 32,29 39,29 6,33 10,33 19,33 24,33 32,33 39,33 6,34 10,34 19,34 24,34 32,34 39,34 6,37 10,37 19,37 24,37 32,37 39,37 6,4 10,4 19,4 24,4 32,4 39,4 6,40 10,40 19,40 24,40 32,40 39,40 6,41 10,41 19,41 24,41 32,41 39,41 6,44 10,44 19,44 24,44 32,44 39,44 6,45 10,45 19,45 24,45 32,45 39,45 6,5 10,5 19,5 24,5 32,5 39,5 6,52 10,52 19,52 24,52 32,52 39,52 6,53 10,53 19,53 24,53 32,53 39,53 6,54 10,54 19,54 24,54 32,54 39,54 6,57 10,57 19,57 24,57 32,57 39,57 6,58 10,58 19,58 24,58 32,58 39,58 6,59 10,59 19,59 24,59 32,59 39,59 6,60 10,60 19,60 24,60 32,60 39,60 6,61 10,61 19,61 24,61 32,61 39,61 6,9 10,9 19,9 24,9 32,9 39,9 6
+5000
+65 - 3 clauses, all different, Boolean
+stmt s; procedure p;
+Select BOOLEAN such that Next*(1, s) and Uses(p,_) and Modifies(p,"a")
+TRUE
+5000
+66 - 3 multiclause + boolean  - BUG
+while w1, w2; procedure p1;
+Select BOOLEAN such that Modifies(p1, "a") and Parent(w1, 42) and Parent*(w2, w1)
+FALSE
+5000
+67 - 3 multiclause + double tuple
+procedure p1, p2;
+Select <p1, p2> such that Modifies(p1, "m1") and Next(56, 57) and Calls*(p1, p2)
+first second
+5000
+68 - 3 multiclause + tuple + wildcard
+procedure p1, p2; stmt s1;
+Select <p1, p2> such that Next*(3, 8) and Uses(p1, "u1") and Parent(s1, _)
+first first, first second
+5000
+69 - 3 multiclause + with + Boolean
+stmt s1; procedure p1; read r1;
+Select BOOLEAN such that Next(s1, r1) and Modifies(p1, "mu3") and Follows(s1, r1)  with p1.procName = "first"
+TRUE
+5000
+70 - 2 multiclause + 1 pattern
+stmt s1; procedure p1; variable v1; print pn1; while w1;
+Select v1 such that Follows*(s1, pn1) and Uses(p1, v1) pattern w1(v1, _)
+a,u1,u2,u3,u4,u5
+5000
+71 - 3 multiclause + triple tuple
+stmt s1; variable v1; ifs if1; procedure p1; assign a1;
+Select <s1, v1, if1> such that Parent*(s1, a1) and Uses(p1, v1) and Next(if1, a1)
+none
+5000
+72 - 2 multiclause + prog line + with
+prog_line n1; procedure p1, p2; assign a1; if if1;
+Select n1 such that Calls(p1, p2) with a1.stmt# = 40 such that Follows*(n1, 34)
+33
+5000
+73 - 3 multiclause + wildcard + 1 pattern
+stmt s1; assign a1; variable v1;
+Select s1 such that Next(19, s1) and Parent(_, a1) and Follows(s1, _) pattern a1(v1, _)
+20,23
+5000
+74 - 2 multiclause + with - BIG BUG EXCEPTION
+procedure p1; prog_line n1; assign a1; if if1;
+Select p1 such that Next(if1, a1) with a1.stmt# = n1 and n1 = 57 such that Follows*(n1, a1)
+none
+5000
+75 - 3 multiclause + with + tuple
+call c1; procedure p1; while w1; prog_line n1; variable v1; if ifs;
+Select <n1, c1> such that Next(n1, c1) and Uses(n1, v1) with v1.varName = "u7" such that Next(n1, ifs)
+38 46
+5000
+76 - 3 clause uses
+assign a; while w;
+Select a such that Modifies (a, "b") and Parent* (w, a) and Next* (1, a)
+none
+5000
+78 - 3 clause modifies
+assign a; while w;
+Select a such that Modifies (a, "m1") and Parent* (w, a) and Next* (1, a)
+9,22,37,44
+5000
+79 - 3 clause prog line
+prog_line p1; procedure p;
+Select p1 such that Modifies(p1,"m3") and Next*(9, p1) and Calls(p, "second")
+2,3,5,6,8,15,16,18,19,21,31,32,36,38,39,43
+5000
+80 - 3 clause use follow
+procedure p; prog_line p1;
+Select p such that Uses(p,_) and Calls*(p, _) and Uses(p,"b")
+first
+5000
+81 - 3 clause use follow
+procedure p; prog_line p1; constant c;
+Select c such that Uses(p,_) and Calls*(_, p)  and Parent*(2,p1)
+1000000001,101010101,1,10,10001,10101010,2,3,4,5,6,7,787878787878,8,9,999
+5000
+82 - 3 clause with
+procedure p; prog_line p1; variable v; stmt s;
+Select p such that Uses(p,v) and Calls*(p, _) with v.varName = "d"
+first
+5000
+83 - call clauses
+procedure p1, p2, p3 , p4 , p5 , p6 , p7;
+Select p1 such that Calls(p1,p2) and Calls(p2,p3) and Calls(p3,p4) and Calls(p4,p5) and Calls(p5,p6) and Calls(p6,p7)
+none
+5000
+84 - call* clauses
+procedure p1, p2, p3 , p4 , p5 , p6 , p7;
+Select p1 such that Calls*(p1,p2) and Calls*(p2,p3) and Calls*(p3,p4) and Calls*(p4,p5) and Calls*(p5,p6) and Calls*(p6,p7)
+none
+5000
+85 - parent clauses
+prog_line p1, p2, p3,p4,p5,p6;
+Select p1 such that Parent(p1,p2) and Parent(p2,p3)
+2,3,15,16,31,38
+5000
+86 - parent clauses
+prog_line p1, p2, p3,p4,p5,p6;
+Select p1 such that Parent(p1,p2) and Parent(p2,p3) and Parent(p3,p4)
+2, 15
+5000
+87 - invalid uses clause cannot have first argument as '_'
+procedure p1; stmt s1;
+Select s1 such that Uses(_,_)
+none
+5000
+88 - GROUP 4 - INVALID clauses invalid modifies clause cannot have first argument as '_'
+procedure p1; stmt s1;
+Select s1 such that Modifies(_,s1)
+none
+5000
+89 - invalid duplicated synonyms
+procedure p1, p1;
+Select p1 such that Uses(p1, _)
+none
+5000
+90 - invalid declaration of synonyms misspelled
+proc p1;
+Select p1 such that Uses(p1, _)
+none
+5000
+91 - invalid variable declaration
+procedure p1_;
+Select p1_ such that Uses(p1_, _)
+none
+5000
+92 - invalid pattern clause + wildcard
+procedure p1; stmt s1, s2; assign a1;
+Select a1 such that Parent(s1,s2) pattern a1(_, _"+"_)
+none
+5000
+93 - invalid pattern clause
+stmt s1, s2; assign a1;
+Select a1 such that Follows(s1, s2) pattern a1(_, "*")
+none
+5000
+94 - invalid and usage
+procedure p1; stmt s1; assign a1;
+Select a1 such that Parent*(s1, a1) and pattern a1(_, "y") such that Modifies(p1, "z")
+none
+5000
+95 - invalid and usage 2
+procedure p1; stmt s1; assign a1;
+Select a1 such that Parent*(s1, a1) and Modifies(p1, "z") and such that Next*(4, a1)
+none
+5000
+96 - invalid and usage 3
+procedure p1; stmt s1, s2; assign a1;
+Select a1 such that Follows*(s1, s2) pattern a1("y", _) and Modifies(p1, "x")
+none
+5000
+97- invalid undeclared synonym
+procedure p1; stmt s1;
+Select s1 such that Uses(s2, _)
+none
+5000
+98 - invalid non-existent variable name
+procedure p1; stmt s1;
+Select s1 such that Modifies(s1, "nananannananana")
+none
+5000
+99 - invalid out of range stmt num
+procedure p1; stmt s1;
+Select s1 such that Uses(10000, "z")
+none
+5000
+100 - invalid non-existent variable name + out of range stmt num
+procedure p1; stmt s1;
+Select s1 such that Uses(10000, "nanananna")
+none
+5000
+101 - invalid modifies + undeclared synonym + pattern
+procedure p1; stmt s1; if if1;
+Select s1 such that Modifies(_, v1) pattern if1(_, _, _)
+none
+5000
+102 - invalid number of arguments clause
+procedure p1; stmt s1; variable v1, v2;
+Select s1 such that Modifies(s1, v1, v2)
+none
+5000
+103 - invalid pattern if
+procedure p1; stmt s1; if if1, if2;
+Select if1 pattern if1("u1", "sasa", _)
+none
+5000
+104 - invalid pattern if
+procedure p1; stmt s1; if if1, if2;
+Select if1 pattern if1("u1", _, "sasa")
+none
+5000
+105 - invalid pattern if
+procedure p1; stmt s1; if if1, if2;
+Select if1 pattern if1("10", "u1", "10")
+none
+5000
+106 - invalid pattern if
+procedure p1; stmt s1; if if1, if2;
+Select if1 pattern if1("00000 0001", _, _)
+none
+5000
+107 - invalid pattern if
+procedure p1; stmt s1; if if1, if2;
+Select if1 pattern if1(_, _, _, _)
+none
+5000
+108 - invalid pattern if
+procedure p1; stmt s1; if if1, if2;
+Select if1 pattern if1(u1, _, _)
+none
+5000
+109 - invalid pattern while
+procedure p1; stmt s1; while w1, w2;
+Select w1 pattern w1("u1", _, _)
+none
+5000
+110 - invalid pattern while
+procedure p1; stmt s1; while w1, w2;
+Select w1 pattern w1("4     /u1+9%8+7%6", _)
+none
+5000
+111 - invalid pattern while
+procedure p1; stmt s1; while w1, w2;
+Select w1 such that pattern w1("u1", _)
+none
+5000
+112 - invalid pattern while
+while w1;
+Select BOOLEAN such that pattern w1("a", _)
+none
+5000
+113 - invalid pattern while
+while w1, w2;
+Select BOOLEAN with pattern w1("u3", _)
+none
+5000
+114 - invalid pattern assign
+assign a1;
+Select a1 pattern a1(_, "m6")
+none
+5000
+115 - invalid pattern assign
+assign a1;
+Select a1 pattern a1("m6")
+none
+5000
+116 - invalid pattern assign
+assign a1;
+Select a1 pattern a1(_, m6)
+none
+5000
+117 - select boolean
+
+Select BOOLEAN
+TRUE
+5000
+117 - select boolean
+stmt s;
+Select BOOLEAN
+TRUE
+5000
+118 - with more
+stmt s; prog_line n;
+Select s with s.stmt# = n and n = 10
+10
+5000
+119 - no clause - invalid procName
+read re;
+Select re.procName
+none
+5000
+120 - no clause - invalid procName stmt
+stmt s;
+Select s.procName
+none
+5000
+121 - valid affects
+stmt s1,s2;
+Select s1 such that Affects(s1,s2)
+34,41,49,50,52,54,57,59
+5000
+8001 - Syntax
+assign a1;
+assign a2; Select BOOLEAN
+TRUE
+5000
+8002 - Syntax
+
+assign a2; assign a1; Select BOOLEAN
+TRUE
+5000
+8003 - Syntax - add to report
+assign a1;
+assign a1; Select BOOLEAN
+none
+5000
+8004 - Syntax
+variable Modifies; stmt Uses;
+Select Uses such that Modifies(Uses,Modifies)
+1,4,5,9,11,14,17,18,22,23,25,28,29,33,34,30,37,40,41,44,45, 47,48,49,50,52,53,54,55,57,58,59,60,61,64,43,36,27,21,13,8,2, 6, 10, 15,19,24,31,38,51,56,39,32,16,3,46
+5000
+8005 - Syntax
+variable Modifies; stmt s1;
+Select BOOLEAN with 1 = 1
+TRUE
+5000
+8007 - Syntax
+variable Modifies; stmt s1;
+Select BOOLEAN with 1 = "1"
+none
+5000
+8008 - Syntax -add to report
+variable Modifies; stmt s1;
+Select BOOLEAN with 1 = "a"
+none
+5000
+8009 - Syntax
+stmt BOOLEAN;
+Select BOOLEAN such that Follows(1,2)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64
+5000
+8010 - Syntax
+assign BOOLEAN;
+Select BOOLEAN such that Follows(1,2)
+1,4,5,9,11,14,17,18,22,23,25,28,29,33,34,30,37,40,41,44,45, 47,48,49,50,52,53,54,55,57,58,59,60,61
+5000
+8011 - Syntax
+assign pattern; variable Select;
+Select Select pattern pattern(Select, _)
+a,b,c,d,g,h,m1,m2,m3,m4,m6,m7,m8,m9,mu3,z
+5000
+8012 - Syntax
+assign a; variable v;
+Select a pattern a(v, _"i                /   j"_) with v.varName = "h"
+53
+5000
+9001 - Follows - between procedures
+stmt s1,s2;
+Select BOOLEAN such that Follows(46,47)
+FALSE
+5000
+9201 - Follows
+stmt s1,s2; constant c;
+Select BOOLEAN such that Follows(s1,c)
+none
+5000
+9202 - Follows
+stmt s1,s2; constant c;
+Select BOOLEAN such that Follows(s1,c.value)
+none
+5000
+9002 - Follows* - between procedures
+stmt s1,s2;
+Select BOOLEAN such that Follows*(46,47)
+FALSE
+5000
+9003 - Calls* - between procedures
+procedure p;
+Select p such that Calls*(p,p)
+none
+5000
+9004 - Calls* - between procedures
+procedure p;
+Select p such that Calls(p,q) and Calls*(q,p)
+none
+5000
+9005 - Pattern AST invalidated
+assign a;
+Select a pattern a("h", _"j/k"_)
+none
+5000
+9006 - Pattern AST okay
+assign a;
+Select a pattern a("h", _"i/j"_)
+53
+5000
+9106 - Pattern invalid expr
+assign a;
+Select a pattern a(_, " ")
+none
+5000
+9107 - Pattern invalid expr
+assign a;
+Select a pattern a(_,_" "_)
+none
+5000
+9007 - Affects
+stmt s;
+Select s such that Affects(34,s)
+34,41
+5000
+9008 - Affects for stmt num exceeding total stmt nums of program
+stmt s;
+Select s such that Affects*(300,500)
+none
+5000
+9009 - Affects for stmt num exceeding total stmt nums of program
+stmt s;
+Select s such that Next*(300,500)
+none
+5000
+9010 - Affects for stmt num exceeding total stmt nums of program
+stmt s;
+Select s such that Follows*(300,500)
+none
+5000
+9011 - prog_line
+prog_line n;
+Select n.stmt#
+none
+5000
+9012 - procName   - add to report
+procedure p;
+Select p    .   procName
+none
+5000
+9012 - procName
+procedure p;
+Select p.procName
+first, second
+5000
+9100 - follows
+stmt s;
+Select s such that Follows(s,s)
+none
+5000
+9101 - follows*
+stmt s;
+Select BOOLEAN such that Follows*(s,s)
+FALSE
+5000
+9102 - Affects
+stmt s;
+Select BOOLEAN such that Affects(s,s)
+TRUE
+5000
+9103 - Affects*
+stmt s;
+Select BOOLEAN such that Affects*(s,s)
+TRUE
+5000
+9104 - Parent*
+stmt s;
+Select BOOLEAN such that Parent*(s,s)
+FALSE
+5000
+9104 - Parent
+stmt s;
+Select BOOLEAN such that Parent(s,s)
+FALSE
+5000
+9105 - Next
+stmt s;
+Select BOOLEAN such that Next(s,s)
+FALSE
+5000
+9106 - Next*
+stmt s;
+Select BOOLEAN such that Next*(s,s)
+TRUE
+5000
+9107 - Calls
+stmt s; procedure p;
+Select BOOLEAN such that Calls(p,p)
+FALSE
+5000
+9108 - Calls*
+stmt s; procedure p;
+Select BOOLEAN such that Calls*(p,p)
+FALSE
+5000
+9109 - Pattern
+stmt s; assign a;
+Select BOOLEAN pattern a(_,"(((((u4+u5)))))")
+TRUE
+5000
+9110 - Pattern
+stmt s; assign a;
+Select BOOLEAN pattern a(_,_""_)
+none
+5000

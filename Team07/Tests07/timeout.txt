@@ -1,0 +1,10 @@
+2521 - Multi clause - 3 + Independent Clauses + Syn args - TIMEOUT
+assign a1,a2; if ifs; variable v1,v2; procedure p;
+Select <p, p> such that Next(a1,a2) and Uses(p,v2) pattern ifs(v1,_,_)
+first first, second second
+5000
+2639 - Multi clause - 4 + Mix Clauses + Constant args
+stmt s1; while w1; call c1; procedure p1, p2; if if1; assign a1; variable var1; read re1; print pr1;
+Select s1.stmt# such that Uses(pr1,var1) and Calls*(p1,p2) and Follows*(a1,_) with var1.varName = "a"
+32
+5000

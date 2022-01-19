@@ -1,0 +1,45 @@
+1 - Select procedures
+procedure p;
+Select p
+if
+5000
+2 - Select assignments
+assign a;
+Select a
+1, 3, 5, 7, 9, 11, 13, 14,15,16,17,18,19
+5000
+3 - Select ifs
+if ifs;
+Select ifs
+2, 4, 6, 8, 10, 12
+5000
+4 - Select assignment statements that are within a if
+if ifs; assign a;
+Select a such that Parent(ifs, a)
+3, 5, 7, 9, 11, 13, 14,15,16,17,18,19
+5000
+5 - Select if statements that are within another if
+if ifs, ifs1;
+Select ifs such that Parent(ifs1, ifs)
+4, 6, 8, 10, 12
+5000
+6 - Select if statements that uses c
+if ifs;
+Select ifs such that Uses(ifs, "c")
+2, 4, 6
+5000
+7 - Select if statements that uses f
+if ifs;
+Select ifs such that Uses(ifs, "f")
+2, 4, 6, 8, 10, 12
+5000
+8 - Invalid Select statement for non-syn
+if if;
+Select ifs
+none
+5000
+9 - Query 1 with additional spaces
+procedure       p;
+Select                          p
+if
+5000

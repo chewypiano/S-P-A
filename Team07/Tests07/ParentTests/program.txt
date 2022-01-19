@@ -1,0 +1,9 @@
+procedure follows {    a = 0;
+    b = a + 1;
+    if ((!(a == b)) || (b == a)) then {
+        a = b + 1;
+    } else {       b = a + 1;    }
+    a = 2;
+    while (a < b) {
+        b = 3;
+        a = a + 1;    } }

@@ -1,0 +1,557 @@
+procedure Stressed{
+    car = x * b;
+    print abc;
+    car = (x / y) * (z * 3);
+    dog = (z * y) / (y + x);
+    a = x * z;
+    dog = a % 3;
+    dog = a % 2;
+    car = (b / c) + (x % y) + (z * a);
+    p = (r - y - (x + bike)) * s + p % (x * v * z) % (car / bike / bus);
+    m11 = u11 + u11 / x4 * 3 / 5 + (19 - 2 * 22) / 2 + (u18 * (u19 - (19 * (2 + 2 + (2 + 2)))));
+    mu21 = mu11+ 1;
+    mu13 = 3;
+    mu14 = 4;
+    s = x * z;
+    car = a % 3;
+    car = a % 2;
+    if ((( u12 ==  mu11 ) && (!( 123 == 321 ))) || ( u13 == 1 + 1)) then {
+          mu12 = mu12 + 5;
+          while (mu11 + mu12 == mu13 + mu14) {
+            while ((mu13 == 13) || (mu14 == 14)) {
+              m11 = u2 * 2 + 5;
+              while ((mu11 == mu12) || (u13 * u12 == mu13 % 4)) {
+                read m13;
+                print u12;
+                if (mu16 * mu17 * mu18 * mu19 == u16 / u17 / u18 / u19)
+                  then{
+                      while (u11==u12){
+                        mu11 = u12 + 1;
+                        mu21 = u11 + 1;
+                      }
+                  }
+                else {
+                  while ((!(6 == 9)) || (4 == 2 + 2)) {
+                    mu11 = mu12 * mu13;
+                    m11 = u19 + u18;
+                  }
+                  if (72 * 1010101010101 >= u15)
+                    then{
+                        mu19 = u19 + u18 + u17 / u16;
+                        mu19 = mu19+ 10;
+                        print u19;
+                        read m19;
+                    }
+                  else {
+                    m17 = u17;
+                    m18 = u18;
+                    m15 = mu16 + mu17 + mu18 + mu19;
+                  }
+                  print mu11;
+                  read cat;
+                  read m12;
+                }
+
+              }
+              m14 = 4 + 5;
+              m15 = 9 * 4;
+
+            }
+            while (1 == 1) {
+              m11 = u14 + u15 - car;
+              m12 = u13 * u16;
+            }
+          }
+          mu13 = mu12 + 5 * 2 + (8 - 10);
+        }else{
+          mu18 = u14 + u14;
+          mu15 = mu15 + mu18;
+        }
+    car = (b / c) + (x % y) + (z * a);
+    p = (r - y - (x + bike)) * s + p % (x * v * z) % (car / bike / bus);
+    car = a * y;
+    car = (x / y) * (z * 3);
+    cat = (z * y) / (y + x);
+    a = x * z;
+    x = a % 3;
+    car = a % 2;
+    bus = (b / c) + (x % y) + (z * a);
+    p = (r - y - (x + bike)) * s + p % (x * v * z) % (car / bike / bus);
+    car = a % 3;
+    a = a % 2;
+    car = (b / c) + (x % y) + (z * a);
+    car = x * b;
+    print abc;
+    while(1==1){
+             m56 = (u55)*((u56))%(u51*u52)*(u53-u54);
+             m57 = ((u57+u58)*(u57-u58))/u59+(u55)*((u56));
+             m58 = u54/u55/u56 + u51*u52*u53/((u57+u58)*(u57-u58))/u59;
+             mu51 = u54/u55/u56 + u51*u52*u53 - (mu51%mu52)/(1 % 100001);
+             mu52 = (mu51%mu52)/(1 % 100001);
+        }
+        m59 = (1+2)*3 +(4+5)*6 + (7+8)*9;
+
+        if( !((u55)*((u56))%(u51*u52)*(u53-u54)== ((u57+u58)*(u57-u58))/u59+(u55)*((u56))) ) then{
+            m51 = u51;
+            mu56=mu56;
+        }else{
+            m52 = u52;
+            mu55 = mu54;
+        }
+    car = (b / c) + (x % y) + (z * a);
+    car = x * b;
+    print abc;
+    cart = (x / y) * (z * 3);
+    car = (b / c) + (x % y) + (z * a);
+    p = (r - y - (x + bike)) * s + p % (x * v * z) % (car / bike / bus);
+    bus = a % 3;
+    car = a % 2;
+    bus = (b / c) + (x % y) + (z * a);
+    car = x * b;
+    read bike;
+    print abc;
+    b = (x / y) * (z * 3);
+    car = x * b;
+    print abc;
+    car = (x / y) * (z * 3);
+    bike = (z * y) / (y + x);
+    bike = x * z;
+    bike = a % 3;
+    bike = a % 2;
+    car = (b / c) + (x % y) + (z * a);
+    p = (r - y - (x + bike)) * s + p % (x * v * z) % (car / bike / bus);
+    car = a * y;
+    car = x * b;
+    print abc;
+    car = (x / y) * (z * 3);
+    bus1 = (z * y) / (y + x);
+    car = x * z;
+    ca5r = a % 3;
+    car = a % 2;
+    car = (b / c) + (x % y) + (z * a);
+    p = (r - y - (x + bike)) * s + p % (x * v * z) % (car / bike / bus);
+    car = a * y;
+    car = (x / y) * (z * 3);
+    ca5r = (z * y) / (y + x);
+    d = x * z;
+    car = a % 3;
+    car = a % 2;
+    car = (b / c) + (x % y) + (z * a);
+    p = (r - y - (x + bike)) * s + p % (x * v * z) % (car / bike / bus);
+    while (1==1) {
+    car = a % 3;
+    a = a % 2;
+    car = (b / c) + (x % y) + (z * a);
+    d = x * b;
+    print abc;
+    b = (x / y) * (z * 3);
+    car = (x / y) * (z * 3);
+    car = (z * y) / (y + x);
+    e = x * z;
+    e = a % 3;
+    bike = a % 2 + bike;
+    car = (b / c) + (x % y) + (z * a);
+    p = (r - y - (x + bike)) * s + p % (x * v * z) % (car / bike / bus);
+    car = a * y;
+    car2 = (x / y) * (z * 3);
+    catr = (z * y) / (y + x);
+    car = x * z;
+    e = a % 3;
+    car = a % 2;
+    car = (b / c) + (x % y) + (z * a);
+    }
+    p = (r - y - (x + bike)) * s + p % (x * v * z) % (car2 / bike / bus);
+    bus = a % 3;
+    car = a % 2;
+    car = (b / c) + (x % y) + (z * a);
+    eee = x * b;
+    print abc;
+    car = (x / y) * (z * 3);
+    car = (b / c) + (x % y) + (z * a);
+    p = (r - y - (x + bike)) * s + p % (x * v * z) % (car2 / bike / bus1);
+    p = (r - y - (x + bike)) * s + p % (x * y * z) % (car / bike / bus);
+    if (u22 < 19) then {
+
+          while (!((mu24 == mu24) && ((u25 - u24 != mu23) || (!(u22 < 1))))) {
+
+            print mu23;
+            read m23;
+
+            while ((((2 > 1) || (u21 < mu21))
+                || (((mu22 > u22) && (mu21 < u23)) && ((mu21) != (18 * (69) - (u24) / 2 + u21 % x2))))
+                && ((((x1 > x2) || (u21 < u24))
+                    || (((u25 > mu25) && (3 < 15)) && ((77) != (u21 * (u22) - (u23) / 2 + u24 % x6))))
+                    || (((mu21 > mu22) || (mu23 < mu24))
+                        || (((mu21 > 22) && (3 < 5)) && ((8) != (8 * (8) - (16) / 2 + 16 % 2)))))) {
+
+              while (2 == 2 + 2 - 2 * 2 / 2 % 2 + 22) {
+
+                m22 = u22 - 18 / 2 * 18;
+                m23 = 2;
+                m24 = 6;
+                m25 = u25;
+
+              }
+
+              while (1 < 2) {
+
+                mu21 = 21;
+                mu22 = 22;
+                mu23 = 23;
+
+                while (2 > 1) {
+
+                  mu24 = u24;
+                  mu25 = mu25 + 1;
+                }
+
+                m21 = u25 + u22 * x2 + (mu21 / 7);
+
+              }
+            }
+
+          }
+
+        } else {
+
+          while (!((u26 == u27) && ((u28 - u29 != mu23) || (!(u22 < 1))))) {
+
+            print mu23;
+            read m23;
+
+            while ((((2 > 1) || (u21 < mu21))
+                || (((mu22 > u22) && (mu21 < u23)) && ((mu21) != (18 * (69) - (u24) / 2 + u21 % x2))))
+                && ((((x1 > x2) || (u21 < u24))
+                    || (((u25 > mu25) && (3 < 15)) && ((77) != (u21 * (u22) - (u23) / 2 + u24 % x6))))
+                    || (((mu21 > mu22) || (mu23 < mu24))
+                        || (((mu21 > 22) && (3 < 5)) && ((8) != (8 * (8) - (16) / 2 + 16 % 2)))))) {
+
+              while (2 == 2 + 2 - 2 * 2 / 2 % 2 + 22) {
+
+                m22 = u22 - 18 / 2 * 18;
+                m23 = 2;
+                m24 = 6;
+                m25 = u25;
+
+              }
+
+              while (1 < 2) {
+
+                mu21 = 21;
+                mu22 = 22;
+                mu23 = 23;
+
+                while (2 > 1) {
+
+                  mu24 = u24;
+                  mu25 = mu25 + 1;
+                }
+
+                m21 = u26 + u22 * x2 + (mu21 / 7);
+
+              }
+            }
+          }
+        }
+    car = x * z;
+    b = a % 3;
+    bike1 = a % 2;
+    car = (b / c) + (x % y) + (z * a);
+    p = (r - y - (x + bike)) * s + p % (x * v * z) % (car / bike / bus);
+    car = a * y;
+    car = (x / y) * (z * 3);
+    car = (z * y) / (y + x);
+    car = x * z;
+    ff = a % 3;
+    car = a % 2;
+    car = (b / c) + (x % y) + (z * a);
+    p = (r - y - (x + bike)) * s + p % (x * v * z) % (car / bike / bus);
+    bus = a % 3;
+    a = a % 2;
+    car = (b / c) + (x % y) + (z * a);
+    car = x * b;
+    print abc;
+    car = (x / y) * (z * 3);
+    car = (b / c) + (x % y) + (z * a);
+    p = (r - y - (x + bike)) * s + p % (x * v * z) % (car / bike / bus);
+    bus = a % 3;
+    car = a % 2;
+    d = (b / c) + (x % y) + (z * a);
+    car = x * b;
+    read bike;
+    print abc;
+    car = (x / y) * (z * 3);
+    car = x * b;
+    print abc;
+    car = (x / y) * (z * 3);
+    mu21 = (z * y) / (y + x);
+    mu21 = x * z;
+    mu21 = a % 3;
+    car = a % 2;
+    car = (b / c) + (x % y) + (z * a);
+    p = (r - y - (x + bike)) * s + p % (x * v * z) % (car / bike / bus);
+    car = a * y;
+    car = x * b;
+    print abc;
+    car = (x / y) * (z * 3);
+    car = (z * y) / (y + x);
+    x = x * z;
+    bus1 = a % 3;
+    car1 = a % 2;
+    car = (b / c) + (x % y) + (z * a);
+    p = (r - y - (x + bike)) * s + p % (x * v * z) % (car / bike / bus);
+    car = (b / c) + (x % y) + (z * a);
+    p = (r - y - (x + bike)) * s + p % (x * v * z) % (car / bike / bus);
+    bus = a % 3;
+    b = a % 2;
+    car = (b / c) + (x % y) + (z * a);
+    car = x * b;
+    print abc;
+    car = (x / y) * (z * 3);
+    car = (b / c) + (x % y) + (z * a);
+    p = (r - y - (x + bike)) * s + p % (x * v * z) % (car / bike / bus);
+    p = (r - y - (x + bike)) * s + p % (x * y * z) % (car / bike / bus);
+    if (u22 < 19) then {
+
+              while (!((mu24 == mu24) && ((u25 - u24 != mu23) || (!(u22 < 1))))) {
+
+                print mu23;
+                read m23;
+
+                while ((((2 > 1) || (u21 < mu21))
+                    || (((mu22 > u22) && (mu21 < u23)) && ((mu21) != (18 * (69) - (u24) / 2 + u21 % x2))))
+                    && ((((x1 > x2) || (u21 < u24))
+                        || (((u25 > mu25) && (3 < 15)) && ((77) != (u21 * (u22) - (u23) / 2 + u24 % x6))))
+                        || (((mu21 > mu22) || (mu23 < mu24))
+                            || (((mu21 > 22) && (3 < 5)) && ((8) != (8 * (8) - (16) / 2 + 16 % 2)))))) {
+
+                  while (2 == 2 + 2 - 2 * 2 / 2 % 2 + 22) {
+
+                    m22 = u22 - 18 / 2 * 18;
+                    m23 = 2;
+                    m24 = 6;
+                    m25 = u25;
+
+                  }
+
+                  while (1 < 2) {
+
+                    mu21 = cat;
+                    mu22 = 22;
+                    mu23 = 23;
+
+                    while (2 > 1) {
+
+                      car = u24;
+                      mu25 = mu25 + 1;
+                    }
+
+                    m21 = u25 + u22 * x2 + (mu21 / 7);
+
+                  }
+                }
+
+              }
+
+            } else {
+
+              while (!((u26 == u27) && ((u28 - u29 != mu23) || (!(u22 < 1))))) {
+
+                print mu23;
+                read b;
+
+                while ((((2 > 1) || (u21 < mu21))
+                    || (((mu22 > u22) && (mu21 < u23)) && ((mu21) != (18 * (69) - (u24) / 2 + u21 % x2))))
+                    && ((((x1 > x2) || (u21 < u24))
+                        || (((u25 > mu25) && (3 < 15)) && ((77) != (u21 * (u22) - (u23) / 2 + u24 % x6))))
+                        || (((mu21 > mu22) || (mu23 < mu24))
+                            || (((mu21 > 22) && (3 < 5)) && ((8) != (8 * (8) - (16) / 2 + 16 % 2)))))) {
+
+                  while (2 == 2 + 2 - 2 * 2 / 2 % 2 + 22) {
+
+                    m22 = u22 - 18 / 2 * bus;
+                    b = 2;
+                    m24 = 6;
+                    m25 = u25;
+
+                  }
+
+                  while (1 < 2) {
+
+                    mu21 = 21;
+                    mu22 = 22 + b;
+                    b = 23;
+
+                    while (2 > 1) {
+
+                      mu24 = u24;
+                      mu25 = mu25 + 1;
+                    }
+
+                    m21 = u26 + bike * x2 + (mu21 / 7);
+
+                  }
+                }
+              }
+            }
+    car = x * z;
+    b = a % 3;
+    sb = a % 2;
+    car = (b / c) + (x % y) + (z * a);
+    p = (r - y - (x + bike)) * s + p % (x * v * z) % (car / bike / bus);
+    bus = a % 3;
+    car = a % 2;
+    sa = (b / c) + (x % z) + (z * a);
+    car = x * b;
+    print abc;
+    car = (x / y) * (z * 3);
+    car = (b / c) + (x % y) + (z * a);
+    p = (r - y - (x + bike)) * s + p % (x * v * z) % (car / bike / bus);
+    p = (r - y - (x + bike)) * s + p % (x * y * z) % (car / bike / bus);
+    bus = a % 3;
+    s = a % 2;
+    car = x * b;
+    print abc;
+    car = (x / y) * (z * 3);
+    car = (z * y) / (y + x);
+    a = x * z;
+    a = a % 3;
+    car = a % 2;
+    car = (b / c) + (x % y) + (z * a);
+    p = (r - y - (x % bike)) * s + p % (x * v * z) % (car / bike / bus);
+    car = a * y;
+    car = x * b;
+    print abc;
+    car = (x / y) * (z * 3);
+    a = (z * y) / (y + x);
+    car = x * z;
+    x = a % 3;
+    car = a % 2;
+    car = (b / c) + (x % y) + (z * a);
+    p = (r - y - (x + bike)) * s + p % (x * v * z) % (car / bike / bus);
+    car = a * y;
+    car = (x / y) * (z * 3);
+    car = (z * y) / (y + x);
+    car = x * z;
+    car = a % 3;
+    car = a % 2;
+    car = (b / a) + (x % y) + (z * a);
+    while (2 - 1 > 0) {
+    p = (r - y - (x + bike)) * s + p % (x * v * z) % (car / bike / bus);
+    car1 = a % 3;
+    car = a % 2;
+    b = (b / c) + (x % y) + (z * a);
+    car1 = x * b;
+    print abc;
+    car = a % 3;
+    e = a % 2;
+    a = (b / c) + (x % y) + (z * a);
+    car = (b / c) + (x % y) + (z * a);
+    p = (r - y - (x % bike)) * s + p % (x * v * z) % (car / bike / bus);
+    car = a * y;
+    car = x * b;
+    print abc;
+    car1 = (x / y) * (z * 3);
+    car = (z * y) / (y + x);
+    }
+    car = (b / c) + (x % y) + (z * a);
+    bike = x * b;
+    print abc;
+    car = a % 3;
+    b = a % 2;
+    car = (b / c) + (x % y) + (z * a);
+    car = x * b;
+    print abc;
+    car = (x / y) * (z * 3);
+    c = (x / y) * (z * 3);
+    car = (z * y) / (y + x);
+    ccv = x * z;
+    cat = a % 3 + cat;
+    bike = a % 2;
+    car = (b / c) + (x % y) + (z * a);
+    p = (r - y - (x + bike)) * s + p % (x * v * z) % (car / bike / bus);
+    car = a * y;
+    fish = (x / y) * (z * 3);
+    car = (z * y) / (y + x);
+    car = x * z - car1;
+    car2 = a % 3;
+    car4 = a % 2;
+    car = (b / c) + (x % y) + (z * a);
+    p = (r - y - (x + bike)) * s + p % (x * v * z) % (car / bike / bus);
+    bus = a % 3;
+    car = a % 2;
+    x = (b / c) + (x % z) + (z * a);
+    car = x * b;
+    print abc;
+    car = (x / y) * (z * 3);
+    car = (b / c) + (x % y) + (z * a);
+    p = (r - y - (x + bike)) * s + p % (x * v * z) % (car / bike / bus);
+    p = (r - y - (x + bike)) * s + p % (x * y * z) % (car / bike / bus);
+    bus = a % 3;
+    car = a % 2;
+    car = x * b;
+    print abc;
+    car = (x / y) * (z * 3);
+    car = (z * y) / (y + x);
+    car = (b / c) + (x % y) + (z * a);
+    p = (r - y - (x + bike)) * s + p % (x * v * z) % (car2 / bike / bus);
+    car = a * y;
+    abc = (x / y) * (z * 3);
+    abc2 = (z * y) / (y + x);
+    abc = x * z;
+    abc2 = a % 3;
+    car = a % 2;
+    car = (b / a) + (x % y) + (z * a);
+    p = (r - y - (x + bike)) * s + p % (x * v * z) % (car / bike1 / bus1);
+    car = a % 3;
+    car = a % 2;
+    a= (b / c) + (x % y) + (z * a);
+    b = x * b;
+    car = a % 3;
+    c = a % 2;
+    car = (b / c) + (x % y) + (z * a);
+    bike = x * b;
+    print abc;
+    car = a % 3;
+    car = a % 2;
+    car = (b / c) + (x % y) + (z * a);
+    if ((u31 == u32) || (u41 == u42))
+        then{
+          m31 = u31;
+          m32 = u32;
+          m33 = u33;
+          m34 = u34;
+          m35 = u35;
+        }
+        else {
+          m36 = u36;
+          m37 = u37;
+          m38 = u38;
+          m39 = u39;
+          while ((mu31 == mu32) && (!(mu32 == mu31))) {
+            mu33 = mu34;
+            mu34 = mu33;
+          }
+          mu35 = mu36;
+          mu36 = mu35;
+          mu31 = mu32;
+          mu32 = mu31;
+        }
+    print abc;
+    car = (x / y) * (z * 3);
+    mu33 = (z * y + mu35) / (y + x);
+    car = x * b;
+    print abc;
+    car = (x / y) * (z * 3);
+    car = (b / c) + (x % y) + (z * a);
+    p = (r - y - (x + bike)) * s + p % (x * v * z) % (car / bike / bus);
+    p = (r - y - (x + bike)) * s + p % (x * y * z) % (car / bike / bus);
+    bus = a % 3;
+    car = a % 2;
+    car5 = x * b;
+    print abc;
+    car = (x / y) * (z * 3);
+    a = (z * y) / (y + x);
+    x = x * z;
+    car = a % 3;
+}

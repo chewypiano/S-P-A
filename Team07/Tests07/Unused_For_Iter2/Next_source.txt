@@ -1,0 +1,68 @@
+procedure Alpha {
+
+    read b00k;
+    call Bravo;
+
+    while (a == b) {
+
+        print help;
+
+        if (hello != bye) then {
+
+            b = a;
+            white = black;
+            print SOS;
+
+        } else {
+
+            read s0mething;
+
+        }
+
+        help = me;
+
+        while ( !(a > 2 * b) ) {
+
+            read aPoem;
+            print outLoud;
+
+            while ( (eye > stillHave) && (!(no > pulse)) ) {
+
+                read prayers;
+                print goodbyes;
+                bid = farewell;
+
+            }
+
+        }
+
+    }
+}
+
+procedure Bravo {
+
+    if (I + am == still + alive) then {
+
+        while (x == b - 4 * a * c) {
+
+            read quadratic_formula;
+            print missing_over_2_a;
+
+        }
+
+        c = d + e;
+
+    }   else {
+
+        while (e == mc2) {
+
+            print physics;
+            a = b + 18;
+
+        }
+
+    }
+
+    end = of + program;
+
+}

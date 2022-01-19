@@ -1,0 +1,5 @@
+procedure Example {
+    if (a == 2) then {
+        a = a + 1;
+    }
+}

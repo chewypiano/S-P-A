@@ -1,0 +1,80 @@
+1 - Select assignment statements
+assign a;
+Select a
+1, 2, 4, 6, 8, 10, 12, 13
+5000
+2 - Select While statements
+while w;
+Select w
+3, 5, 7, 9, 11
+5000
+3 - Select While statements nested in another while statement
+while w, w1;
+Select w such that Parent(w1, w)
+5, 7, 9, 11
+5000
+4 - Select While statements that Modifies f
+while w;
+Select w such that Modifies(w, "f")
+3, 5, 7, 9, 11
+5000
+5 - Select While statements that Modifies c
+while w;
+Select w such that Modifies(w, "c")
+3, 5, 7
+5000
+6 - Select assign statements in while statements that uses 1
+while w; assign a;
+Select a such that Parent(w, a) pattern a(_, _"1"_)
+4, 6, 8, 10, 12
+5000
+7 - Swap ordering of 6
+while w; assign a;
+Select a pattern a(_, _"1"_) such that Parent(w, a)
+none
+5000
+8 - Select Statements that follow 4
+stmt s;
+Select s such that Follows("4", s)
+none
+5000
+9 - Select Procedure names
+procedure p;
+Select p
+nestedWhileAsf
+5000
+10 - Select constansts
+constant c;
+Select c
+1, 2, 3, 4, 5, 6
+5000
+11 - Misspell constant
+const c;
+Select c
+none
+5000
+12 - Semicolon after select statement (invalid)
+assign a;
+Select a;
+none
+5000
+13 - Pattern clause
+assign a;
+Select a pattern a("a",_)
+1, 4
+5000
+14 - Test lhs wildcard
+assign a; variable v;
+Select a pattern a(_,"a")
+none
+5000
+15 - Test Both side wildcard
+assign a;
+Select a pattern a(_, _"a"_)
+4, 13
+5000
+16 - Test Follows*
+stmt s, s1;
+Select s such that Follows*(s, s1)
+1, 2, 3, 4, 6, 8, 10
+5000

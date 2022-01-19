@@ -1,0 +1,150 @@
+1 - single clause call
+procedure a, b, c;
+Select a such that Calls(a, b)
+toyota, honda, mitsubishi, bmw, lambo
+5000
+2 - single clause call + wildcard for caller procedure
+procedure a, b, c;
+Select a such that Calls(a, _)
+toyota, honda, mitsubishi, bmw, lambo
+5000
+3 - single clause call + wildcard for called procedure
+procedure a, b, c;
+Select a such that Calls(_, a)
+honda, mitsubishi, bmw, merc, porsche, maserati, ferrari, lambo
+5000
+4 - single clause + procName
+procedure a, b, c;
+Select a.procName such that Calls(a, b)
+toyota, honda, mitsubishi, bmw, lambo
+5000
+5 - single clause + with
+procedure a, b, c;
+Select a such that Calls(a, b) with b.procName = "bmw"
+honda
+5000
+6 - false single clause call
+procedure a, b, c;
+Select a such that Calls(a, "motorbike")
+none
+5000
+7 - single clause call + double wildcard
+procedure a, b, c;
+Select BOOLEAN such that Calls(_, _)
+TRUE
+5000
+8 - single clause call + constant
+procedure a, b, c;
+Select a such that Calls("toyota", a)
+mitsubishi, honda
+5000
+9 - single clause call + 2 constants
+
+Select BOOLEAN such that Calls("toyota", "mitsubishi")
+TRUE
+5000
+10 - false single clause call + 2 constants
+
+Select BOOLEAN such that Calls("toyota", "ferrari")
+FALSE
+5000
+11 - single clause call*
+procedure a, b, c;
+Select a such that Calls*(a, b)
+toyota, honda, mitsubishi, bmw, lambo
+5000
+12 - single clause call* + wildcard for caller procedure
+procedure a, b, c;
+Select a such that Calls*(a, _)
+toyota, honda, mitsubishi, bmw, lambo
+5000
+13 - single clause call* + wildcard for called procedure
+procedure a, b, c;
+Select a such that Calls*(_, a)
+honda, mitsubishi, bmw, ferrari, lambo, maserati, merc, porsche
+5000
+14 - single clause star + procName
+procedure a, b, c;
+Select a.procName such that Calls*(a, b)
+toyota, honda, mitsubishi, bmw, lambo
+5000
+15 - single clause star + with
+procedure a, b, c;
+Select a such that Calls*(a, b) with b.procName = "honda"
+toyota
+5000
+16 - false single clause star
+procedure a, b, c;
+Select a such that Calls*(a, "motorbike")
+none
+5000
+17 - single clause call star + double wildcard
+procedure a, b, c;
+Select BOOLEAN such that Calls*(_, _)
+TRUE
+5000
+18 - single clause call star + constant
+procedure a, b, c;
+Select a such that Calls*("toyota", a)
+honda, mitsubishi, bmw, merc, porsche, maserati, ferrari, lambo
+5000
+19 - single clause call star+ 2 constants
+procedure a, b, c;
+Select BOOLEAN such that Calls*("toyota", "mitsubishi")
+TRUE
+5000
+20 - false single clause call star + 2 constants
+procedure a, b, c;
+Select BOOLEAN such that Calls*("ferrari", "lambo")
+FALSE
+5000
+21 - wrong argument type call*
+assign a;
+Select BOOLEAN such that Calls*("ferrari", a)
+none
+5000
+22 - no proc being called by given proc
+procedure a, b, c;
+Select b such that Calls*("ferrari", b)
+none
+5000
+23 - no proc being called by given proc + wildcard
+procedure a, b, c;
+Select b such that Calls*("ferrari", _)
+none
+5000
+24 - all procedure if true call*
+procedure a, b, c;
+Select a such that Calls*("toyota", "mitsubishi")
+toyota, honda, mitsubishi, bmw, merc, porsche, maserati, ferrari, lambo
+5000
+25 - no procedure selected call*
+procedure a, b, c;
+Select a such that Calls*("mitsubishi", "toyota")
+none
+5000
+26 - all procedure if true call
+procedure a, b, c;
+Select a such that Calls("toyota", "mitsubishi")
+toyota, honda, mitsubishi, bmw, merc, porsche, maserati, ferrari, lambo
+5000
+27 - no procedure selected call
+procedure a, b, c;
+Select a such that Calls("ferrari", "mitsubishi")
+none
+5000
+28 - wrong argument type call
+assign a;
+Select BOOLEAN such that Calls("ferrari", a)
+none
+5000
+29 - tuple call
+procedure a, b, c;
+Select <a, b> such that Calls(a, b)
+toyota mitsubishi, toyota honda, honda bmw, honda merc, mitsubishi porsche, mitsubishi maserati, bmw ferrari, bmw lambo, lambo mitsubishi
+5000
+30 - tuple call*
+procedure a, b, c;
+Select <a, b> such that Calls*("ferrari", b)
+none
+5000

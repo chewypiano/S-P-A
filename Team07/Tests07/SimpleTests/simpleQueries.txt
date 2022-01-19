@@ -1,0 +1,70 @@
+1 - Select assignment
+assign a;
+Select a
+1
+5000
+2 - Select Procedure
+procedure p;
+Select p
+Example
+5000
+3 - Select pattern with 2 wildcard
+assign a;
+Select a pattern a(_, _)
+1
+5000
+4 - Select pattern with 1 wildcard
+assign a;
+Select a pattern a("a", _)
+1
+5000
+5 - Select pattern with no wildcard
+assign a;
+Select a pattern a("a", "a")
+none
+5000
+6 - Select pattern with 1 wildcard and 1 double wildcard
+assign a;
+Select a pattern a(_, _"a"_)
+1
+5000
+7 - Select such that Modifies(1,a)
+assign a; variable v;
+Select a such that Modifies(a, v)
+1
+5000
+8 - Semantics check colliding variables
+assign a; variable a;
+Select a;
+none
+5000
+9 - Semantics check invalid variables
+assign a;
+Select a such that Uses(1, a)
+none
+5000
+10 - Semantics check 2 different assign
+assign a; assign b;
+Select a such that Follows(a, b)
+none
+5000
+11 - Check Uses
+variable a;
+Select a such that Uses(1, a)   
+a, b, c, d, e, f, g
+5000
+12 - Semantics check invalid variables
+while a;
+Select a such that Uses(1, a)
+none
+5000
+13 - Semantics check invalid variables
+if a;
+Select a such that Uses(1, a)
+none
+5000
+14 - Pattern check
+assign a;
+Select a pattern a(_, "!")
+none
+5000

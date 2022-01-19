@@ -1,0 +1,105 @@
+2621 - Multi clause - 4 + dependent Clauses + Constant args
+stmt s1; while w1; assign a1, a2; variable v1;
+Select a1 such that Affects(49,a1)
+50,59
+5000
+2 - Multi clause - 4 + dependent Clauses + Constant args
+stmt s1; while w1; assign a1, a2; variable v1;
+Select a1 such that Affects(a1,50)
+49
+5000
+3 - Multi clause - 4 + dependent Clauses + Constant args
+stmt s1; while w1; assign a1, a2; variable v1;
+Select a1 such that Affects*(a1,50)
+49
+5000
+4 - Multi clause - 4 + dependent Clauses + Constant args
+stmt s1; while w1; assign a1, a2; variable v1;
+Select a1 such that Affects*(49,a1)
+50,55,58,59,60
+5000
+4 - Multi clause - 4 + dependent Clauses + Constant args
+stmt s1; while w1; assign a1, a2; variable v1;
+Select a1 such that Affects*(a2,a1)
+41,34,50,52,55,58,59,60,61
+5000
+4 - Multi clause - 4 + dependent Clauses + Constant args
+stmt s1; while w1; assign a1, a2; variable v1;
+Select a1 such that Affects*(a1,a2)
+41,34,49,50,52,54,57,59
+5000
+4 - Multi clause - 4 + dependent Clauses + Constant args
+stmt s1; while w1; assign a1, a2; variable v1;
+Select a1 such that Affects*(s1,a2)
+none
+5000
+4 - Multi clause - 4 + dependent Clauses + Constant args
+stmt s1; while w1; assign a1, a2; variable v1;
+Select a1 such that Affects*(s1,_)
+none
+5000
+2622 - Multi clause - 4 - dependent Clauses
+read r; print pr; assign a1; stmt s1;
+Select a1 such that Affects(a1,_)
+41,34,49,50,52,54,57,59
+5000
+26 - Multi clause - 4 - dependent Clauses
+read r; print pr; assign a1; stmt s1;
+Select a1 such that Affects*(a1,_)
+41,34,49,50,52,54,57,59
+5000
+27 - Multi clause - 4 - dependent Clauses
+read r; print pr; assign a1; stmt s1;
+Select a1 such that Affects(a1,a1)
+41,34
+5000
+28 - Multi clause - 4 - dependent Clauses
+read r; print pr; assign a1; stmt s1;
+Select a1 such that Affects*(a1,a1)
+41,34
+5000
+2623 - Multi clause - 4 - dependent Clauses
+read r; print pr; assign a1; stmt s1;
+Select BOOLEAN such that Affects(34,41)
+TRUE
+5000
+2624 - Multi clause - 4 - dependent Clauses
+read r; print pr; assign a1; stmt s1;
+Select BOOLEAN such that Affects*(41,41)
+TRUE
+5000
+2624 - Multi clause - 4 - dependent Clauses
+read r; print pr; assign a1; stmt s1;
+Select BOOLEAN such that Affects(2,11)
+FALSE
+5000
+2624 - Multi clause - 4 - dependent Clauses
+read r; print pr; assign a1; stmt s1;
+Select a1 such that Affects*(54,a1)
+52,55,58,59,60,61
+5000
+2624 - Multi clause - 4 - dependent Clauses
+read r; print pr; assign a1; stmt s1;
+Select a1 such that Next*(154,_)
+52,55,58,59,60,61
+5000
+2624 - Multi clause - 4 - dependent Clauses
+read r; print pr; assign a1; stmt s1;
+Select a1 such that Follows*(154,_)
+52,55,58,59,60,61
+5000
+2624 - Multi clause - 4 - dependent Clauses
+read r; print pr; assign a1; stmt s1;
+Select a1 such that Affects(a1,155)
+52,55,58,59,60,61
+5000
+2624 - Multi clause - 4 - dependent Clauses
+read r; print pr; assign a1; stmt s1;
+Select a1 such that Affects(166,155)
+52,55,58,59,60,61
+5000
+2624 - Multi clause - 4 - dependent Clauses
+read r; print pr; assign a1; stmt s1;
+Select a1 such that Parent*(154,155)
+52,55,58,59,60,61
+5000

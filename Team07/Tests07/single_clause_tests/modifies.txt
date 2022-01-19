@@ -1,0 +1,185 @@
+1 - valid, 1 such that, 1 synonym - return all stmts s.t. ModifiesS (stmt, _ )
+stmt s;
+Select s such that Modifies(s, _)
+1, 2, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19
+5000
+2 - valid, 1 such that, 1 synonym - ModifiesS(stmtNumOfModifyingStmt, _) return all stmts
+stmt s;
+Select s such that Modifies(1, _)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19
+5000
+3 - valid, 1 such that, 1 synonym - ModifiesS(stmtNumOfModifyingStmt, _) return all assign
+assign a;
+Select a such that Modifies(1, _)
+1, 2, 8, 9, 12, 13, 15, 16, 17, 18, 19
+5000
+4 - valid, 1 such that, 1 synonym - ModifiesS(stmtNumOfModifyingStmt, _) return all print
+print p;
+Select p such that Modifies(1, _)
+3, 4, 6
+5000
+5 - valid, 1 such that, 1 synonym - ModifiesS(stmtNumOfModifyingStmt, _) return all read
+read r;
+Select r such that Modifies(1, _)
+5, 7
+5000
+6 - valid, 1 such that, 2 synonym - ModifiesS(stmtNumOfModifyingStmt, v) return all stmts
+stmt s; variable v;
+Select s such that Modifies(1, v)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19
+5000
+7 - valid, 1 such that, 2 synonym - ModifiesS(stmtNumOfModifyingStmt, v) return all assign
+assign a; variable v;
+Select a such that Modifies(1, v)
+1, 2, 8, 9, 12, 13, 15, 16, 17, 18, 19
+5000
+8 - valid, 1 such that, 2 synonym - ModifiesS(stmtNumOfModifyingStmt, v) return all print
+print p; variable v;
+Select p such that Modifies(1, v)
+3, 4, 6
+5000
+9 - valid, 1 such that, 2 synonym - ModifiesS(stmtNumOfModifyingStmt, v) return all read
+read r; variable v;
+Select r such that Modifies(1, v)
+5, 7
+5000
+10 - valid but null, 1 such that, 1 synonym - ModifiesS(stmtNumOfNonModifyingStmt, _) return none
+stmt s;
+Select s such that Modifies(3, _)
+none
+5000
+11 - valid but null, 1 such that, 1 synonym - ModifiesS(stmtNumOfNonModifyingStmt, _) return none
+assign a;
+Select a such that Modifies(3, _)
+none
+5000
+12 - valid but null, 1 such that, 1 synonym - ModifiesS(stmtNumOfNonModifyingStmt, _) return none
+print p;
+Select p such that Modifies(3, _)
+none
+5000
+13 - valid but null, 1 such that, 1 synonym - ModifiesS(stmtNumOfNonModifyingStmt, _) return none
+read r;
+Select r such that Modifies(3, _)
+none
+5000
+14 - valid, 1 such that, 2 synonyms, 1 common - return all stmts s.t. ModifiesS variable v
+stmt s; variable v;
+Select s such that Modifies(s, v)
+1, 2, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19
+5000
+15 - invalid - ModifiesP invalid in iter1, Select p
+procedure p;
+Select p such that Modifies(p, _)
+none
+5000
+16 - invalid - ModifiesP invalid iter1, Select s
+stmt s; procedure p;
+Select s such that Modifies(p, _)
+none
+5000
+17 - invalid - ModifiesS cannot begin with _ wildcard
+stmt s;
+Select s such that Modifies(_, _)
+none
+5000
+18 - invalid - ModifiesS cannot begin with _ wildcard
+stmt s;
+Select s such that Modifies(_, "a")
+none
+5000
+19 - invalid - ModifiesS cannot modify constant
+stmt s;
+Select s such that Modifies(s, "7")
+none
+5000
+20 - invalid - ModifiesS cannot modify constant
+stmt s;
+Select s such that Modifies(19, "8")
+none
+5000
+21 - valid, such that, 2 synonyms, no common - ModifiesS (a1, someVarThatIsModified) but Select a
+assign a, a1;
+Select a such that Modifies(a1, "a")
+1, 2, 8, 9, 12, 13, 15, 16, 17, 18, 19
+5000
+22 - valid but null result, such that, 2 synonyms, no common - ModifiesS (a1, someVarThatIsNotModified) but Select a
+assign a, a1;
+Select a such that Modifies(a1, "e")
+none
+5000
+23 - valid but null result, such that, 2 synonyms, no common - ModifiesS (a1, someVarThatIsNotInProgram) but Select a
+assign a, a1;
+Select a such that Modifies(a1, "nonExistentVariable")
+none
+5000
+24 - valid, such that, 2 synonyms, no common - ModifiesS (a1,_) but Select a - return all assign
+assign a, a1;
+Select a such that Modifies(a1, _)
+1, 2, 8, 9, 12, 13, 15, 16, 17, 18, 19
+5000
+25 - valid, 1 synonym - ModifiesS return var
+variable v;
+Select v such that Modifies(1, v)
+a
+5000
+26 - valid, 1 synonym - ModifiesS return var
+variable v;
+Select v such that Modifies(1, _)
+a,b,c,d,e,proc,procedure
+5000
+27 - valid, 2 synonyms, 1 common - Modifies return var
+variable v; stmt s;
+Select v such that Modifies(s, v)
+a, b, procedure, proc, c, d
+5000
+28 - valid, 2 synonyms, no common - Modifies return var
+variable v; stmt s;
+Select v such that Modifies(s, _)
+a, b, procedure, proc, c, d, e
+5000
+29 - valid, 1 synonym, 1 common - Modifies return if
+if ifs;
+Select ifs such that Modifies(ifs, _)
+10, 14
+5000
+30 - valid, 1 synonym, 1 common - Modifies return if
+if ifs;
+Select ifs such that Modifies(ifs, "d")
+10, 14
+5000
+31 - valid, 2 synonyms, 1 common - Modifies return if
+if ifs; variable v;
+Select ifs such that Modifies(ifs, v)
+10, 14
+5000
+32 - valid, 2 synonyms, 1 common - Modifies return var for ifs
+if ifs; variable v;
+Select v such that Modifies(ifs, v)
+a, c, d
+5000
+33 - valid but null, 2 synonyms, no common - Modifies return if but null
+if ifs; variable v;
+Select ifs such that Modifies(ifs, "e")
+none
+5000
+34 - valid, 1 synonym, 1 common - Modifies return while
+while w;
+Select w such that Modifies(w, _)
+11
+5000
+35 - valid, 2 synonyms, 1 common - Modifies return while
+while w; variable v;
+Select w such that Modifies(w, v)
+11
+5000
+36 - valid, 2 synonyms, 1 common - Modifies return var for while
+while w; variable v;
+Select v such that Modifies(w, v)
+a, c, d
+5000
+37 - valid but null, 1 synonym, 1 common - Modifies return while
+while w; variable v;
+Select w such that Modifies(w, "e")
+none
+5000

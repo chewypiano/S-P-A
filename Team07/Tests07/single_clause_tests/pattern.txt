@@ -1,0 +1,95 @@
+1 - valid, 1 synonym
+assign a;
+Select a pattern a (_,_)
+1, 2, 8, 9, 12, 13, 15, 16, 17, 18, 19
+5000
+2 - valid, 1 synonym, IDENT, _
+assign a;
+Select a pattern a("b", _)
+2, 9
+5000
+3 - valid, 1 synonym, IDENT, _
+assign a;
+Select a pattern a("c", _)
+12, 16, 18, 19
+5000
+4 - valid, 1 synonym, _, IDENT
+assign a;
+Select a pattern a(_, _"c"_)
+8, 9, 16, 18
+5000
+5 - valid, 2 synonym
+assign a; variable v;
+Select v pattern a (_,_)
+a,b,c,d,e,proc,procedure
+5000
+6 - valid, 2 synonym 1 common
+assign a; variable v;
+Select v pattern a (v,_)
+a,b,c,d
+5000
+7 - valid, 2 synonym, IDENT, _
+assign a; constant c;
+Select c pattern a("b", _)
+1, 2, 7, 0
+5000
+8 - valid, 2 synonym, IDENT, _
+assign a; read r;
+Select r pattern a("c", _)
+5, 7
+5000
+9 - valid, 2 synonym, v, IDENT
+assign a; variable v;
+Select a pattern a(v, _"c"_)
+8, 9, 16, 18
+5000
+10 - valid, 2 synonym, v, IDENT
+assign a; variable v;
+Select v pattern a(v, _"c"_)
+a, b, c
+5000
+11 - invalid, 1 synonym, _, IDENT
+assign a;
+Select a pattern a(_, "c"_)
+none
+5000
+12 - invalid, 1 synonym, pattern a invalid syntax
+assign a;
+Select a pattern a(_,_,_)
+none
+5000
+13 - invalid, 2 synonym, pattern not a
+assign a; if ifs;
+Select a pattern if(_,_,_)
+none
+5000
+14 - invalid, 2 synonym, pattern not a
+assign a; while w;
+Select v pattern w(_,_,_)
+none
+5000
+15 - invalid, 1 synonym, pattern no label
+assign a;
+Select a pattern (_, "c"_)
+none
+5000
+16 - valid 1 synoynm, _ CONST
+assign a;
+Select a pattern a(_, _"7"_)
+19
+5000
+17 - invalid - _ +
+assign a;
+Select a pattern a(_, "a+1")
+none
+5000
+18 - invalid - _, _+_
+assign a;
+Select a pattern a(_, _"a+1"_)
+none
+5000
+19 - invalid - _, _+_
+assign a;
+Select a pattern a(_, _"+"_)
+none
+5000

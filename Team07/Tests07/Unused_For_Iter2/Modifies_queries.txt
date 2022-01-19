@@ -1,0 +1,20 @@
+1 - valid, 1 such that, 1 synonym - return all stmts s.t. ModifiesS (stmt, _ )
+stmt s;
+Select s such that Modifies(s, _)
+1, 2, 3, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20
+5000
+2 - valid procedure acquisition
+procedure p;
+Select p such that Modifies(p, _)
+First, Second, Third
+5000
+3 - valid procedure acquisition with specific variable modifies
+procedure p;
+Select p such that Modifies(p,"f")
+First,Third
+5000
+4 - valid procedure acquisition with specific variable uses
+procedure p;
+Select p such that Uses(p,"e")
+First,Second
+5000

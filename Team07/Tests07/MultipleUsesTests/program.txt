@@ -1,0 +1,17 @@
+procedure NestingMultipleUses {	x = 3;
+    while (a != 0) {
+        if (a != 0) then {
+            while ((a != 0) && (a != 0)) {
+                if (a != 0) then {
+                    x = y + z * w;
+                    j = k - l * m;
+                } else {
+                    d = e + f * g; } }
+        } else { e1 = e2 + e3 + e4; } }
+    if (((cond1 != 0) && (cond2 != 0)) || ((cond3 != 0) || (cond4 != 0))) then {
+        a = 1;
+    } else { a = 1; }
+    while (((cond1 != 0) && (cond2 != 0)) || ((cond3 != 0) || (cond4 != 0))) {
+        a = 1;
+    }
+}

@@ -1,0 +1,15 @@
+1 - Test nested Uses with multiple variables in a statement
+variable v;
+Select v such that Uses(5, v)
+a, y, z ,w , k, l, m,, e,f ,g
+5000
+2 - Test multiple variables Used as condition in If
+variable v;
+Select v such that Uses (10, v)
+cond1, cond2, cond3, cond4
+5000
+3 - Test multiple variables Used as condition in While
+variable v;
+Select v such that Uses(13, v)
+cond1, cond2, cond3, cond4
+5000

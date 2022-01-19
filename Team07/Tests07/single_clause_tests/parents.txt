@@ -1,0 +1,65 @@
+1 - valid, basic parent in first nesting returns all children
+stmt c;
+Select c such that Parent(10,c)
+11, 18
+5000
+2 - valid, basic parent in second nesting returns all children
+stmt c;
+Select c such that Parent(11,c)
+12, 13, 14
+5000
+3 - valid, basic parent in third nesting returns all children
+stmt c;
+Select c such that Parent(14,c)
+15, 16, 17
+5000
+4 - valid, basic children in first nesting returns correct parent
+stmt p;
+Select p such that Parent(p,11)
+10
+5000
+5 - valid, basic children in second nesting returns correct parent
+stmt p;
+Select p such that Parent(p,13)
+11
+5000
+6 - valid, basic children in second nesting returns correct parent
+stmt p;
+Select p such that Parent(p,17)
+14
+5000
+7 - valid, parent* returns all children and grandchildren
+stmt c;
+Select c such that Parent*(10,c)
+11, 18, 12, 13, 14, 15, 16, 17
+5000
+8 - valid, parent* returns all children and grandchildren 2
+stmt c;
+Select c such that Parent*(11,c)
+12, 13, 14, 15, 16, 17
+5000
+9 - valid, parent* returns all children and grandchildren 3
+stmt c;
+Select c such that Parent*(14,c)
+15, 16, 17
+5000
+10 - valid, parent* returns all parents and grandparents 1
+stmt p;
+Select p such that Parent*(p,17)
+10, 11, 14
+5000
+11 - valid, parent* returns all parents and grandparents 2
+stmt p;
+Select p such that Parent*(p,13)
+10, 11
+5000
+12 - valid, parent* returns all parents and grandparents 3
+stmt p;
+Select p such that Parent*(p,11)
+10
+5000
+13 - valid, parent* returns all parents and grandparents 4
+stmt p;
+Select p such that Parent*(p,18)
+10
+5000

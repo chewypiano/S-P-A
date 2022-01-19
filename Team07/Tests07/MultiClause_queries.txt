@@ -1,0 +1,400 @@
+1 - valid 1 synonym 1 common
+assign a;
+Select a such that Uses(a, _) pattern a(_,_)
+1, 2, 7
+5000
+2 - valid 1 synonym 1 common
+assign a;
+Select a pattern a(_,_) such that Uses(a,_)
+1, 2, 7
+5000
+3 - invalid 1 synonym 1 common
+assign a;
+Select a pattern a(_,_) Uses(a,_)
+none
+5000
+4 - invalid 1 synonym 1 common
+assign a;
+Select a pattern a(_,_) and Uses(a,_)
+none
+5000
+5 - invalid 1 synonym 1 common
+assign a;
+Select a pattern a(_,_) with Uses(a,_)
+none
+5000
+6 - valid 1 synonym 1 common pattern IDENT _
+assign a;
+Select a such that Uses(a, _) pattern a("procedure",_)
+1
+5000
+7 - valid 1 synonym 1 common IDENT _
+assign a;
+Select a pattern a("while",_) such that Uses(a,_)
+2
+5000
+8 - valid 1 synonym 1 common pattern IDENT _FACTOR_
+assign a;
+Select a such that Uses(a, _) pattern a("procedure",_"5"_)
+1
+5000
+9 - invalid (for iter 1) 1 synonym 1 common _ _FACTOR_
+assign a;
+Select a such that Uses(a,_) pattern a(_,_"abc123"_)
+2
+5000
+10 - invalid (for iter 1) but return none 1 synonym 1 common _ _FACTOR_
+assign a;
+Select a such that Uses(a,_) pattern a(_,_"abc12"_)
+none
+5000
+11 - invalid % factor 1 synonym 1 common pattern IDENT _FACTOR_
+assign a;
+Select a such that Uses(a, _) pattern a("procedure",_"%"_)
+none
+5000
+12 - invalid 1 synonym 1 common _ FACTOR
+assign a;
+Select a pattern a(_,"abc123") such that Uses(a,_)
+2
+5000
+13 - valid 2 synonym 1 common pattern IDENT _
+assign a; variable v;
+Select a such that Uses(a, _) pattern a(v,_)
+1,2,7
+5000
+14 - invalid 2 synonym 1 common IDENT CONST
+assign a; variable v;
+Select v pattern a("while",_) such that Uses(a,"3")
+none
+5000
+15 - valid 2 synonym 1 common pattern IDENT factor
+assign a; variable v;
+Select a such that Uses(a, _) pattern a(v,_" a "_)
+1
+5000
+16 - pattern
+assign a; if ifs;
+Select a such that Parent(ifs,a) pattern a(_,_)
+5, 8
+5000
+17 - pattern invalid
+assign a; if ifs;
+Select a pattern a(_,_) such that Parent(ifs, a)
+5, 8
+5000
+18 - pattern valid
+assign a; while wh;
+Select a such that Parent(wh,a) pattern a(_,_)
+7
+5000
+19 - pattern valid
+assign a; while wh; stmt s;
+Select a such that Parent(wh,s) pattern a(_,_)
+1, 2, 5, 7, 8, 9
+5000
+20 - pattern valid
+assign a; while wh; stmt s;
+Select a such that Parent*(wh,s) pattern a(_,_)
+1, 2, 5, 7, 8, 9
+5000
+21 - pattern valid
+assign a; while wh;
+Select a such that Parent*(wh,a) pattern a(_,_)
+5, 7, 8
+5000
+22 - pattern valid
+while wh; if ifs;
+Select ifs such that Parent*(wh,ifs)
+4
+5000
+23 - pattern valid
+while wh; while wh2;
+Select wh2 such that Parent*(wh,wh2)
+6
+5000
+24 - pattern valid
+while wh; while wh2;
+Select wh such that Parent*(wh,wh2)
+3
+5000
+25 - pattern valid
+if ifs; while wh2;
+Select ifs such that Parent*(ifs,wh2)
+4
+5000
+26 - pattern
+assign a; if ifs;
+Select a such that Parent*(ifs,a) pattern a(_,_"2"_)
+5, 8
+5000
+27 - pattern
+assign a; if ifs;
+Select a such that Parent*(ifs,a) pattern a(_,_"c"_)
+7
+5000
+28 - pattern valid, match syntax
+assign a; if ifs;
+Select a such that Parent*(ifs,a) pattern a(_,"c")
+7
+5000
+29 - valid 1 synonym 1 common
+assign a;
+Select a such that Modifies(a, _) pattern a(_,_)
+1, 2, 5, 7, 8, 9
+5000
+30 - valid 1 synonym 1 common
+assign a;
+Select a pattern a(_,_) such that Modifies(a,_)
+1, 2, 5, 7, 8, 9
+5000
+31 - invalid 1 synonym 1 common
+assign a;
+Select a pattern a(_,_) Modifies(a,_)
+none
+5000
+32 - invalid 1 synonym 1 common
+assign a;
+Select a pattern a(_,_) and Modifies(a,_)
+none
+5000
+33 - invalid 1 synonym 1 common
+assign a;
+Select a pattern a(_,_) with Modifies(a,_)
+none
+5000
+34 - valid 1 synonym 1 common pattern IDENT _
+assign a;
+Select a such that Modifies(a, _) pattern a("procedure",_)
+1
+5000
+35 - valid 1 synonym 1 common IDENT _
+assign a;
+Select a pattern a("while",_) such that Modifies(a,_)
+2,9
+5000
+36 - valid 1 synonym 1 common pattern IDENT _FACTOR_
+assign a;
+Select a such that Modifies(a, _) pattern a("procedure",_"5"_)
+1
+5000
+37 - invalid (for iter 1) 1 synonym 1 common _ _FACTOR_
+assign a;
+Select a pattern a(_,_"abc123"_) such that Modifies(a,_)
+2
+5000
+38 - invalid (for iter 1) but return none 1 synonym 1 common _ _FACTOR_
+assign a;
+Select a pattern a(_,_"abc12"_) such that Modifies(a,_)
+none
+5000
+39 - invalid % factor 1 synonym 1 common pattern IDENT _FACTOR_
+assign a;
+Select a such that Modifies(a, _) pattern a("procedure",_"%"_)
+none
+5000
+40 - invalid 1 synonym 1 common _ FACTOR
+assign a;
+Select a pattern a(_,"abc123") such that Modifies(a,_)
+2
+5000
+41 - valid 2 synonym 1 common pattern IDENT _
+assign a; variable v;
+Select a such that Modifies(a, _) pattern a(v,_)
+1,2,5,7,8,9
+5000
+42 - invalid 2 synonym 1 common IDENT CONST
+assign a; variable v;
+Select v pattern a("while",_) such that Modifies(a,"3")
+none
+5000
+43 - valid 2 synonym 1 common pattern IDENT factor
+assign a; variable v;
+Select a such that Modifies(a, _) pattern a(v,_" a "_)
+1
+5000
+44 - valid with weird names
+assign pattern; variable Select;
+Select Select such that Modifies(pattern,_) pattern pattern(Select, _)
+procedure,while,c,d,e
+5000
+45 - valid with weird names
+assign pattern, Modifies; variable Select;
+Select Select such that Modifies(pattern,_) pattern Modifies(Select, _)
+procedure,while,c,d,e
+5000
+46 - pattern
+assign a; if ifs;
+Select a such that Follows(ifs,a) pattern a(_,_)
+none
+5000
+47 - pattern
+assign a; while wh;
+Select a such that Follows(wh,a) pattern a(_,_)
+9
+5000
+48 - pattern invalid
+assign a; if ifs;
+Select a pattern a(_,_) such that Follows(wg, a)
+none
+5000
+49 - pattern valid
+assign a; while wh; stmt s;
+Select a such that Follows(wh,s) pattern a(_,_)
+1, 2, 5, 7, 8, 9
+5000
+50 - pattern valid
+assign a; while wh; stmt s;
+Select a such that Follows*(wh,s) pattern a(_,_)
+1, 2, 5, 7, 8, 9
+5000
+51 - pattern valid
+assign a; while wh;
+Select a such that Follows*(wh,a) pattern a(_,_)
+9
+5000
+52 - pattern valid
+read r; while wh;
+Select r such that Follows*(wh,r)
+10
+5000
+53 - pattern valid
+while wh; if ifs;
+Select ifs such that Follows*(wh,ifs)
+none
+5000
+54 - pattern valid
+while wh; if ifs;
+Select ifs such that Follows*(ifs,wh)
+none
+5000
+55 - pattern valid
+assign a; assign a1;
+Select a such that Follows(a,a1) pattern a(_,_)
+1
+5000
+56 - pattern valid
+assign a; assign a1;
+Select a1 such that Follows(a,a1) pattern a(_,_)
+2
+5000
+57 - pattern valid
+assign a; while wh;
+Select a such that Follows*(wh,a) pattern a(_,_"3"_)
+9
+5000
+58 - pattern valid
+assign a; while wh;
+Select a such that Follows*(wh,a) pattern a("while",_)
+9
+5000
+59 - pattern invalid in iter 1, no exact match syntax
+assign a; while wh;
+Select a such that Follows*(wh,a) pattern a(_,"c")
+none
+5000
+60 - modifies single
+stmt s;
+Select s such that Modifies(s, "while")
+2, 9
+5000
+61 - modifies single
+stmt s;
+Select s such that Modifies(s, if)
+none
+5000
+62 - modifies single
+stmt s;
+Select s such that Modifies(s, if)
+none
+5000
+63 - Follows single
+stmt s;
+Select s such that Follows(s, _)
+1,2,3,5,9
+5000
+64 - Basic FollowedBy with wildcard
+stmt s;
+Select s such that Follows(_, s)
+10,2,3,6,9
+5000
+65 - Basic Follows
+variable v;
+Select v such that Follows(1,3)
+none
+5000
+66 - Basic Follows*
+stmt s;
+Select s such that Follows*(1,s)
+10,2,3,9
+5000
+67 - Basic Follows* variable
+variable v;
+Select v such that Follows*(1,10)
+a,a1b2c3,abc123,b,c,d,e,f,procedure,t0xicV4R143L3,while
+5000
+68 - Basic Follows* assign stmt
+stmt s; assign a;
+Select s such that Follows*(a, s)
+10,2,3,6,9
+5000
+69 - Basic Use with wildcard
+assign a;
+Select a such that Uses(a,_)
+1,2,7
+5000
+70 - Basic Use with variable
+assign a;
+Select a such that Uses(1,a)
+none
+5000
+71 - Basic Use
+assign a;
+Select a such that Uses(1,_)
+1,2,5,7,8,9
+5000
+72 - Basic Parents
+stmt s;
+Select s such that Parent(s, _)
+3,4,6
+5000
+73 - Basic Parents with wildcard
+stmt s;
+Select s such that Parent(_, s)
+4,5,6,7,8
+5000
+74 - Basic Parents variable
+variable v;
+Select v such that Parent(3,4)
+a,a1b2c3,abc123,b,c,d,e,f,procedure,t0xicV4R143L3,while
+5000
+75 - Basic Parents*
+stmt s;
+Select s such that Parent*(3,_)
+1,10,2,3,4,5,6,7,8,9
+5000
+76 - Basic Parents* variable
+variable v;
+Select v such that Parent*(_,3)
+none
+5000
+77 - Basic Parents* assign stmt
+stmt s; assign a;
+Select s such that Parent*(a, s)
+none
+5000
+78 - pattern single valid, 1 synonym
+assign a;
+Select a pattern a (_,_)
+1,2,5,7,8,9
+5000
+79 - pattern single valid, 1 synonym, IDENT, _
+assign a;
+Select a pattern a("b", _)
+none
+5000
+80 - pattern single valid, 1 synonym, IDENT, _
+assign a;
+Select a pattern a("c", _)
+5
+5000

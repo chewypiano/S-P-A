@@ -1,0 +1,9 @@
+procedure follows { a = 1;
+    b = 2;
+    c = 3;
+    d = 4;
+    if (e == 5) then {
+        f = 6;
+    } else { g = 7;
+     h = 8; }
+    i = 9; }

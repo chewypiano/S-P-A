@@ -1,0 +1,123 @@
+procedure first {
+
+    while ( alpha == 4lph4 ) {
+
+        if ( ( ( ( abc123 == 0000001 ) ) && (!( 123 == cba321 )) ) || ( a = 1 + 1) ) then {
+
+            t0x1cVar      =      00001    +    11 + (    (    8)) * 2 * (-2);
+
+                            a =         b;
+
+        }                   else {
+
+            if ( ( c - d == c + (d) ) ) then {
+
+                    a = 1;
+            } else { a = 2; }
+
+        }
+
+    }
+
+}
+
+procedure
+second
+{
+
+    read b00k;
+    print worDS;
+
+    if (  (( (a>b) || (a < b) ) || ( ( (a>b) && (a<b) ) && ( (a) != (a * (a) - (a)/2 + a % div ) ) )) && ( (( (a>b) || (a < b) ) || ( ( (a>b) && (a<b) ) && ( (a) != (a * (a) - (a)/2 + a % div ) ) )) ||  (( (a>b) || (a < b) ) || ( ( (a>b) && (a<b) ) && ( (a) != (a * (a) - (a)/2 + a % div ) ) )) )    ) then {
+
+        clown = 11111 - 00000010101;
+
+    } else {
+
+        while (2 == 2) {
+
+            call third;
+
+        }
+
+
+    }
+
+    while = print;
+
+}
+
+procedure third {
+
+    read MODIFIEDvar;
+    print USEDvar;
+    m0difiedAndUs3dvar = m0difiedAndUs3dvar + 1;
+
+}
+
+procedure fourth {
+
+    print a;
+    print b;
+    print c;
+
+
+    read r1;
+    read r2;
+
+    while (a == b) {
+
+        a = 2;
+
+        while (b == a) {
+            while (3 == 1) {
+                while               ( a - 1 = 1 ) {
+                    var4 = 2;
+                }
+            }
+            var4 = 3;
+        }
+
+    }
+
+    if ( a == 1) then {
+
+        abc222 = 1;
+
+    } else {
+        abc222 = 222;
+    }
+
+    followedStmt = 1;
+
+}
+
+procedure fifth {
+
+    x = y;
+    y = x;
+
+    call sixth;
+    call seventh;
+
+}
+
+procedure sixth {
+
+    abc = 123;
+    def = 456;
+
+    read news;
+    read paper;
+
+}
+
+procedure seventh {
+
+    efg = 789;
+    hij = 987;
+
+    print ink;
+    print lead;
+
+}

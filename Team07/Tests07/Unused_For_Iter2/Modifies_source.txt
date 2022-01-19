@@ -1,0 +1,35 @@
+procedure First {
+	a = b;
+	b = c;
+	c = a;
+	if ( ( b == c ) && ( a == c ) ) then {
+	    call Third;
+	}
+	else {
+	    call Second;
+	}
+}
+
+procedure Second {
+	read b;
+	while ( (d==a) ){
+	    c = a+1;
+        a = d+1;
+        while ( a==d ) {
+	        d = 1;
+            a = e;
+        }
+	}
+}
+
+procedure Third {
+	print c;
+	while ( (c==a) ){
+	    b = b+1;
+        d = d+1;
+        while ( a==c ) {
+	        f = 1;
+            a = b;
+        }
+	}
+}

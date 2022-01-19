@@ -1,0 +1,490 @@
+procedure first {
+
+    while ( alpha == lph4 ) {
+
+        if ( ( ( ( abc123 ==  1 ) ) && (!( 123 == cba321 )) ) || ( a == 1 + 1) ) then {
+
+            t0x1cVar      =     1    +    11 + (    (    8)) * 2 * (2);
+
+                            a =         b;
+
+        }                   else {
+
+            if ( ( c - d == c + (d) ) ) then {
+
+                    a = 1;
+            } else { a = 2; }
+
+        }
+
+    }
+
+}
+
+procedure
+second
+{
+
+    read b00k;
+    print worDS;
+
+    if (  (( (a>b) || (a < b) ) || ( ( (a>b) && (a<b) ) && ( (a) != (a * (a) - (a)/2 + a % div ) ) )) && ( (( (a>b) || (a < b) ) || ( ( (a>b) && (a<b) ) && ( (a) != (a * (a) - (a)/2 + a % div ) ) )) ||  (( (a>b) || (a < b) ) || ( ( (a>b) && (a<b) ) && ( (a) != (a * (a) - (a)/2 + a % div ) ) )) )    ) then {
+
+        clown = 11111 - 00000010101;
+
+    } else {
+
+        while (2 == 2) {
+
+            call third;
+
+        }
+
+
+    }
+
+    while = print;
+
+}
+
+procedure third {
+
+    read MODIFIEDvar;
+    print USEDvar;
+    m0difiedAndUs3dvar = m0difiedAndUs3dvar + 1;
+
+}
+
+procedure fourth {
+
+    print a;
+    print b;
+    print c;
+
+
+    read r1;
+    read r2;
+
+    while (a == b) {
+
+        a = 2;
+
+        while (b == a) {
+            while (3 == 1) {
+                while               ( a - 1 == 1 ) {
+                    var4 = 2;
+                }
+            }
+            var4 = 3;
+        }
+
+    }
+
+    if ( a == 1) then {
+
+        abc222 = 1;
+
+    } else {
+        abc222 = 222;
+    }
+
+    followedStmt = 1;
+
+}
+
+procedure fifth {
+
+    x = y;
+    y = x;
+
+    call sixth;
+    call seventh;
+
+}
+
+procedure sixth {
+
+    abc = 123;
+    def = 456;
+
+    read news;
+    read paper;
+
+}
+
+procedure seventh {
+
+    efg = 789;
+    hij = 987;
+
+    print ink;
+    print lead;
+
+}
+
+procedure fourth2 {
+
+    print a2;
+    print b2;
+    print c2;
+
+
+    read r12;
+    read r22;
+
+    while (a == b) {
+
+        a22 = 2;
+
+        while (b == a) {
+            while (3 == 1) {
+                while               ( a - 1 == 1 ) {
+                    var4 = 2;
+                }
+            }
+            var4 = 3;
+        }
+
+    }
+
+    if ( a == 1) then {
+
+        abc222 = 1;
+
+    } else {
+        abc222 = 222;
+    }
+
+    followedStmt = 1;
+
+}
+
+procedure fourth3 {
+
+    print a3;
+    print b3;
+    print c3;
+
+
+    read r13;
+    read r23;
+
+    while (a == b) {
+
+        a = 2;
+
+        while (b == a) {
+            while (3 == 1) {
+                while               ( a - 1 == 1 ) {
+                    var4 = 2;
+                }
+            }
+            var4 = 3;
+        }
+
+    }
+
+    if ( a == 1) then {
+
+        abc222 = 1;
+
+    } else {
+        abc222 = 222;
+    }
+
+    followedStmt = 1;
+
+}
+
+procedure fourth4 {
+
+    print a4;
+    print b4;
+    print c4;
+
+
+    read r1;
+    read r2;
+
+    while (a == b) {
+
+        a = 2;
+
+        while (b == a) {
+            while (3 == 1) {
+                while               ( a - 1 == 1 ) {
+                    var4 = 2;
+                }
+            }
+            var4 = 3;
+        }
+
+    }
+
+    if ( a == 1) then {
+
+        abc222 = 1;
+
+    } else {
+        abc222 = 222;
+    }
+
+    followedStmt = 1;
+
+}
+
+procedure fourth5 {
+
+    print a5;
+    print b5;
+    print c5;
+
+
+    read r15;
+    read r25;
+
+    while (a == b) {
+
+        a = 2;
+
+        while (b == a) {
+            while (3 == 1) {
+                while               ( a - 1 ==1 ) {
+                    var4 = 2;
+                }
+            }
+            var4 = 3;
+        }
+
+    }
+
+    if ( a == 1) then {
+
+        abc222 = 1;
+
+    } else {
+        abc222 = 222;
+    }
+
+    followedStmt = 1;
+
+}
+
+procedure fourth6 {
+
+    print a6;
+    print b6;
+    print c6;
+
+
+    read r16;
+    read r26;
+
+    while (a == b) {
+
+        a = 2;
+
+        while (b == a) {
+            while (3 == 1) {
+                while               ( a - 1 == 1 ) {
+                    var4 = 2;
+                }
+            }
+            var4 = 3;
+        }
+
+    }
+
+    if ( a == 1) then {
+
+        abc222 = 1;
+
+    } else {
+        abc222 = 222;
+    }
+
+    followedStmt = 1;
+
+}
+
+procedure fourth7 {
+
+    print a7;
+    print b7;
+    print c7;
+
+
+    read r17;
+    read r27;
+
+    while (a == b) {
+
+        a7 = 2;
+
+        while (b == a) {
+            while (3 == 1) {
+                while               ( a - 1 == 1 ) {
+                    var4 = 2;
+                }
+            }
+            var4 = 3;
+        }
+
+    }
+
+    if ( a == 1) then {
+
+        abc222 = 1;
+
+    } else {
+        abc222 = 222;
+    }
+
+    followedStmt = 1;
+
+}
+
+procedure fourth8 {
+
+    print a8;  print b8;   print c8;
+
+
+    read r18;
+    read r28;
+
+    while (a == b) {
+
+        a8 = 2;
+
+        while (b == a) {
+            while (3 == 1) {
+                while               ( a - 1 == 1 ) {
+                    var4 = 2;
+                }
+            }
+            var4 = 3;
+        }
+
+    }
+
+    if ( a == 1) then {
+
+        abc222 = 1;
+
+    } else {
+        abc222 = 222;
+    }
+
+    followedStmt = 1;
+
+}
+procedure fourth9 {
+
+    print a9;
+    print b9;
+    print c9;
+
+
+    read r19;
+    read r29;
+
+    while (a == b) {
+
+        a99 = 2;
+
+        while (b == a) {
+            while (3 == 1) {
+                while               ( a - 1 == 1 ) {
+                    var4 = 2;
+                }
+            }
+            var4 = 3;
+        }
+
+    }
+
+    if ( a == 1) then {
+
+        abc222 = 1;
+
+    } else {
+        abc222 = 222;
+    }
+
+    followedStmt = 1;
+
+    call fourth10;
+
+}
+procedure fourth10 {
+
+    print a10;
+    print b10;
+    print c10;
+
+
+    read r10;
+    read r20;
+
+    while (a == b) {
+
+        a = 2;
+
+        while (b == a) {
+            while (3 == 1) {
+                while               ( a - 1 == 1 ) {
+                    var4 = 2;
+                }
+            }
+            var4 = 3;
+        }
+
+    }
+
+    if ( a == 1) then {
+
+        abc222 = 1;
+
+    } else {
+        abc222 = 222;
+    }
+
+    followedStmt = 1;
+
+}
+procedure fourth11 {
+
+    print a11;
+    print b11;
+    print c11;
+
+
+    read r11;
+    read r22;
+
+    while (a == b) {
+
+        a11 = 2;
+
+        while (b == a) {
+            while (3 == 1) {
+                while               ( a - 1 == 1 ) {
+                    var4 = 2;
+                }
+            }
+            var4 = 3;
+        }
+
+    }
+
+    if ( a == 1) then {
+
+        abc222 = 1;
+
+    } else {
+        abc222 = 222;
+    }
+
+    followedStmt = 1;
+
+}

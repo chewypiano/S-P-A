@@ -1,0 +1,50 @@
+1 - Select statement with Follows
+stmt s;
+Select s such that Follows(_, s)
+2, 3, 4, 5, 8, 9
+5000
+2 - Select statement with Follows*
+stmt s;
+Select s such that Follows(_, s)
+2, 3, 4, 5, 8, 9
+5000
+3 - Select Follows of statement
+stmt s;
+Select s such that Follows(s, _)
+1, 2, 3, 4, 5, 7
+5000
+4 - Select Follows* of statement
+stmt s;
+Select s such that Follows(s, _)
+1, 2, 3, 4, 5, 7
+5000
+5 - Select valid Follows relation between statements
+variable v;
+Select v such that Follows(3, 4)
+a, b, c, d, e, f, g, h, i
+5000
+6 - Select valid Follows* relation between statements
+variable v;
+Select v such that Follows*(3, 4)
+a, b, c, d, e, f, g, h, i
+5000
+7 - Select valid Follows relation between statements and wildcard
+variable v;
+Select v such that Follows(3, _)
+a, b, c, d, e, f, g, h, i
+5000
+8 - Select valid Follows* relation between statements and wildcard
+variable v;
+Select v such that Follows*(3, _)
+a, b, c, d, e, f, g, h, i
+5000
+9 - Select valid Follows relation between wildcard and statements
+variable v;
+Select v such that Follows(_, 4)
+a, b, c, d, e, f, g, h, i
+5000
+10 - Select valid Follows* relation between wildcard and statements
+variable v;
+Select v such that Follows*(_, 4)
+a, b, c, d, e, f, g, h, i
+5000

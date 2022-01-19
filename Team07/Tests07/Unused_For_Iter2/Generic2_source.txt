@@ -1,0 +1,33 @@
+procedure A {
+   call B;
+   a = 1;
+   while (a > 0) {
+       c = d+1;
+       while ( (d != a) && (c == d) ) {
+           read B;
+           print Book;
+       }
+       a = 9;
+   }
+}
+
+procedure B {
+	call C;
+}
+
+procedure C {
+	var = 10;
+	if (a == 2) then {
+	    c = d + 1;
+	    a = c;
+	} else {
+	    a = Hot;
+	    d = Gri11;
+	}
+	print Bo1;
+}
+
+
+
+// call and call *
+// next and next *

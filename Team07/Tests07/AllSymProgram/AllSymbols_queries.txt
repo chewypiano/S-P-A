@@ -1,0 +1,275 @@
+1 - Follows stmt 1 const
+stmt a;
+Select a such that Follows(3, a)
+4
+5000
+2 - Follows stmt 1 const negative
+stmt a;
+Select a such that Follows(a, 1)
+none
+5000
+3 - Follows stmt 2 const
+stmt a;
+Select a such that Follows(1, 2)
+1,2,3,4,5,6,7,8,9,10,11,12,13
+5000
+4 - Follows stmt 2 const negative
+stmt a;
+Select a such that Follows(2,1)
+none
+5000
+5 - Follows stmt 0 const
+stmt a, b;
+Select a such that Follows(a, b)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12
+5000
+6 - Follows stmt 0 const alt
+stmt a, b;
+Select a such that Follows(b, a)
+2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13
+5000
+7 - Follows * stmt 2 const
+stmt a;
+Select a such that Follows*(1,2)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
+5000
+8 - Follows * stmt 2 const negative test
+stmt a;
+Select a such that Follows*(2,1)
+none
+5000
+9 - Follows * stmt 1 const
+stmt a;
+Select a such that Follows*( a, 2 )
+1
+5000
+10 - Follows * stmt 1 const negative
+stmt a;
+Select a such that Follows(13, a)
+none
+5000
+11 - Follows * stmt 0 const
+stmt a, b;
+Select a such that Follows*(a , b)
+1,2,3,4,5,6,7,8,9,11, 12
+5000
+12 - Follows * stmt 0 const alt
+stmt a, b;
+Select a such that Follows*(b,a)
+2,3,4,6,7,8,9,10,11,12,13
+5000
+13 - Follows Out of range
+stmt a, b; 
+Select a such that Follows(a, 1234)
+none
+5000
+14 - Follows * out of range
+assign a;
+Select a such that Follows(a, 1235)
+none
+5000
+15 - Follows invalid semantics variable
+variable a;
+Select a such that Follows(a, _)
+none
+5000
+15 - Follows invalid semantics procedure
+precedure a;
+Select a such that Follows(a, _)
+none
+5000
+16 - Follows valid semantics print
+print a;
+Select a such that Follows(_, a)
+2, 11
+5000
+17 - Follows valid semantics assign
+assign a;
+Select a such that Follows(_, a)
+3,6,7,8,9,10, 13
+5000
+18 - Follows valid semantics read
+read a;
+Select a such that Follows(_, a)
+12
+5000
+19 - Follows invalid call
+call a;
+Select a such that Follows(_, a)
+none
+5000
+20 - Follows valid semantics while
+while w;
+Select w such that Follows(_, w)
+4   
+5000
+21 - Follows valid semantics if
+if ifs;
+Select ifs such that Follows(ifs, _)
+none
+5000
+22 - Follows invalid semantics constant
+constant c;
+Select c such that Follows(c, _)
+none
+5000
+23 - Uses print and variable
+print p; variable v;
+Select p such that Uses(p, v)
+2, 11
+5000
+24 - Follow read and print
+stmt s;
+Select s such that Follows(12, 13)
+1,2,3,4,5,6,7,8,9,10,11,12,13
+5000
+26 - Follows with wildcard
+stmt s;
+Select s such that Follows(_, 7)
+1,2,3,4,5,6,7,8,9,10,11,12,13
+5000
+30 - No common between pattern and such that
+stmt s; while w; assign a;
+Select w such that Follows(w,s) pattern a("x", _"y"_)
+4
+5000
+31 - No common synonym at all
+while w;
+Select w such that Follows*(_, 2)
+4
+5000
+32 - Test undeclared syn
+assign a;
+Select b
+none
+5000
+33 - Test
+assign a; variable v;
+Select v such that Uses(a, v) pattern a(v, _)
+a, n
+5000
+34 - Test Modifies
+assign a;
+Select a such that Modifies(a, "a")
+3, 5, 6, 13
+5000
+35 - Modifies with pattern
+assign a; variable v;
+Select v such that Modifies(a, "n") pattern a(v, _)
+n
+5000
+36 - Uses with const, invalid
+assign a; variable v;
+Select v such that Uses(a, 10)
+none
+5000
+37 - Follows assignment by itself
+assign a;
+Select a such that Follows(a,a)
+none
+5000
+37 - Modifies assignment by itself
+stmt a;
+Select a such that Modifies(a,a)
+none
+5000
+38 - Select whiles
+while w;
+Select w
+4
+5000
+39 - Select reads
+read r;
+Select r
+1, 12
+5000
+40 - Modifies with const
+assign a;
+Select a such that Modifies(a, "a")
+3, 5, 6
+5000
+41 - Uses with const
+assign a;
+Select a such that Uses(a, "3")
+13
+5000
+42 - Pattern not found
+assign a;
+Select a pattern a("x", _)
+none
+5000
+43 - Pattern found double wildcard
+assign a;
+Select a pattern a("n", _"n"_)
+7,8,9,10,11
+5000
+44 - Patten found single wildcard
+assign a;
+Select a pattern a("a", _)
+3, 5,6,13
+5000
+45 - Parent not found
+stmt a;
+Select a such that Parent(1, 2)
+none
+5000
+46 - Parent found wildcard
+stmt a;
+Select a such that Parent(a, _)
+4
+5000
+47 - Parent found no wildcard
+assign a; while w;
+Select a such that Parent(w, a)
+5,6,7,8,9,10
+5000
+48 - Parent* not found
+stmt a;
+Select a such that Parent*(1,2)
+none
+5000
+49 - Parent* found wildcard
+stmt a;
+Select a such that Parent*(a, _)
+4
+5000
+50 - Parent* found no wildcard
+assign a; while w;
+Select a such that Parent*(w, a)
+5,6,7,8,9,10
+5000
+51 - Pattern with such that pattern not found
+assign a; stmt s; while w;
+Select s such that Parent(w, a) pattern a("n",_"a"_)
+none
+5000
+52 - Pattern with such that not found
+assign a;stmt s; while w;
+Select s such that Parent(a, w) pattern a("n", _)
+none
+5000
+53 - Pattern with such that 1 common syn
+while w; stmt s; assign a;
+Select w such that Parent(w,s) pattern a(_,_)
+4
+5000
+54 - Pattern with such that 2 common syn
+while w; stmt s; assign a;
+Select a such that Parent(w, a) pattern a("a", _"a"_)
+5,6
+5000
+55 - Pattern with such that no common syn
+while w; stmt s; assign a; if ifs;
+Select s such that Parent(w, ifs) pattern a(_,_)
+none
+5000
+56 - Pattern with such that both not found
+while w; stmt s; assign a; if ifs; variable v;
+Select ifs such that Modifies(w, v) pattern a(v, _)
+none
+5000
+57 - Pattern with such that 1
+while w; stmt s; assign a; if ifs; variable v;
+Select v such that Modifies(w, v) pattern a(v, _)
+a, n
+5000

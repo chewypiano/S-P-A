@@ -1,0 +1,200 @@
+8001 - Syntax
+assign a1;
+assign a2; Select BOOLEAN
+TRUE
+5000
+8002 - Syntax
+
+assign a2; assign a1; Select BOOLEAN
+TRUE
+5000
+8003 - Syntax - add to report
+assign a1;
+assign a1; Select BOOLEAN
+none
+5000
+8004 - Syntax
+variable Modifies; stmt Uses;
+Select Uses such that Modifies(Uses,Modifies)
+1,4,5,9,11,14,17,18,22,23,25,28,29,33,34,30,37,40,41,44,45, 47,48,49,50,52,53,54,55,57,58,59,60,61,64,43,36,27,21,13,8,2, 6, 10, 15,19,24,31,38,51,56,39,32,16,3,46
+5000
+8005 - Syntax
+variable Modifies; stmt s1;
+Select BOOLEAN with 1 = 1
+TRUE
+5000
+8007 - Syntax
+variable Modifies; stmt s1;
+Select BOOLEAN with 1 = "1"
+none
+5000
+8008 - Syntax -add to report
+variable Modifies; stmt s1;
+Select BOOLEAN with 1 = "a"
+none
+5000
+8009 - Syntax
+stmt BOOLEAN;
+Select BOOLEAN such that Follows(1,2)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64
+5000
+8010 - Syntax
+assign BOOLEAN;
+Select BOOLEAN such that Follows(1,2)
+1,4,5,9,11,14,17,18,22,23,25,28,29,33,34,30,37,40,41,44,45, 47,48,49,50,52,53,54,55,57,58,59,60,61
+5000
+8011 - Syntax
+assign pattern; variable Select;
+Select Select pattern pattern(Select, _)
+a,b,c,d,g,h,m1,m2,m3,m4,m6,m7,m8,m9,mu3,z
+5000
+8012 - Syntax
+assign a; variable v;
+Select a pattern a(v, _"i                /   j"_) with v.varName = "h"
+53
+5000
+9001 - Follows - between procedures
+stmt s1,s2;
+Select BOOLEAN such that Follows(46,47)
+FALSE
+5000
+9201 - Follows
+stmt s1,s2; constant c;
+Select BOOLEAN such that Follows(s1,c)
+none
+5000
+9202 - Follows
+stmt s1,s2; constant c;
+Select BOOLEAN such that Follows(s1,c.value)
+none
+5000
+9002 - Follows* - between procedures
+stmt s1,s2;
+Select BOOLEAN such that Follows*(46,47)
+FALSE
+5000
+9003 - Calls* - between procedures
+procedure p;
+Select p such that Calls*(p,p)
+none
+5000
+9004 - Calls* - between procedures
+procedure p;
+Select p such that Calls(p,q) and Calls*(q,p)
+none
+5000
+9005 - Pattern AST invalidated
+assign a;
+Select a pattern a("h", _"j/k"_)
+none
+5000
+9006 - Pattern AST okay
+assign a;
+Select a pattern a("h", _"i/j"_)
+53
+5000
+9106 - Pattern invalid expr
+assign a;
+Select a pattern a(_, " ")
+none
+5000
+9107 - Pattern invalid expr
+assign a;
+Select a pattern a(_,_" "_)
+none
+5000
+9007 - Affects
+stmt s;
+Select s such that Affects(34,s)
+34,41
+5000
+9008 - Affects for stmt num exceeding total stmt nums of program
+stmt s;
+Select s such that Affects*(300,500)
+none
+5000
+9009 - Affects for stmt num exceeding total stmt nums of program
+stmt s;
+Select s such that Next*(300,500)
+none
+5000
+9010 - Affects for stmt num exceeding total stmt nums of program
+stmt s;
+Select s such that Follows*(300,500)
+none
+5000
+9011 - prog_line
+prog_line n;
+Select n.stmt#
+none
+5000
+9012 - procName   - add to report
+procedure p;
+Select p    .   procName
+none
+5000
+9012 - procName
+procedure p;
+Select p.procName
+first, second
+5000
+9100 - follows
+stmt s;
+Select s such that Follows(s,s)
+none
+5000
+9101 - follows*
+stmt s;
+Select BOOLEAN such that Follows*(s,s)
+FALSE
+5000
+9102 - Affects
+stmt s;
+Select BOOLEAN such that Affects(s,s)
+TRUE
+5000
+9103 - Affects*
+stmt s;
+Select BOOLEAN such that Affects*(s,s)
+TRUE
+5000
+9104 - Parent*
+stmt s;
+Select BOOLEAN such that Parent*(s,s)
+FALSE
+5000
+9104 - Parent
+stmt s;
+Select BOOLEAN such that Parent(s,s)
+FALSE
+5000
+9105 - Next
+stmt s;
+Select BOOLEAN such that Next(s,s)
+FALSE
+5000
+9106 - Next*
+stmt s;
+Select BOOLEAN such that Next*(s,s)
+TRUE
+5000
+9107 - Calls
+stmt s; procedure p;
+Select BOOLEAN such that Calls(p,p)
+FALSE
+5000
+9108 - Calls*
+stmt s; procedure p;
+Select BOOLEAN such that Calls*(p,p)
+FALSE
+5000
+9109 - Pattern
+stmt s; assign a;
+Select BOOLEAN pattern a(_,"(((((u4+u5)))))")
+TRUE
+5000
+9110 - Pattern
+stmt s; assign a;
+Select BOOLEAN pattern a(_,_""_)
+none
+5000

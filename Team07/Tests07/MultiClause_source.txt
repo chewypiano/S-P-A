@@ -1,0 +1,17 @@
+procedure procedure {
+    procedure = ( a + b % 2) % ( 5 / ( 3 / e ));
+    while = abc123;
+    while ( (a1b2c3 != (t0xicV4R143L3 * 2)) ) {
+        if ( !(a == f) ) then {
+            c = 2;
+            while ( (a == b) && ( b == a) ) {
+                d = c;
+            }
+        }
+        else {
+            e = 2;
+        }
+    }
+    while = 3;
+    read a;
+}

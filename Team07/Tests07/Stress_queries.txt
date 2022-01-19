@@ -1,0 +1,20 @@
+1 - 4 clause Independent
+stmt s1,s2,s3,s5; prog_line n,n2; assign a1,a2; procedure p;
+Select <s1, a1, p> such that Affects*(a1,s1)
+none
+5000
+2 - 4 clause Independent
+stmt s1,s2,s3,s5; prog_line n,n2; assign a1,a2; procedure p; variable v1,v2;if ifs;
+Select s1 such that Follows(s3,s5)
+none
+5000
+2 - 4 clause Independent
+stmt s1,s2,s3,s5; prog_line n,n2; assign a1,a2; procedure p; variable v1,v2;if ifs;
+Select s1 such that Next(s1,s2) and Uses(p,v2) pattern ifs(v1,_,_)
+none
+5000
+2 - 4 clause Independent
+stmt s1,s2,s3,s4,s5; prog_line n,n2; assign a1,a2; procedure p; variable v1,v2;if ifs;
+Select <s1,p> such that Next(s1,s2) and Uses(p,v2) pattern ifs(v1,_,_) such that Parent*(s3,s5)
+none
+5000

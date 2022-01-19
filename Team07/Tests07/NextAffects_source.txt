@@ -1,0 +1,85 @@
+procedure first{
+    notAffecting = 5;
+
+    a = 1;
+    b = 2;
+    c = 3;
+    d = 4;
+    e = 5;
+
+    read d;
+    while( x==1 ){
+        if (x==2) then {
+          read e;
+          z = a;
+          y = y;
+          a = 1;
+          call second;
+          z = b;
+          z = c;
+        } else{
+            z = e;
+            a = 1;
+            c = 1;
+        }
+    }
+
+    a = 1;
+    b = 2;
+    c = 3;
+    d = 4;
+    e = 5;
+
+    if (x==3) then {
+         b = 1+c;
+         c = 1+b;
+         while(x==4){
+            b = z;
+            if (x==5) then {
+                c = b+c;
+            } else {
+                c = b+c;
+            }
+         }
+         z = a;
+
+    } else {
+        b = 1;
+        z = c;
+    }
+    z = b;
+}
+
+procedure second{
+    call third;
+}
+
+procedure third{
+    c = b;
+    b = c;
+}
+
+procedure fourth {
+    a1 = 1;
+    b1 = 1;
+    c1 = 1;
+    while (x==1){
+        UnaffectedByInnerNest = 1;
+        AffectedByInnerNest = 1 + AffectedByInnerNest;
+        if (x == 2) then {
+            d1 = a1;
+            while (x==4) {
+                e1 = f1;
+                f1 = 1;
+            }
+        } else {
+            e1 = d1;
+            UnaffectedByInnerNest = 1;
+            if ( x==5 ) then {
+                AffectedByInnerNest = 1;
+            } else{
+                AffectedByInnerNest = 1;
+            }
+        }
+    }
+}

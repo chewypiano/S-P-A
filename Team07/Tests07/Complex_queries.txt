@@ -1,0 +1,35 @@
+1 - get all assignments
+assign a;
+Select a
+1,2,3,10,11,13,14,17,18,19,21,22,25,26,32,33,35,36,39,40, 41, 43,44
+5000
+2 - get all if statements
+if if;
+Select if
+4, 6, 7,9,12,16,20,24,28,29,31,34,38,42
+5000
+3 - get all while statements
+while what;
+Select what
+5, 8, 15, 23, 27, 30, 37
+5000
+4 - get all assign that has a on lhs
+assign a;
+Select a pattern a("a", _)
+1
+5000
+5 - get all assign with parent
+assign a;
+Select a such that Parent(_, a)
+10, 11, 13, 14,17,18,19,21,22,25,26,32,33,35,36,39,40, 41, 43,44
+5000
+6 - get all assign that are parent
+assign a;
+Select a such that Parent(a, _)
+none
+5000
+7 - Spam queries
+assign a, a1, a2, a3, a4, a5; variable v, v1, v2, v3, v4; while w;
+Select a such that Parent*(_, a1) and Follows(a, a2) and Follows*(a2, a3) pattern a(_, _) pattern a1 (_, _) pattern a(v, _) pattern a1(v2, _) pattern a3(_,_) and a5(_,_)
+1
+5000

@@ -1,0 +1,16 @@
+procedure procedure {
+    read a;
+}
+
+procedure Example {
+    read b;
+    print a;
+}
+
+procedure Hello {
+    read a;
+    print a;
+    if (a == 1) then{
+        
+    }
+}

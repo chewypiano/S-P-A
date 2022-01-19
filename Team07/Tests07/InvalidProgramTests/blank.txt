@@ -1,0 +1,5 @@
+1 - Select query
+assign a;
+Select a
+none
+5000

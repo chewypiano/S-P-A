@@ -1,0 +1,550 @@
+1 - Affects wildcards
+
+Select BOOLEAN such that Affects(_,_)
+TRUE
+5000
+2 - Affects wildcards
+stmt s;
+Select s.stmt# such that Affects(_,_)
+1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,24,25,26,27,28,29,3,30,31,32,33,34,35,36,37,38,39,4,40,41,42,43,44,45,46,47,48,49,5,50,51,52,53,54,55,6,7,8,9
+5000
+3 - Affects const wildcard
+
+Select BOOLEAN such that Affects(2,_)
+TRUE
+5000
+4 - Affects const wildcard
+
+Select BOOLEAN such that Affects(5,_)
+FALSE
+5000
+5 - Affects const wildcard
+
+Select BOOLEAN such that Affects(1,_)
+FALSE
+5000
+6 - Affects wildcard const
+
+Select BOOLEAN such that Affects(_,3)
+FALSE
+5000
+7 - Affects wildcard const
+
+Select BOOLEAN such that Affects(_,11)
+TRUE
+5000
+8 - Affects consts
+
+Select BOOLEAN such that Affects(1,2)
+FALSE
+5000
+9 - Affects consts
+
+Select BOOLEAN such that Affects(2,11)
+TRUE
+5000
+10 - Affects syn wildcard
+assign a1;
+Select a1 such that Affects(a1,_)
+2, 6, 16, 17 , 12 , 18 , 22,20 ,26 ,29 ,31,32 , 38,40,45,54,55,47,50,13,27,34
+5000
+11 - Affects wildcard syn
+assign a1;
+Select a1 such that Affects(_,a1)
+17,11 , 29 , 12 ,26,27,33,35 ,31,32,39,47,45,51,49,36
+5000
+12 - Affects syn const
+assign a1;
+Select a1 such that Affects(a1,17)
+6
+5000
+912 - Affects syn const
+assign a1;
+Select a1 such that Affects(a1,15)
+none
+5000
+13 - Affects syn const
+assign a1;
+Select a1 such that Affects(a1,5)
+none
+5000
+14 - Affects syn const
+assign a1;
+Select a1 such that Affects(a1,12)
+12
+5000
+15 - Affects const syn
+assign a1;
+Select a1 such that Affects(22,a1)
+26,35
+5000
+16 - Affects const syn
+assign a1;
+Select a1 such that AffectsBip(3,a1)
+38
+5000
+17 - Affects const syn
+assign a1;
+Select a1 such that AffectsBip(39,a1)
+15,38
+5000
+18 - Affects syn syn
+assign a1,a2;
+Select <a1,a2> such that Affects(a1,a2)
+12 12,13 11,16 29,17 29,18 11,2 11,20 33,22 26,22 35,26 27,26 36,27 31,27 32,29 31,29 32,29 36,31 31,31 32,32 31,32 32,34 36,38 39,40 47,45 45,47 51,50 49,54 45,55 45,6 17
+5000
+101 - Affects* wildcards
+
+Select BOOLEAN such that Affects*(_,_)
+TRUE
+5000
+102 - Affects* wildcards
+stmt s;
+Select s.stmt# such that Affects*(_,_)
+1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55
+5000
+103 - Affects* const wildcard
+
+Select BOOLEAN such that Affects*(2,_)
+TRUE
+5000
+104 - Affects* const wildcard
+
+Select BOOLEAN such that Affects*(5,_)
+FALSE
+5000
+105 - Affects* const wildcard
+
+Select BOOLEAN such that Affects*(1,_)
+FALSE
+5000
+106 - Affects* wildcard const
+
+Select BOOLEAN such that Affects*(_,3)
+FALSE
+5000
+107 - Affects* wildcard const
+
+Select BOOLEAN such that Affects*(_,12)
+TRUE
+5000
+108 - Affects* consts
+
+Select BOOLEAN such that Affects*(1,2)
+FALSE
+5000
+109 - Affects* consts
+
+Select BOOLEAN such that Affects*(40,51)
+TRUE
+5000
+110 - Affects* syn wildcard
+assign a1;
+Select a1 such that Affects*(a1,_)
+12,13,16,17,18,2,20,22,26,27,29,31,32,34,38,40,45,47,50,54,55,6
+5000
+111 - Affects* wildcard syn
+assign a1;
+Select a1 such that Affects*(_,a1)
+11,12,17,26,27,29,31,32,33,35,36,39,45,47,49,51
+5000
+112 - Affects* syn const
+assign a1;
+Select a1 such that Affects*(a1,7)
+none
+5000
+113 - Affects* syn const
+assign a1;
+Select a1 such that Affects*(a1,5)
+none
+5000
+114 - Affects* syn const
+assign a1;
+Select a1 such that Affects*(a1,12)
+12
+5000
+115 - Affects* const syn
+assign a1;
+Select a1 such that Affects*(7,a1)
+none
+5000
+116 - Affects* const syn
+assign a1;
+Select a1 such that Affects*(3,a1)
+none
+5000
+117 - Affects* const syn
+assign a1;
+Select a1 such that Affects*(24,a1)
+none
+5000
+118 - Affects* syn syn
+assign a1,a2;
+Select <a1,a2> such that Affects*(a1,a2)
+12 12,13 11,16 29,16 31,16 32,16 36,17 29,17 31,17 32,17 36,18 11,2 11,20 33,22 26,22 27,22 31,22 32,22 35,22 36,26 27,26 31,26 32,26 36,27 31,27 32,29 31,29 32,29 36,31 31,31 32,32 31,32 32,34 36,38 39,40 47,40 51,45 45,47 51,50 49,54 45,55 45,6 17,6 29,6 31,6 32,6 36
+5000
+119 - NextBip* const syn
+assign a2;
+Select a2 such that NextBip*(3,a2)
+11,12,13,15,16,17,18,19,20,21,22,23,24,26,27,29,31,32,33,34,35,36,38,39,4,5,6
+5000
+1401 - NextBip (wildcard, wildcard)
+stmt s;
+Select s such that NextBip(_,_)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55
+5000
+1402 - NextBip (wildcard, wildcard)
+
+Select BOOLEAN such that NextBip(_,_)
+TRUE
+5000
+1411 - NextBip (syn, wildcard) - prog_line
+prog_line n;
+Select n such that NextBip(39,n)
+15
+5000
+1411 - NextBip (syn, wildcard) - prog_line
+prog_line n;
+Select n such that NextBip*(39,n)
+10,11,12,13,14,16,15,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,8,9
+5000
+14116 - NextBip (syn, wildcard) - prog_line
+prog_line n;
+Select n such that NextBip(n,15)
+39
+5000
+1412 - NextBip (syn, wildcard) - while
+while w;
+Select w.stmt# such that NextBip(w,_)
+28,43,48,8
+5000
+1413 - NextBip (syn, wildcard) - read
+read re1;
+Select <re1, re1, re1> such that NextBip(re1,_)
+10 10 10,7 7 7
+5000
+1422 - NextBip (wildcard, syn) - call
+call c1;
+Select c1.procName such that NextBip(_,c1)
+second, third
+5000
+1423 - NextBip (wildcard, syn) - if-if
+if ifs1;
+Select ifs1 such that NextBip(_,ifs1)
+25,30,46,53,9
+5000
+1431 - NextBip (syn, syn) - assign-read
+assign a1; read re1;
+Select <a1.stmt#, re1> such that NextBip(re1,a1)
+11 10
+5000
+1432 - NextBip (syn, syn) - assign-if
+assign a1; if if1;
+Select <a1.stmt#, if1> such that NextBip(if1,a1)
+17 9,26 25,31 30,32 30,34 25,47 46,51 46,54 53,55 53
+5000
+1441 - NextBip (const, wildcard)
+
+Select BOOLEAN such that NextBip(27,_)
+TRUE
+5000
+1442 - NextBip (const, wildcard) - read
+read re1;
+Select re1 such that NextBip(1,_)
+7,10
+5000
+1443 - NextBip (const, wildcard) - procedure
+procedure p;
+Select p.procName such that NextBip(_,42)
+first, second,third , fourth
+5000
+1451 - NextBip (wildcard, const)
+stmt s;
+Select s.stmt# such that NextBip(_,1)
+none
+5000
+1453 - NextBip (wildcard, const) - call
+call call1;
+Select call1 such that NextBip(_,34)
+14,37
+5000
+1461 - NextBip(const, const)
+
+Select BOOLEAN such that NextBip(2,3)
+TRUE
+5000
+1462 - NextBip(const, const) - if
+if if1;
+Select if1 such that NextBip*(39,36)
+25,30,46,53,9
+5000
+14625 - NextBip(const, const) - if
+if if1;
+Select if1 such that NextBip(39,15)
+25,30,46,53,9
+5000
+1463 - NextBip(const, const) - while
+while w1;
+Select w1 such that NextBip(14,37)
+28,43,48,8
+5000
+1471 - NextBip(syn, const) - read
+read re1;
+Select re1 such that NextBip*(re1,39)
+7,10
+5000
+1473 - NextBip(const, syn) - prog_line
+prog_line pl1;
+Select pl1 such that NextBip(14,pl1)
+37
+5000
+1474 - NextBip(const, syn) - assign
+assign a1;
+Select a1 such that NextBip(15,a1)
+16
+5000
+1501 - NextBip*(wildcard,wildcard)
+stmt s;
+Select s such that NextBip*(_,_)
+36,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55
+5000
+1502 - NextBip*(wildcard,wildcard)
+
+Select BOOLEAN such that NextBip*(_,_)
+TRUE
+5000
+1511 - NextBip* (syn, wildcard) - prog_line
+prog_line n;
+Select n such that NextBip*(n,_)
+1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,24,25,26,27,28,29,3,30,31,32,33,34,35,37,38,39,4,40,41,42,43,44,45,46,47,48,49,5,50,51,52,53,54,55,6,7,8,9
+5000
+1513 - NextBip* (syn, wildcard) - read
+read re1;
+Select <re1, re1, re1> such that NextBip*(re1,_)
+10 10 10,7 7 7
+5000
+1521 - NextBip* (wildcard, syn) - print
+print p1;
+Select p1 such that NextBip*(_,p1)
+none
+5000
+1522 - NextBip* (wildcard, syn) - call
+call c1;
+Select c1.procName such that NextBip*(_,c1)
+second , third
+5000
+1523 - NextBip* (wildcard, syn) - if-if
+if ifs1, ifs2;
+Select <ifs1, ifs2> such that NextBip*(_,ifs1)
+25 25,25 30,25 46,25 53,25 9,30 25,30 30,30 46,30 53,30 9,46 25,46 30,46 46,46 53,46 9,53 25,53 30,53 46,53 53,53 9,9 25,9 30,9 46,9 53,9 9
+5000
+1531 - NextBip* (syn, syn) - assign
+assign a1; read re1;
+Select a1 such that NextBip*(re1,a1)
+11,12,13,15,16,17,18,19,20,21,22,23,24,26,27,29,31,32,33,34,35,36,38,39
+5000
+1532 - NextBip* (syn, syn) - while-if
+while w1; if if1;
+Select <w1, if1> such that NextBip*(w1,if1)
+28 30,43 46,43 53,48 46,48 53,8 25,8 30,8 9
+5000
+1533 - NextBip* (syn, syn) - prog_line-print
+prog_line n1; print pr1;
+Select n1 such that NextBip*(n1,pr1)
+none
+5000
+1534 - NextBip* (syn, syn) - while-call
+while w1; call call1;
+Select <w1.stmt#, call1> such that NextBip*(w1,call1)
+8 14,8 37
+5000
+1541 - NextBip* (const, wildcard)
+
+Select BOOLEAN such that NextBip*(27,_)
+TRUE
+5000
+1542 - NextBip* (const, wildcard) - read
+read re1;
+Select re1 such that NextBip*(36,_)
+none
+5000
+1543 - NextBip* (const, wildcard) - procedure
+procedure p;
+Select p.procName such that NextBip*(_,42)
+first, second ,fourth,third
+5000
+1551 - NextBip* (wildcard, const)
+stmt s;
+Select s.stmt# such that NextBip*(_,1)
+none
+5000
+1552 - NextBip* (wildcard, const) - print
+print pr1;
+Select pr1 such that NextBip*(_,35)
+none
+5000
+1553 - NextBip* (wildcard, const) - call
+call call1;
+Select call1 such that NextBip*(_,34)
+14,37
+5000
+1561 - NextBip*(const, const)
+
+Select BOOLEAN such that NextBip*(2,27)
+TRUE
+5000
+1562 - NextBip*(const, const) - if
+if if1;
+Select if1 such that NextBip*(42,39)
+none
+5000
+1563 - NextBip*(const, const) - while
+while w1;
+Select w1 such that NextBip*(55,55)
+28,43,48,8
+5000
+1571 - NextBip*(syn, const) - read
+read re1;
+Select re1 such that NextBip*(re1,44)
+none
+5000
+1572 - NextBip*(syn, const) - print
+print pr1;
+Select pr1 such that NextBip*(pr1,27)
+none
+5000
+1573 - NextBip*(const, syn) - prog_line
+prog_line pl1;
+Select pl1 such that NextBip*(37,pl1)
+8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39
+5000
+1574 - NextBip*(const, syn) - assign
+assign a1;
+Select a1 such that NextBip*(15,a1)
+15,16,17,18,19,11,12,13,38,39,20,21,22,23,24,26,27,29,31,32,33,34,35,36
+5000
+901 - AffectsBip wildcards
+
+Select BOOLEAN such that AffectsBip(_,_)
+TRUE
+5000
+902 - AffectsBip wildcards
+stmt s;
+Select s.stmt# such that AffectsBip(_,_)
+51,52,53,54,55,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50
+5000
+903 - AffectsBip const wildcard
+
+Select BOOLEAN such that AffectsBip(2,_)
+TRUE
+5000
+904 - AffectsBip const wildcard
+
+Select BOOLEAN such that AffectsBip(3,_)
+TRUE
+5000
+905 - AffectsBip const wildcard
+
+Select BOOLEAN such that AffectsBip(1,_)
+FALSE
+5000
+906 - AffectsBip wildcard const
+
+Select BOOLEAN such that AffectsBip(_,3)
+FALSE
+5000
+907 - AffectsBip wildcard const
+
+Select BOOLEAN such that AffectsBip(_,38)
+TRUE
+5000
+908 - AffectsBip consts
+
+Select BOOLEAN such that AffectsBip(38,16)
+TRUE
+5000
+909 - AffectsBip consts
+
+Select BOOLEAN such that AffectsBip(2,11)
+TRUE
+5000
+910 - AffectsBip syn wildcard
+assign a1;
+Select a1 such that AffectsBip(a1,_)
+2, 6, 16, 17 , 12 , 18 , 22,20 ,26 ,29 ,31,32 , 38,40,45,54,55,47,50,13,27,34,3,39
+5000
+911 - AffectsBip wildcard syn
+assign a1;
+Select a1 such that AffectsBip(_,a1)
+17,11 , 29 , 12 ,26,27,33,35 ,31,32,39,47,45,51,49,36,15,16,38
+5000
+912 - AffectsBip syn const
+assign a1;
+Select a1 such that AffectsBip(a1,17)
+6
+5000
+913 - AffectsBip syn const
+assign a1;
+Select a1 such that AffectsBip(a1,15)
+39
+5000
+914 - AffectsBip syn const
+assign a1;
+Select a1 such that AffectsBip(a1,5)
+none
+5000
+915 - AffectsBip syn const
+assign a1;
+Select a1 such that AffectsBip(a1,12)
+12
+5000
+916 - AffectsBip const syn
+assign a1;
+Select a1 such that AffectsBip(22,a1)
+26,35
+5000
+917 - AffectsBip const syn
+assign a1;
+Select a1 such that AffectsBip(3,a1)
+38
+5000
+918 - AffectsBip const syn
+assign a1;
+Select a1 such that AffectsBip(39,a1)
+15,38
+5000
+919 - AffectsBip syn syn
+assign a1,a2;
+Select <a1,a2> such that AffectsBip(a1,a2)
+12 12,13 11,16 29,17 29,18 11,2 11,20 33,22 26,22 35,26 27,26 36,27 31,27 32,29 31,29 32,29 36,31 31,31 32,32 31,32 32,34 36,38 39,40 47,45 45,47 51,50 49,54 45,55 45,6 17,3 38,38 16,39 15,39 38
+5000
+920 - Multiclause
+call c1; stmt s1;
+Select BOOLEAN such that NextBip(c1, s1) and Next(c1, s1)
+FALSE
+5000
+921 - Multiclause
+stmt s2; stmt s1;
+Select <s1,s2> such that AffectsBip(s1, s2) and Parent(_, s1) and Parent*(_,s2)
+12 12,13 11,16 29,17 29,18 11,26 27,27 31,27 32,29 31,29 32,31 31,31 32,32 31,32 32,45 45,47 51,50 49,54 45,55 45
+5000
+922 - Multiclause
+assign a1; stmt s1,s2; prog_line n;
+Select <a1,s2> such that NextBip*(a1, s1) and AffectsBip(a1, s2) with a1.stmt# = n and n = 3
+3 38
+5000
+933 - edge case
+stmt s1,s2;
+Select s1 such that AffectsBip(s1,s1)
+12,31,32,45
+5000
+934 - edge case
+stmt s1,s2;
+Select s1 such that NextBip(s1,s1)
+none
+5000
+935 - edge case
+stmt s1,s2;
+Select s1 such that NextBip*(s1,s1)
+10,11,12,13,14,15,16,17,18,19,28,29,30,31,32,37,38,39,43,44,45,46,47,48,49,50,51,52,53,54,55,8,9
+5000

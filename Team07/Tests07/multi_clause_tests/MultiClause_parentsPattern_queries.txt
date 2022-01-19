@@ -1,0 +1,65 @@
+1 - pattern
+assign a; if ifs;
+Select a such that Parent(ifs,a) pattern a(_,_)
+5, 8
+5000
+2 - pattern invalid
+assign a; if ifs;
+Select a pattern a(_,_) such that Parent(ifs, a)
+none
+5000
+3 - pattern valid
+assign a; while wh;
+Select a such that Parent(wh,a) pattern a(_,_)
+7
+5000
+4 - pattern valid
+assign a; while wh; stmt s;
+Select a such that Parent(wh,s) pattern a(_,_)
+1, 2, 5, 7, 8, 9
+5000
+5 - pattern valid
+assign a; while wh; stmt s;
+Select a such that Parent*(wh,s) pattern a(_,_)
+1, 2, 5, 7, 8, 9
+5000
+6 - pattern valid
+assign a; while wh;
+Select a such that Parent*(wh,a) pattern a(_,_)
+5, 7, 8
+5000
+7 - pattern valid
+while wh; if ifs;
+Select ifs such that Parent*(wh,ifs)
+4
+5000
+8 - pattern valid
+while wh; while wh2;
+Select wh2 such that Parent*(wh,wh2)
+6
+5000
+9 - pattern valid
+while wh; while wh2;
+Select wh such that Parent*(wh,wh2)
+3
+5000
+10 - pattern valid
+if ifs; while wh2;
+Select ifs such that Parent*(ifs,wh2)
+4
+5000
+11 - pattern
+assign a; if ifs;
+Select a such that Parent*(ifs,a) pattern a(_,_"2"_)
+5, 8
+5000
+12 - pattern
+assign a; if ifs;
+Select a such that Parent*(ifs,a) pattern a(_,_"c"_)
+7
+5000
+13 - pattern invalid in iter 1, no exact match syntax
+assign a; if ifs;
+Select a such that Parent*(ifs,a) pattern a(_,"c")
+none
+5000

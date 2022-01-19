@@ -1,0 +1,67 @@
+procedure toyota {
+    call honda;
+    while (0 > 2) {
+        call mitsubishi;
+    }
+    call = 6;
+}
+
+procedure honda {
+    if (b3 > 0) then {
+        b3 = 1 + 32 + 123 + 9 + 13;
+    } else {
+        call bmw;
+        while (b > 4) {
+            call merc;
+        }
+    }
+}
+
+procedure mitsubishi {
+    if ( x > 2 ) then {
+        call porsche;
+    } else {
+        call maserati;
+    }
+}
+
+procedure bmw {
+    read a1;
+    print a4;
+    call ferrari;
+    call lambo;
+}
+
+procedure merc {
+    read a2;
+    print a3;
+    call = lambo;
+    x = 9;
+}
+
+procedure porsche {
+    while (k > 4) {
+        call = honda;
+    }
+}
+
+procedure maserati {
+    while (a > 3) {
+        while (p > 4) {
+            call = mitsubishi;
+        }
+    }
+}
+
+procedure ferrari {
+    call = 1;
+}
+
+procedure lambo {
+    call mitsubishi;
+    if (p != 0) then {
+        read b;
+    } else {
+        print c;
+    }
+}

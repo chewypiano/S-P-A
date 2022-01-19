@@ -1,0 +1,17 @@
+//
+// Created by vaish on 8/10/2021.
+//
+
+#ifndef AUTOTESTER_SPA_TEAM07_CODE07_SRC_SPA_SRC_PQL_QUERYPROJECTOR_QUERYOUTPUTTYPE_H_
+#define AUTOTESTER_SPA_TEAM07_CODE07_SRC_SPA_SRC_PQL_QUERYPROJECTOR_QUERYOUTPUTTYPE_H_
+
+enum class QueryOutputType {
+  Synonym,
+  StmtNoAttribute,
+  ProcNameAttribute,
+  VarNameAttribute,
+  ValueAttribute,
+  Boolean
+};
+
+#endif //AUTOTESTER_SPA_TEAM07_CODE07_SRC_SPA_SRC_PQL_QUERYPROJECTOR_QUERYOUTPUTTYPE_H_

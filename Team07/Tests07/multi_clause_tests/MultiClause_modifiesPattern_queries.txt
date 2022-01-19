@@ -1,0 +1,85 @@
+1 - valid 1 synonym 1 common
+assign a;
+Select a such that Modifies(a, _) pattern a(_,_)
+1, 2, 5, 7, 8, 9
+5000
+2 - invalid for iter 1 1 synonym 1 common
+assign a;
+Select a pattern a(_,_) such that Modifies(a,_)
+none
+5000
+3 - invalid 1 synonym 1 common
+assign a;
+Select a pattern a(_,_) Modifies(a,_)
+none
+5000
+4 - invalid 1 synonym 1 common
+assign a;
+Select a pattern a(_,_) and Modifies(a,_)
+none
+5000
+5 - invalid 1 synonym 1 common
+assign a;
+Select a pattern a(_,_) with Modifies(a,_)
+none
+5000
+6 - valid 1 synonym 1 common pattern IDENT _
+assign a;
+Select a such that Modifies(a, _) pattern a("procedure",_)
+1
+5000
+7 - invalid for iter 1 1 synonym 1 common IDENT _
+assign a;
+Select a pattern a("while",_) such that Modifies(a,_)
+none
+5000
+8 - valid 1 synonym 1 common pattern IDENT _FACTOR_
+assign a;
+Select a such that Modifies(a, _) pattern a("procedure",_"5"_)
+1
+5000
+9 - invalid (for iter 1) 1 synonym 1 common _ _FACTOR_
+assign a;
+Select a pattern a(_,_"abc123"_) such that Modifies(a,_)
+none
+5000
+10 - invalid (for iter 1) but return none 1 synonym 1 common _ _FACTOR_
+assign a;
+Select a pattern a(_,_"abc12"_) such that Modifies(a,_)
+none
+5000
+11 - invalid % factor 1 synonym 1 common pattern IDENT _FACTOR_
+assign a;
+Select a such that Modifies(a, _) pattern a("procedure",_"%"_)
+none
+5000
+12 - invalid 1 synonym 1 common _ FACTOR
+assign a;
+Select a pattern a(_,"abc123") such that Modifies(a,_)
+none
+5000
+13 - valid 2 synonym 1 common pattern IDENT _
+assign a; variable v;
+Select a such that Modifies(a, _) pattern a(v,_)
+1,2,5,7,8,9
+5000
+14 - invalid 2 synonym 1 common IDENT CONST
+assign a; variable v;
+Select v pattern a("while",_) such that Modifies(a,"3")
+none
+5000
+15 - valid 2 synonym 1 common pattern IDENT factor
+assign a; variable v;
+Select a such that Modifies(a, _) pattern a(v,_" a "_)
+1
+5000
+16 - valid with weird names
+assign pattern; variable Select;
+Select Select such that Modifies(pattern,_) pattern pattern(Select, _)
+procedure,while,c,d,e
+5000
+17 - valid with weird names
+assign pattern, Modifies; variable Select;
+Select Select such that Modifies(pattern,_) pattern Modifies(Select, _)
+procedure,while,c,d,e
+5000
